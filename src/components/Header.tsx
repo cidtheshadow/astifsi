@@ -22,6 +22,7 @@ export const Header: React.FC<HeaderProps> = ({ onOpenAbstractModal }) => {
     { name: 'Focus Areas', href: '#themes' },
     { name: 'Highlights', href: '#highlights' },
     { name: 'Dates', href: '#dates' },
+    { name: 'Registration & Fees', href: '#registration' },
     { name: 'Venue & Travel', href: '#venue' },
     { name: 'Committee', href: '#committee' },
   ];
@@ -35,14 +36,14 @@ export const Header: React.FC<HeaderProps> = ({ onOpenAbstractModal }) => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between">
           
-          {/* Logo / Brand (Matching reference logo style with hexagon/badge) */}
+          {/* Logo / Brand */}
           <a href="#" className="flex items-center gap-3 group">
             <div className="w-10 h-10 rounded-xl bg-amber-600/10 border border-amber-500/30 flex items-center justify-center text-amber-600 group-hover:scale-105 transition-transform shadow-sm">
               <span className="text-xl">🌾</span>
             </div>
             <div>
               <div className="flex items-center gap-2">
-                <span className="font-bold text-lg text-stone-900 tracking-tight font-heading">NFC 2026</span>
+                <span className="font-bold text-lg text-stone-900 tracking-tight font-heading">AFSTINFC-2026</span>
                 <span className="inline-flex items-center gap-1 text-[10px] uppercase font-bold tracking-wider px-2 py-0.5 rounded-full bg-emerald-100 text-emerald-800 border border-emerald-300">
                   <span className="w-1.5 h-1.5 rounded-full bg-emerald-600 animate-pulse" />
                   Hybrid
@@ -52,8 +53,8 @@ export const Header: React.FC<HeaderProps> = ({ onOpenAbstractModal }) => {
             </div>
           </a>
 
-          {/* Centered Navigation Links (Matching reference image header) */}
-          <nav className="hidden lg:flex items-center gap-6">
+          {/* Centered Navigation Links */}
+          <nav className="hidden lg:flex items-center gap-5">
             {navLinks.map((link) => (
               <a
                 key={link.name}
@@ -65,7 +66,7 @@ export const Header: React.FC<HeaderProps> = ({ onOpenAbstractModal }) => {
             ))}
           </nav>
 
-          {/* Right Action Button (Matching "JOIN TODAY" orange button from image) */}
+          {/* Right Action Button */}
           <div className="hidden sm:flex items-center gap-3">
             <button
               onClick={onOpenAbstractModal}

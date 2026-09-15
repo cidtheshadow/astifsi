@@ -6,6 +6,7 @@ import { FocusAreas } from './components/FocusAreas';
 import { Highlights } from './components/Highlights';
 import { ImportantDates } from './components/ImportantDates';
 import { AbstractSubmissionModal } from './components/AbstractSubmissionModal';
+import { Registration } from './components/Registration';
 import { VenueLocation } from './components/VenueLocation';
 import { Committee } from './components/Committee';
 import { Footer } from './components/Footer';
@@ -22,7 +23,7 @@ export function App() {
   };
 
   return (
-    <div className="min-h-screen bg-slate-950 text-slate-100 selection:bg-emerald-500 selection:text-slate-950">
+    <div className="min-h-screen bg-[#FAF8F5] text-stone-800 selection:bg-orange-500 selection:text-white">
       {/* Sticky Top Header */}
       <Header onOpenAbstractModal={handleOpenAbstractModal} />
 
@@ -33,6 +34,7 @@ export function App() {
         <FocusAreas onOpenAbstractModal={handleOpenAbstractModal} />
         <Highlights />
         <ImportantDates onOpenAbstractModal={handleOpenAbstractModal} />
+        <Registration onOpenAbstractModal={handleOpenAbstractModal} />
         <VenueLocation />
         <Committee />
       </main>

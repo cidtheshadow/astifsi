@@ -1,5 +1,5 @@
 import React from 'react';
-import { Calendar, MapPin, Sparkles, Send, ArrowRight, Video, FileCheck, Layers } from 'lucide-react';
+import { Calendar, MapPin, Sparkles, Send, Video, FileCheck, Layers, CreditCard } from 'lucide-react';
 import { CountdownTimer } from './CountdownTimer';
 
 interface HeroProps {
@@ -16,7 +16,7 @@ export const Hero: React.FC<HeroProps> = ({ onOpenAbstractModal }) => {
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         
-        {/* Main 2-Column Hero Section matching reference layout */}
+        {/* Main 2-Column Hero Section */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center mb-12">
           
           {/* Left Column (7 Cols): Headline, Theme, CTAs */}
@@ -25,7 +25,7 @@ export const Hero: React.FC<HeroProps> = ({ onOpenAbstractModal }) => {
             {/* Top Occasion Pill */}
             <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full text-xs font-semibold bg-amber-100/90 text-amber-900 border border-amber-300 shadow-2xs">
               <Sparkles className="w-3.5 h-3.5 text-amber-700" />
-              <span>World Food Day 2026 Flagship Conference</span>
+              <span>AFST(I), Mysuru Sponsored Flagship Conference</span>
             </div>
 
             {/* Headline with clean inline accent badge */}
@@ -46,7 +46,7 @@ export const Hero: React.FC<HeroProps> = ({ onOpenAbstractModal }) => {
 
             {/* Description Text */}
             <p className="text-xs sm:text-sm text-stone-600 max-w-xl leading-relaxed">
-              Organized by <strong className="text-stone-900 font-semibold">AFST(I) Longowal Chapter</strong> &amp; <strong className="text-stone-900 font-semibold">Department of Food Engineering &amp; Technology</strong>, Sant Longowal Institute of Engineering &amp; Technology (SLIET), Longowal, Punjab (in association with AFST(I), Mysuru).
+              Jointly organised by <strong className="text-stone-900 font-semibold">AFST- Longowal Chapter</strong> &amp; <strong className="text-stone-900 font-semibold">Department of Food Engineering and Technology</strong>, Sant Longowal Institute of Engineering and Technology (SLIET), Longowal, Punjab.
             </p>
 
             {/* Key Event Meta (Dates & Venue Pills) */}
@@ -68,15 +68,15 @@ export const Hero: React.FC<HeroProps> = ({ onOpenAbstractModal }) => {
                 className="inline-flex items-center gap-2.5 px-6 py-3 rounded-xl text-xs font-bold bg-[#E86024] hover:bg-[#d4521a] text-white shadow-md shadow-orange-500/20 transition-all transform hover:-translate-y-0.5 tracking-wider uppercase"
               >
                 <Send className="w-4 h-4" />
-                Submit Abstract
+                Submit Abstract (Oct 4)
               </button>
 
               <a
-                href="#themes"
+                href="#registration"
                 className="inline-flex items-center gap-2 px-6 py-3 rounded-xl text-xs font-bold bg-white hover:bg-stone-100 text-stone-900 border border-stone-300 shadow-xs transition-all tracking-wider uppercase"
               >
-                <span>Explore Focus Areas</span>
-                <ArrowRight className="w-4 h-4 text-stone-500" />
+                <CreditCard className="w-4 h-4 text-amber-700" />
+                <span>Fees &amp; Registration</span>
               </a>
             </div>
 
@@ -93,15 +93,15 @@ export const Hero: React.FC<HeroProps> = ({ onOpenAbstractModal }) => {
                 <CountdownTimer />
               </div>
 
-              {/* Floating Stat Card Badge */}
+              {/* Floating Technical Sessions Summary Badge */}
               <div className="editorial-card rounded-2xl p-4 border border-stone-200 shadow-sm flex items-center justify-between gap-4">
                 <div className="flex items-center gap-3">
                   <div className="w-10 h-10 rounded-xl bg-emerald-100 flex items-center justify-center text-emerald-700 shrink-0">
                     <Video className="w-5 h-5" />
                   </div>
                   <div>
-                    <h4 className="text-xs font-bold text-stone-900 font-heading">Hybrid Presentation Mode</h4>
-                    <p className="text-[11px] text-stone-500">In-Person &amp; Online Scientific Sessions</p>
+                    <h4 className="text-xs font-bold text-stone-900 font-heading">3 Oral Technical Sessions + 1 Poster Session</h4>
+                    <p className="text-[11px] text-stone-500">Hybrid In-Person &amp; Virtual Presentations</p>
                   </div>
                 </div>
 
@@ -116,7 +116,7 @@ export const Hero: React.FC<HeroProps> = ({ onOpenAbstractModal }) => {
 
         </div>
 
-        {/* Bottom Feature Bar matching reference layout */}
+        {/* Bottom Feature Bar */}
         <div className="grid grid-cols-1 md:grid-cols-12 gap-5 items-stretch pt-2">
           
           {/* Card 1 */}
@@ -126,10 +126,10 @@ export const Hero: React.FC<HeroProps> = ({ onOpenAbstractModal }) => {
             </div>
             <div>
               <h3 className="text-xs font-bold text-stone-900 font-heading mb-0.5">
-                Abstract Submission &amp; Peer Review
+                Abstract Submission Deadline: Oct 4, 2026
               </h3>
               <p className="text-[11px] text-stone-500 leading-relaxed">
-                Submit original research up to 300 words. Peer-evaluated by our scientific review board.
+                Submit original research up to 300 words. Intimation of acceptance on Oct 5, 2026.
               </p>
             </div>
           </div>
@@ -141,15 +141,15 @@ export const Hero: React.FC<HeroProps> = ({ onOpenAbstractModal }) => {
             </div>
             <div>
               <h3 className="text-xs font-bold text-stone-900 font-heading mb-0.5">
-                10 Technical Focus Areas
+                3 Oral Sessions &amp; 1 Poster Session
               </h3>
               <p className="text-[11px] text-stone-500 leading-relaxed">
-                Parallel tracks spanning AI food systems, novel proteins, safety, processing &amp; waste valorization.
+                Structured oral &amp; poster presentation tracks evaluated by an expert jury.
               </p>
             </div>
           </div>
 
-          {/* Card 3 (Matching Iridescent Pastel card on bottom right of reference) */}
+          {/* Card 3 */}
           <div className="md:col-span-4 pastel-gradient-card rounded-2xl p-5 flex flex-col justify-center text-center shadow-2xs">
             <h3 className="text-xl sm:text-2xl font-bold text-stone-950 font-serif-editorial leading-tight">
               Innovate Today. <br /> Nourish Tomorrow.

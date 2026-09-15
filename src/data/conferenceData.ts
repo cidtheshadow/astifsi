@@ -24,6 +24,7 @@ export interface CommitteeMember {
   category: 'Patron' | 'Chair' | 'Secretary' | 'Advisory';
   avatarInitials: string;
   location?: string;
+  phone?: string;
 }
 
 export interface HighlightItem {
@@ -39,34 +40,59 @@ export interface DistanceInfo {
   type: 'road' | 'rail' | 'air';
 }
 
+export interface RegistrationFee {
+  category: string;
+  amount: string;
+  isDiscounted?: boolean;
+}
+
 export const CONFERENCE_INFO = {
-  title: "NATIONAL FOOD CONFERENCE 2026",
+  title: "NATIONAL FOOD CONFERENCE (AFSTINFC-2026)",
+  shortCode: "AFSTINFC-2026",
   mode: "Hybrid Mode (In-Person & Virtual)",
   theme: "Innovate Today. Nourish Tomorrow",
   occasion: "World Food Day 2026",
+  sponsorship: "AFST(I), Mysuru Sponsored",
   dates: "15–16 October 2026",
-  venue: "Sant Longowal Institute of Engineering & Technology (SLIET), Longowal, Punjab",
-  abstractFormUrl: "https://forms.google.com", // Google Form link placeholder
+  venue: "SLIET, Longowal-148106, Punjab, India",
+  abstractFormUrl: "https://forms.gle/bCd8umYgiU5rdjbX9",
+  locationDirectionsUrl: "https://share.google/jbFzRwF2DOy83tKvU",
+  officialEmail: "afstinfc2026@sliet.ac.in",
   organizers: [
     {
       name: "AFST(I) Longowal Chapter",
-      role: "Co-Organizer",
+      role: "Joint Organizer",
     },
     {
       name: "Department of Food Engineering & Technology",
-      role: "Organizer",
+      role: "Joint Organizer",
       institution: "SLIET Longowal"
     },
     {
       name: "AFST(I), Mysuru",
-      role: "Parent Association"
+      role: "Sponsor & Parent Association"
     }
   ]
 };
 
-export const ABOUT_CONFERENCE = `The National Food Conference 2026 brings together food scientists, technologists, engineers, academicians, researchers, industry professionals, entrepreneurs, policymakers and students to deliberate on emerging challenges and opportunities across the food value chain. With the theme "Innovate Today. Nourish Tomorrow," the conference will focus on innovative technologies, sustainable food systems, nutrition, food safety, processing, preservation, value addition and emerging solutions that can contribute to a resilient and secure food future. The conference aims to provide a vibrant platform for knowledge exchange, scientific discussion, networking, technology transfer and industry–academia collaboration.`;
+export const ABOUT_CONFERENCE = `Innovate Today. Nourish Tomorrow. The National Food Conference 2026 brings together academia, research, industry, entrepreneurship and policy to exchange knowledge, showcase innovation and foster collaboration for a sustainable, safe, nutritious and resilient food future. The conference focuses on innovative technologies, food processing, engineering, quality assurance, and circular food systems.`;
 
 export const THEME_DESCRIPTION = `The future of food demands innovation that is sustainable, inclusive, safe, nutritious and accessible. The conference will explore how science, engineering, digital technologies and entrepreneurship can transform the food sector while addressing resource constraints, food loss and waste, climate change and changing consumer needs.`;
+
+export const REGISTRATION_FEES: RegistrationFee[] = [
+  { category: "Industry", amount: "Rs 1500/-" },
+  { category: "Faculty (Non-AFSTI member)", amount: "Rs 1500/-" },
+  { category: "Faculty (AFSTI member)", amount: "Rs 1000/-", isDiscounted: true },
+  { category: "Students (Non-AFSTI member)", amount: "Rs 750/-" },
+  { category: "Students (AFSTI member)", amount: "Rs 500/-", isDiscounted: true }
+];
+
+export const BANK_DETAILS = {
+  accountName: "AFSTI Longowal",
+  bankName: "Central Bank of India, Longowal",
+  accountNo: "3401579557",
+  ifscCode: "CBIN0283105"
+};
 
 export const KEY_FOCUS_AREAS: FocusArea[] = [
   {
@@ -153,8 +179,8 @@ export const KEY_FOCUS_AREAS: FocusArea[] = [
 
 export const IMPORTANT_DATES: ImportantDate[] = [
   {
-    rawDate: "2026-09-30",
-    date: "September 30, 2026",
+    rawDate: "2026-10-04",
+    date: "October 4, 2026",
     title: "Submission of Abstract",
     description: "Deadline for submitting original research abstracts (Max 300 words) via Google Form.",
     isUrgent: true
@@ -175,28 +201,28 @@ export const IMPORTANT_DATES: ImportantDate[] = [
     rawDate: "2026-10-15",
     date: "October 15–16, 2026",
     title: "National Food Conference 2026",
-    description: "Two-day hybrid conference with Keynote lectures, technical sessions, and award presentations."
+    description: "Two-day hybrid conference featuring 3 Technical Sessions (Oral) & 1 Poster Session."
   }
 ];
 
 export const HIGHLIGHTS: HighlightItem[] = [
   {
     title: "Keynote & Invited Lectures",
-    description: "Distinguished talks by eminent leaders from premier national institutes, research laboratories, and global food corporations.",
+    description: "Distinguished talks by eminent leaders from premier national institutes, CSIR, ICAR, NABI, and food corporations.",
     icon: "Presentation",
     badge: "Plenary"
   },
   {
-    title: "Technical Sessions",
-    description: "In-depth parallel sessions covering 10 core thematic areas of food science, engineering, and digital agriculture.",
+    title: "3 Oral Technical Sessions",
+    description: "Three parallel oral presentation sessions covering 10 core thematic areas of food science and engineering.",
     icon: "Layers",
-    badge: "Scientific"
+    badge: "3 Sessions"
   },
   {
-    title: "Oral & Poster Presentations",
-    description: "Vibrant forums for scientists, scholars, and students to showcase novel research findings both physically and virtually.",
+    title: "1 Dedicated Poster Session",
+    description: "Interactive poster presentation forum for researchers, students, and scholars to exhibit scientific findings.",
     icon: "Sparkles",
-    badge: "Hybrid"
+    badge: "1 Session"
   },
   {
     title: "Industry–Academia Interaction",
@@ -205,8 +231,8 @@ export const HIGHLIGHTS: HighlightItem[] = [
     badge: "Networking"
   },
   {
-    title: "Best Presentation Awards",
-    description: "Prestigious recognition and monetary/certificate awards for the best oral and poster scientific presentations.",
+    title: "Best Oral & Poster Awards",
+    description: "Prestigious awards and mementos presented for the best oral and poster scientific presentations.",
     icon: "Trophy",
     badge: "Awards"
   }
@@ -219,9 +245,9 @@ export const ABSTRACT_GUIDELINES = {
   requirements: [
     "Original research work relevant to the conference theme.",
     "Concise bold title in 12 pt Times New Roman.",
-    "Full author names, institutional affiliations, and corresponding author email.",
-    "3 to 5 relevant keywords.",
-    "Submission exclusively via official Google Form submission portal."
+    "Full author names, institutional affiliations, and 3-5 keywords.",
+    "Abstract should be submitted through official Google Form.",
+    "Deadline for Abstract Submission: October 4, 2026."
   ]
 };
 
@@ -229,7 +255,7 @@ export const SLIET_DETAILS = {
   established: "1989",
   deemedStatus: "2007",
   campusSize: "451 Acres",
-  description: "Sant Longowal Institute of Engineering & Technology (SLIET), Longowal, was established in 1989 by the Government of India with the vision of imparting quality technical education and fostering excellence in emerging areas of engineering and technology. An autonomous, fully Government of India-funded institution, SLIET was accorded Deemed-to-be-University status in 2007. Located in a sprawling 451 acres of lush green land of Punjab, about 7 km from the Chandigarh-Bathinda highway in District Sangrur.",
+  description: "Established by India's Ministry of Education in 1989, SLIET Longowal is a premier CFTI & Deemed University in Punjab. Spread across 451 acres of lush green campus, SLIET is known for its modular structure and academic excellence, earning NAAC 'A' accreditation, Tier-1 NBA-accredited UG programs, and 79th NIRF Engineering ranking.",
   distances: [
     { place: "Sangrur", distance: "18 Km", type: "road" },
     { place: "Barnala", distance: "30 Km", type: "road" },
@@ -275,7 +301,8 @@ export const COMMITTEE_MEMBERS: CommitteeMember[] = [
     designation: "Head of Department (FET)",
     institution: "SLIET Longowal",
     category: "Chair",
-    avatarInitials: "CR"
+    avatarInitials: "CR",
+    phone: "98159-69140"
   },
   {
     name: "Prof. D. C. Saxena",
@@ -291,7 +318,8 @@ export const COMMITTEE_MEMBERS: CommitteeMember[] = [
     designation: "Professor, Department of FET",
     institution: "SLIET Longowal",
     category: "Secretary",
-    avatarInitials: "SS"
+    avatarInitials: "SS",
+    phone: "98159-80334"
   },
   {
     name: "Prof. Navdeep Jindal",
@@ -299,7 +327,8 @@ export const COMMITTEE_MEMBERS: CommitteeMember[] = [
     designation: "Professor, Department of FET",
     institution: "SLIET Longowal",
     category: "Secretary",
-    avatarInitials: "NJ"
+    avatarInitials: "NJ",
+    phone: "98159-82026"
   },
 
   // National Advisory Committee
@@ -374,5 +403,14 @@ export const COMMITTEE_MEMBERS: CommitteeMember[] = [
     category: "Advisory",
     avatarInitials: "PG",
     location: "India"
+  },
+  {
+    name: "Mr. Sartaj Singh Brar",
+    role: "National Advisory Committee",
+    designation: "Managing Director",
+    institution: "Pagro Frozen Foods Pvt. Ltd.",
+    category: "Advisory",
+    avatarInitials: "SB",
+    location: "Punjab"
   }
 ];
