@@ -46,7 +46,7 @@ export const Hero: React.FC<HeroProps> = ({ onOpenAbstractModal }) => {
 
             {/* Description Text */}
             <p className="text-xs sm:text-sm text-stone-600 max-w-xl leading-relaxed">
-              Jointly organised by <strong className="text-stone-900 font-semibold">AFST- Longowal Chapter</strong> &amp; <strong className="text-stone-900 font-semibold">Department of Food Engineering and Technology</strong>, Sant Longowal Institute of Engineering and Technology (SLIET), Longowal, Punjab.
+              Jointly organised by <strong className="text-stone-900 font-semibold">AFSTI Longowal Chapter</strong> &amp; <strong className="text-stone-900 font-semibold">Department of Food Engineering and Technology</strong>, Sant Longowal Institute of Engineering and Technology (SLIET), Longowal, Punjab.
             </p>
 
             {/* Key Event Meta (Dates & Venue Pills) */}
@@ -61,19 +61,19 @@ export const Hero: React.FC<HeroProps> = ({ onOpenAbstractModal }) => {
               </div>
             </div>
 
-            {/* Dual CTA Buttons */}
+            {/* Dual CTA Buttons with Apple-Styled Primary Button */}
             <div className="flex flex-wrap items-center gap-4 pt-2">
               <button
                 onClick={onOpenAbstractModal}
-                className="inline-flex items-center gap-2.5 px-6 py-3 rounded-xl text-xs font-bold bg-[#E86024] hover:bg-[#d4521a] text-white shadow-md shadow-orange-500/20 transition-all transform hover:-translate-y-0.5 tracking-wider uppercase"
+                className="inline-flex items-center gap-2.5 px-7 py-3 rounded-full text-xs font-bold text-white bg-gradient-to-b from-[#ff6b35] via-[#E86024] to-[#d64f18] shadow-[0_8px_25px_-4px_rgba(232,96,36,0.5)] border border-white/30 hover:shadow-[0_10px_30px_-2px_rgba(232,96,36,0.65)] hover:scale-[1.04] active:scale-[0.96] transition-all duration-300 ease-out tracking-wider uppercase"
               >
-                <Send className="w-4 h-4" />
-                Submit Abstract (Oct 4)
+                <Send className="w-4 h-4 text-white/90" />
+                <span>Submit Abstract (Oct 4)</span>
               </button>
 
               <a
                 href="#registration"
-                className="inline-flex items-center gap-2 px-6 py-3 rounded-xl text-xs font-bold bg-white hover:bg-stone-100 text-stone-900 border border-stone-300 shadow-xs transition-all tracking-wider uppercase"
+                className="inline-flex items-center gap-2 px-6 py-3 rounded-full text-xs font-bold bg-white hover:bg-stone-50 text-stone-900 border border-stone-300 shadow-sm hover:border-amber-400 hover:scale-[1.02] active:scale-[0.98] transition-all duration-300 tracking-wider uppercase"
               >
                 <CreditCard className="w-4 h-4 text-amber-700" />
                 <span>Fees &amp; Registration</span>
@@ -101,7 +101,7 @@ export const Hero: React.FC<HeroProps> = ({ onOpenAbstractModal }) => {
                   </div>
                   <div>
                     <h4 className="text-xs font-bold text-stone-900 font-heading">3 Oral Technical Sessions + 1 Poster Session</h4>
-                    <p className="text-[11px] text-stone-500">Hybrid In-Person &amp; Virtual Presentations</p>
+                    <p className="text-[11px] text-stone-600 font-medium">Hybrid- In-Person &amp; Virtual Presentations</p>
                   </div>
                 </div>
 
@@ -144,7 +144,7 @@ export const Hero: React.FC<HeroProps> = ({ onOpenAbstractModal }) => {
                 3 Oral Sessions &amp; 1 Poster Session
               </h3>
               <p className="text-[11px] text-stone-500 leading-relaxed">
-                Structured oral &amp; poster presentation tracks evaluated by an expert jury.
+                Structured oral &amp; poster presentation sessions evaluated by an expert jury.
               </p>
             </div>
           </div>

@@ -1,5 +1,5 @@
 import React from 'react';
-import { Presentation, Layers, Sparkles, Users, Trophy, Award, CheckCircle } from 'lucide-react';
+import { Presentation, Layers, Sparkles, Users, Trophy, Award } from 'lucide-react';
 import { HIGHLIGHTS } from '../data/conferenceData';
 
 export const Highlights: React.FC = () => {
@@ -10,6 +10,7 @@ export const Highlights: React.FC = () => {
       case 'Sparkles': return <Sparkles className="w-6 h-6 text-orange-600" />;
       case 'Users': return <Users className="w-6 h-6 text-cyan-700" />;
       case 'Trophy': return <Trophy className="w-6 h-6 text-amber-600" />;
+      case 'Award': return <Award className="w-6 h-6 text-[#E86024]" />;
       default: return <Award className="w-6 h-6 text-amber-700" />;
     }
   };
@@ -27,19 +28,19 @@ export const Highlights: React.FC = () => {
             Key Conference <span className="italic text-amber-700">Highlights</span> &amp; Activities
           </h2>
           <p className="text-sm text-stone-600 mt-3">
-            Designed for high-impact knowledge exchange, scientific dissemination, and awards recognition.
+            Designed for high-impact knowledge exchange, scientific dissemination, and recognition.
           </p>
           <div className="w-16 h-1 bg-gradient-to-r from-amber-600 to-emerald-600 mx-auto mt-4 rounded-full" />
         </div>
 
-        {/* Highlights Cards Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
+        {/* Highlights Cards Grid (6 Cards 3x2) */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {HIGHLIGHTS.map((item, idx) => (
             <div
               key={idx}
               className={`editorial-card rounded-2xl p-6 border transition-all ${
-                item.badge === 'Awards'
-                  ? 'border-amber-400 bg-gradient-to-b from-amber-50/60 to-orange-50/40 shadow-sm'
+                item.badge === 'Awards' || item.badge === 'Certificates'
+                  ? 'border-amber-400/80 bg-white shadow-xs'
                   : 'border-stone-200 hover:border-stone-300'
               }`}
             >
@@ -52,6 +53,8 @@ export const Highlights: React.FC = () => {
                   <span className={`text-[10px] uppercase font-bold tracking-wider px-2.5 py-1 rounded-full border ${
                     item.badge === 'Awards'
                       ? 'bg-amber-100 text-amber-800 border-amber-300'
+                      : item.badge === 'Certificates'
+                      ? 'bg-emerald-100 text-emerald-800 border-emerald-300'
                       : 'bg-stone-100 text-stone-600 border-stone-300'
                   }`}>
                     {item.badge}
@@ -68,30 +71,6 @@ export const Highlights: React.FC = () => {
               </p>
             </div>
           ))}
-        </div>
-
-        {/* Award Highlight Banner */}
-        <div className="pastel-gradient-card rounded-2xl p-6 sm:p-8 relative overflow-hidden">
-          <div className="flex flex-col md:flex-row items-center justify-between gap-6">
-            <div className="flex items-center gap-4">
-              <div className="w-14 h-14 rounded-2xl bg-amber-500/20 border border-amber-500/40 flex items-center justify-center text-amber-800 shrink-0 shadow-sm">
-                <Trophy className="w-7 h-7" />
-              </div>
-              <div className="text-left">
-                <h4 className="text-xl font-bold text-stone-950 font-serif-editorial">
-                  Best Oral &amp; Poster Presentation Awards
-                </h4>
-                <p className="text-xs text-stone-700 mt-1 max-w-xl">
-                  Outstanding research presentations across all technical sessions will be evaluated by an expert scientific jury and awarded certificates &amp; honours during the valedictory session.
-                </p>
-              </div>
-            </div>
-
-            <div className="flex items-center gap-2 bg-white px-4 py-2.5 rounded-xl border border-amber-300 text-xs font-bold text-amber-900 shrink-0 shadow-xs">
-              <CheckCircle className="w-4 h-4 text-amber-600" />
-              <span>Certificates &amp; Mementos for Winners</span>
-            </div>
-          </div>
         </div>
 
       </div>

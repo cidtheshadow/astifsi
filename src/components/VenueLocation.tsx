@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
-import { MapPin, Car, Train, Plane, Building2, Compass, ExternalLink } from 'lucide-react';
-import { SLIET_DETAILS } from '../data/conferenceData';
+import { MapPin, Car, Train, Building2, Compass, ExternalLink, Landmark } from 'lucide-react';
+import { SLIET_DETAILS, NEARBY_ATTRACTIONS } from '../data/conferenceData';
 
 export const VenueLocation: React.FC = () => {
   const [activeTab, setActiveTab] = useState<'all' | 'road' | 'rail' | 'air'>('all');
@@ -29,7 +29,7 @@ export const VenueLocation: React.FC = () => {
         </div>
 
         {/* 2-Column Campus & Location Info */}
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start mb-14">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-stretch mb-14">
           
           {/* Left Column: SLIET Campus Spotlight (7 Cols) */}
           <div className="lg:col-span-7 editorial-card rounded-2xl p-6 sm:p-8 border border-stone-200 flex flex-col justify-between shadow-sm">
@@ -68,45 +68,33 @@ export const VenueLocation: React.FC = () => {
             </div>
           </div>
 
-          {/* Right Column: Key Transit Terminals (5 Cols) */}
-          <div className="lg:col-span-5 space-y-4">
-            
-            {/* Airports Card */}
-            <div className="editorial-card rounded-2xl p-5 border border-stone-200 shadow-sm">
-              <div className="flex items-center gap-3 mb-3">
-                <div className="w-9 h-9 rounded-xl bg-sky-100 border border-sky-300 flex items-center justify-center text-sky-700">
-                  <Plane className="w-4 h-4" />
+          {/* Right Column: Places to Visit Nearby (5 Cols) */}
+          <div className="lg:col-span-5 editorial-card rounded-2xl p-6 border border-stone-200 shadow-sm flex flex-col justify-between bg-white">
+            <div>
+              <div className="flex items-center gap-3 mb-4 border-b border-stone-200 pb-3">
+                <div className="w-10 h-10 rounded-xl bg-amber-100 border border-amber-300 flex items-center justify-center text-amber-800 shrink-0">
+                  <Landmark className="w-5 h-5" />
                 </div>
-                <h4 className="text-sm font-bold text-stone-900 font-heading">Nearest Airports</h4>
-              </div>
-              <ul className="space-y-1.5 text-xs text-stone-700">
-                {SLIET_DETAILS.airports.map((ap, idx) => (
-                  <li key={idx} className="flex items-center gap-2 bg-white px-3 py-2 rounded-lg border border-stone-200">
-                    <span className="w-1.5 h-1.5 rounded-full bg-sky-600" />
-                    <span>{ap}</span>
-                  </li>
-                ))}
-              </ul>
-            </div>
-
-            {/* Railway Stations Card */}
-            <div className="editorial-card rounded-2xl p-5 border border-stone-200 shadow-sm">
-              <div className="flex items-center gap-3 mb-3">
-                <div className="w-9 h-9 rounded-xl bg-amber-100 border border-amber-300 flex items-center justify-center text-amber-700">
-                  <Train className="w-4 h-4" />
+                <div>
+                  <h4 className="text-base font-bold text-stone-900 font-heading">Places to Visit Nearby</h4>
+                  <p className="text-[11px] text-stone-500">Popular tourist &amp; heritage attractions around SLIET</p>
                 </div>
-                <h4 className="text-sm font-bold text-stone-900 font-heading">Nearest Railway Stations</h4>
               </div>
-              <ul className="space-y-1.5 text-xs text-stone-700">
-                {SLIET_DETAILS.railways.map((rw, idx) => (
-                  <li key={idx} className="flex items-center gap-2 bg-white px-3 py-2 rounded-lg border border-stone-200">
-                    <span className="w-1.5 h-1.5 rounded-full bg-amber-600" />
-                    <span>{rw}</span>
-                  </li>
-                ))}
-              </ul>
-            </div>
 
+              <div className="space-y-3">
+                {NEARBY_ATTRACTIONS.map((spot, idx) => (
+                  <div key={idx} className="bg-stone-50 p-3 rounded-xl border border-stone-200 hover:border-amber-300 transition-colors">
+                    <div className="flex items-start justify-between gap-2 mb-1">
+                      <h5 className="text-xs font-bold text-stone-900 leading-snug">{spot.name}</h5>
+                      <span className="text-[10px] font-bold text-amber-800 bg-amber-100 px-2 py-0.5 rounded-full border border-amber-200 shrink-0">
+                        {spot.distance}
+                      </span>
+                    </div>
+                    <p className="text-[11px] text-stone-600 line-clamp-2 leading-relaxed">{spot.description}</p>
+                  </div>
+                ))}
+              </div>
+            </div>
           </div>
 
         </div>

@@ -19,12 +19,12 @@ export const Header: React.FC<HeaderProps> = ({ onOpenAbstractModal }) => {
 
   const navLinks = [
     { name: 'About', href: '#about' },
+    { name: 'Committee', href: '#committee' },
     { name: 'Focus Areas', href: '#themes' },
     { name: 'Highlights', href: '#highlights' },
     { name: 'Dates', href: '#dates' },
     { name: 'Registration & Fees', href: '#registration' },
     { name: 'Venue & Travel', href: '#venue' },
-    { name: 'Committee', href: '#committee' },
   ];
 
   return (
@@ -38,7 +38,7 @@ export const Header: React.FC<HeaderProps> = ({ onOpenAbstractModal }) => {
           
           {/* Logo / Brand */}
           <a href="#" className="flex items-center gap-3 group">
-            <div className="w-10 h-10 rounded-xl bg-amber-600/10 border border-amber-500/30 flex items-center justify-center text-amber-600 group-hover:scale-105 transition-transform shadow-sm">
+            <div className="w-10 h-10 rounded-2xl bg-amber-600/10 border border-amber-500/30 flex items-center justify-center text-amber-600 group-hover:scale-105 transition-transform shadow-sm">
               <span className="text-xl">🌾</span>
             </div>
             <div>
@@ -66,14 +66,14 @@ export const Header: React.FC<HeaderProps> = ({ onOpenAbstractModal }) => {
             ))}
           </nav>
 
-          {/* Right Action Button */}
+          {/* Apple-styled Highlight CTA Button */}
           <div className="hidden sm:flex items-center gap-3">
             <button
               onClick={onOpenAbstractModal}
-              className="inline-flex items-center gap-2 px-5 py-2.5 rounded-lg text-xs font-bold bg-[#E86024] hover:bg-[#d4521a] text-white shadow-md shadow-orange-500/20 transition-all transform hover:-translate-y-0.5 active:translate-y-0 tracking-wide uppercase"
+              className="inline-flex items-center gap-2 px-6 py-2.5 rounded-full text-xs font-bold text-white bg-gradient-to-b from-[#ff6b35] via-[#E86024] to-[#d64f18] shadow-[0_6px_20px_-3px_rgba(232,96,36,0.45)] border border-white/30 hover:shadow-[0_8px_25px_-2px_rgba(232,96,36,0.6)] hover:scale-[1.04] active:scale-[0.96] transition-all duration-300 ease-out tracking-wider uppercase"
             >
-              <Send className="w-3.5 h-3.5" />
-              Submit Abstract
+              <Send className="w-3.5 h-3.5 text-white/90" />
+              <span>Submit Abstract</span>
             </button>
           </div>
 
@@ -111,7 +111,7 @@ export const Header: React.FC<HeaderProps> = ({ onOpenAbstractModal }) => {
                 setIsMobileMenuOpen(false);
                 onOpenAbstractModal();
               }}
-              className="w-full flex items-center justify-center gap-2 px-4 py-3 rounded-lg text-sm font-bold bg-[#E86024] hover:bg-[#d4521a] text-white transition-all shadow-md uppercase tracking-wider"
+              className="w-full flex items-center justify-center gap-2 px-4 py-3 rounded-full text-xs font-bold text-white bg-gradient-to-b from-[#ff6b35] via-[#E86024] to-[#d64f18] shadow-[0_6px_20px_-3px_rgba(232,96,36,0.45)] border border-white/30 hover:scale-[1.02] active:scale-[0.98] transition-all uppercase tracking-wider"
             >
               <Send className="w-4 h-4" />
               Submit Abstract

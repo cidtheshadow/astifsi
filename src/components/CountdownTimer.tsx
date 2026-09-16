@@ -15,12 +15,12 @@ export const CountdownTimer: React.FC = () => {
     abstract: {
       name: "Abstract Submission Deadline",
       dateStr: "2026-10-04T23:59:59",
-      formatted: "Oct 4, 2026"
+      formatted: "October 4, 2026"
     },
     conference: {
       name: "Conference Inauguration",
       dateStr: "2026-10-15T09:00:00",
-      formatted: "Oct 15, 2026"
+      formatted: "October 15, 2026"
     }
   };
 
@@ -59,7 +59,7 @@ export const CountdownTimer: React.FC = () => {
           }`}
         >
           <AlertCircle className="w-3.5 h-3.5" />
-          <span>Abstract Deadline (Oct 4)</span>
+          <span className="whitespace-nowrap">Abstract Deadline (Oct 4)</span>
         </button>
         <button
           onClick={() => setTargetType('conference')}
@@ -70,14 +70,15 @@ export const CountdownTimer: React.FC = () => {
           }`}
         >
           <Calendar className="w-3.5 h-3.5" />
-          <span>Conference Start (Oct 15)</span>
+          <span className="whitespace-nowrap">Conference Start (Oct 15)</span>
         </button>
       </div>
 
       <div className="text-center mb-3">
-        <p className="text-xs uppercase tracking-wider text-stone-500 font-semibold flex items-center justify-center gap-1.5">
-          <Clock className="w-3.5 h-3.5 text-amber-600" />
-          Countdown to {targets[targetType].name} ({targets[targetType].formatted})
+        <p className="text-[11px] sm:text-xs uppercase tracking-wider text-stone-500 font-semibold flex flex-wrap items-center justify-center gap-1">
+          <Clock className="w-3.5 h-3.5 text-amber-600 shrink-0" />
+          <span>Countdown to {targets[targetType].name}</span>
+          <span className="whitespace-nowrap font-bold text-stone-800">({targets[targetType].formatted})</span>
         </p>
       </div>
 

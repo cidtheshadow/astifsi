@@ -31,12 +31,12 @@ export function App() {
       <main>
         <Hero onOpenAbstractModal={handleOpenAbstractModal} />
         <AboutConference />
+        <Committee />
         <FocusAreas onOpenAbstractModal={handleOpenAbstractModal} />
         <Highlights />
         <ImportantDates onOpenAbstractModal={handleOpenAbstractModal} />
         <Registration onOpenAbstractModal={handleOpenAbstractModal} />
         <VenueLocation />
-        <Committee />
       </main>
 
       {/* Footer */}

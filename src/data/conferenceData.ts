@@ -46,6 +46,13 @@ export interface RegistrationFee {
   isDiscounted?: boolean;
 }
 
+export interface NearbyAttraction {
+  name: string;
+  distance: string;
+  description: string;
+  category: string;
+}
+
 export const CONFERENCE_INFO = {
   title: "NATIONAL FOOD CONFERENCE (AFSTINFC-2026)",
   shortCode: "AFSTINFC-2026",
@@ -232,9 +239,15 @@ export const HIGHLIGHTS: HighlightItem[] = [
   },
   {
     title: "Best Oral & Poster Awards",
-    description: "Prestigious awards and mementos presented for the best oral and poster scientific presentations.",
+    description: "Prestigious awards and mementos presented for the top oral and poster scientific research presentations.",
     icon: "Trophy",
     badge: "Awards"
+  },
+  {
+    title: "Certificates for Winners & Participants",
+    description: "Official certificates of participation awarded to all registered delegates, along with mementos & honors for award winners.",
+    icon: "Award",
+    badge: "Certificates"
   }
 ];
 
@@ -268,6 +281,33 @@ export const SLIET_DETAILS = {
   airports: ["Chandigarh Airport (IXC)", "Halwara Airport Ludhiana"],
   railways: ["Sangrur (18 Km)", "Barnala (30 Km)", "Dhuri (38 Km)"]
 };
+
+export const NEARBY_ATTRACTIONS: NearbyAttraction[] = [
+  {
+    name: "Banasar Bagh & Heritage Monuments",
+    distance: "18 Km (Sangrur)",
+    description: "Historic royal gardens, marble pavilions, and heritage architecture of the former Jind kingdom in Sangrur.",
+    category: "Heritage Garden"
+  },
+  {
+    name: "Qila Mubarak & Sheesh Mahal",
+    distance: "78 Km (Patiala)",
+    description: "Magnificent 18th-century grand fort, mirror palace gallery, and museum showcasing rich royal heritage.",
+    category: "Royal Fort & Museum"
+  },
+  {
+    name: "Sukhna Lake & Rock Garden",
+    distance: "150 Km (Chandigarh)",
+    description: "World-famous Nek Chand sculpture park crafted from recycled materials beside the serene foothills lake.",
+    category: "Architecture & Lake"
+  },
+  {
+    name: "Sri Harmandir Sahib (Golden Temple)",
+    distance: "210 Km (Amritsar)",
+    description: "Spiritual center and world-renowned gilded sanctuary surrounded by the sacred Amrit Sarovar.",
+    category: "Spiritual Landmark"
+  }
+];
 
 export const COMMITTEE_MEMBERS: CommitteeMember[] = [
   // Patrons & Chairs

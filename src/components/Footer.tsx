@@ -30,7 +30,7 @@ export const Footer: React.FC<FooterProps> = ({ onOpenAbstractModal }) => {
 
           <button
             onClick={onOpenAbstractModal}
-            className="whitespace-nowrap px-6 py-3 rounded-xl text-xs font-bold bg-[#E86024] hover:bg-[#d4521a] text-white transition-colors shadow-sm uppercase tracking-wider flex items-center gap-2"
+            className="whitespace-nowrap px-6 py-3 rounded-full text-xs font-bold text-white bg-gradient-to-b from-[#ff6b35] via-[#E86024] to-[#d64f18] shadow-[0_6px_20px_-3px_rgba(232,96,36,0.45)] border border-white/30 hover:scale-[1.03] active:scale-[0.97] transition-all uppercase tracking-wider flex items-center gap-2"
           >
             <Send className="w-4 h-4" />
             Submit Abstract Now
@@ -46,26 +46,27 @@ export const Footer: React.FC<FooterProps> = ({ onOpenAbstractModal }) => {
               <div className="w-8 h-8 rounded-lg bg-amber-100 flex items-center justify-center text-amber-800 font-bold">
                 🌾
               </div>
-              <span className="font-bold text-base text-stone-900 font-heading">NFC 2026</span>
+              <span className="font-bold text-base text-stone-900 font-heading">AFSTINFC-2026</span>
             </div>
             <p className="text-xs text-stone-600 leading-relaxed mb-4">
-              National Food Conference 2026 (Hybrid Mode) themed "Innovate Today. Nourish Tomorrow", organized by AFST(I) Longowal Chapter &amp; Department of FET, SLIET Longowal, Punjab.
+              National Food Conference 2026 (Hybrid Mode) themed "Innovate Today. Nourish Tomorrow", jointly organized by AFSTI Longowal Chapter &amp; Department of FET, SLIET Longowal, Punjab.
             </p>
             <div className="text-[11px] font-semibold text-amber-800 bg-amber-100 px-3 py-1.5 rounded-lg border border-amber-300 inline-block">
               15–16 October 2026 • Hybrid Mode
             </div>
           </div>
 
-          {/* Col 2: Quick Links */}
+          {/* Col 2: Quick Links (Updated Order) */}
           <div>
             <h4 className="text-sm font-bold text-stone-900 mb-4 font-heading">Quick Navigation</h4>
             <ul className="space-y-2 text-xs">
               <li><a href="#about" className="hover:text-amber-700 transition-colors">About Conference</a></li>
+              <li><a href="#committee" className="hover:text-amber-700 transition-colors">Organizing Committee</a></li>
               <li><a href="#themes" className="hover:text-amber-700 transition-colors">10 Key Focus Areas</a></li>
               <li><a href="#highlights" className="hover:text-amber-700 transition-colors">Conference Highlights &amp; Awards</a></li>
               <li><a href="#dates" className="hover:text-amber-700 transition-colors">Important Dates &amp; Deadlines</a></li>
+              <li><a href="#registration" className="hover:text-amber-700 transition-colors">Registration &amp; Fees</a></li>
               <li><a href="#venue" className="hover:text-amber-700 transition-colors">Venue &amp; Travel Matrix</a></li>
-              <li><a href="#committee" className="hover:text-amber-700 transition-colors">Organizing Committee</a></li>
             </ul>
           </div>
 
@@ -73,7 +74,7 @@ export const Footer: React.FC<FooterProps> = ({ onOpenAbstractModal }) => {
           <div>
             <h4 className="text-sm font-bold text-stone-900 mb-4 font-heading">Organizing Bodies</h4>
             <ul className="space-y-2 text-xs text-stone-700">
-              <li className="font-semibold text-amber-800">AFST(I) Longowal Chapter</li>
+              <li className="font-semibold text-amber-800">AFSTI Longowal Chapter</li>
               <li>Department of Food Engineering &amp; Technology</li>
               <li className="text-stone-600">Sant Longowal Institute of Engineering &amp; Technology (SLIET), Longowal</li>
               <li className="pt-2 text-stone-600 border-t border-stone-200">
@@ -92,7 +93,7 @@ export const Footer: React.FC<FooterProps> = ({ onOpenAbstractModal }) => {
               </div>
               <div className="flex items-center gap-2">
                 <Mail className="w-4 h-4 text-amber-700 shrink-0" />
-                <span>nfc2026@sliet.ac.in</span>
+                <span>afstinfc2026@sliet.ac.in</span>
               </div>
               <div className="flex items-center gap-2">
                 <Phone className="w-4 h-4 text-amber-700 shrink-0" />
@@ -105,7 +106,7 @@ export const Footer: React.FC<FooterProps> = ({ onOpenAbstractModal }) => {
 
         {/* Bottom Copyright & Back to Top */}
         <div className="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-stone-500">
-          <p>© 2026 National Food Conference (NFC 2026). All Rights Reserved. SLIET Longowal &amp; AFST(I).</p>
+          <p>© 2026 National Food Conference (AFSTINFC-2026). All Rights Reserved. SLIET Longowal &amp; AFST(I).</p>
 
           <button
             onClick={scrollToTop}

@@ -3,14 +3,12 @@ import { MapPin, Building2 } from 'lucide-react';
 import { COMMITTEE_MEMBERS, type CommitteeMember } from '../data/conferenceData';
 
 export const Committee: React.FC = () => {
-  const [activeCategory, setActiveCategory] = useState<'all' | 'organizing' | 'advisory'>('organizing');
+  const [activeCategory, setActiveCategory] = useState<'organizing' | 'advisory'>('organizing');
 
   const organizingMembers = COMMITTEE_MEMBERS.filter(m => m.category !== 'Advisory');
   const advisoryMembers = COMMITTEE_MEMBERS.filter(m => m.category === 'Advisory');
 
-  const displayedMembers: CommitteeMember[] = activeCategory === 'all' 
-    ? COMMITTEE_MEMBERS 
-    : activeCategory === 'organizing' 
+  const displayedMembers: CommitteeMember[] = activeCategory === 'organizing' 
     ? organizingMembers 
     : advisoryMembers;
 
@@ -41,12 +39,11 @@ export const Committee: React.FC = () => {
           <div className="w-16 h-1 bg-gradient-to-r from-amber-600 to-emerald-600 mx-auto mt-4 rounded-full" />
         </div>
 
-        {/* Category Tabs */}
+        {/* Category Tabs (Organizing Committee & National Advisory Board) */}
         <div className="flex items-center justify-center gap-2 mb-12">
           {[
             { key: 'organizing', label: 'Organizing Committee', count: organizingMembers.length },
-            { key: 'advisory', label: 'National Advisory Board', count: advisoryMembers.length },
-            { key: 'all', label: 'All Members', count: COMMITTEE_MEMBERS.length }
+            { key: 'advisory', label: 'National Advisory Board', count: advisoryMembers.length }
           ].map(tab => (
             <button
               key={tab.key}
