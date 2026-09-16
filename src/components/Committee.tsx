@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { MapPin, Building2, Crown, Shield, Award, UserCheck, Star } from 'lucide-react';
+import { MapPin, Building2, Crown, Shield, Award, UserCheck, Star, Phone } from 'lucide-react';
 import { COMMITTEE_MEMBERS, type CommitteeMember } from '../data/conferenceData';
 
 export const Committee: React.FC = () => {
@@ -21,9 +21,17 @@ export const Committee: React.FC = () => {
     <div className="editorial-card editorial-card-hover rounded-2xl p-5 border border-stone-200 flex flex-col justify-between shadow-xs h-full bg-white">
       <div>
         <div className="flex items-start justify-between gap-3 mb-3">
-          <div className="w-11 h-11 rounded-xl bg-stone-100 border border-stone-300 flex items-center justify-center font-bold text-sm text-stone-900 font-heading shrink-0">
-            {member.avatarInitials}
-          </div>
+          {member.image ? (
+            <img
+              src={member.image}
+              alt={member.name}
+              className="w-12 h-12 rounded-xl object-cover border border-stone-300 shadow-xs shrink-0"
+            />
+          ) : (
+            <div className="w-11 h-11 rounded-xl bg-stone-100 border border-stone-300 flex items-center justify-center font-bold text-sm text-stone-900 font-heading shrink-0">
+              {member.avatarInitials}
+            </div>
+          )}
 
           <span className={`text-[10px] font-bold uppercase tracking-wider px-2.5 py-1 rounded-full border ${getRoleBadgeStyle(member.category)}`}>
             {member.role}
@@ -44,12 +52,24 @@ export const Committee: React.FC = () => {
         </p>
       </div>
 
-      {member.location && (
-        <div className="mt-4 pt-3 border-t border-stone-200 text-[11px] text-stone-500 flex items-center gap-1">
-          <MapPin className="w-3 h-3 text-stone-400" />
-          <span>{member.location}</span>
-        </div>
-      )}
+      <div className="space-y-1 mt-4">
+        {member.phone && (
+          <a
+            href={`tel:${member.phone.replace(/[^0-9+]/g, '')}`}
+            className="pt-2.5 border-t border-stone-200 text-xs font-bold text-amber-800 hover:text-amber-900 flex items-center gap-1.5 transition-colors"
+          >
+            <Phone className="w-3.5 h-3.5 text-amber-600 shrink-0" />
+            <span>+91 {member.phone}</span>
+          </a>
+        )}
+
+        {member.location && (
+          <div className={`${member.phone ? '' : 'pt-2.5 border-t border-stone-200'} text-[11px] text-stone-500 flex items-center gap-1`}>
+            <MapPin className="w-3 h-3 text-stone-400" />
+            <span>{member.location}</span>
+          </div>
+        )}
+      </div>
     </div>
   );
 

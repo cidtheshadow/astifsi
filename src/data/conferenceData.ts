@@ -23,6 +23,7 @@ export interface CommitteeMember {
   institution: string;
   category: 'Patron' | 'Chair' | 'Secretary' | 'Advisory';
   avatarInitials: string;
+  image?: string;
   location?: string;
   phone?: string;
 }
