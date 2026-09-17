@@ -334,7 +334,8 @@ export const COMMITTEE_MEMBERS: CommitteeMember[] = [
     designation: "President",
     institution: "AFST(I), Mysuru",
     category: "Patron",
-    avatarInitials: "PP"
+    avatarInitials: "PP",
+    image: "/organizers/ps-panesar.jpeg"
   },
   {
     name: "Prof. C. S. Riar",
@@ -343,7 +344,8 @@ export const COMMITTEE_MEMBERS: CommitteeMember[] = [
     institution: "SLIET Longowal",
     category: "Chair",
     avatarInitials: "CR",
-    phone: "98159-69140"
+    phone: "98159-69140",
+    image: "/organizers/cs-riar.jpeg"
   },
   {
     name: "Prof. D. C. Saxena",
@@ -351,7 +353,8 @@ export const COMMITTEE_MEMBERS: CommitteeMember[] = [
     designation: "President, AFST(I) Longowal Chapter",
     institution: "SLIET Longowal",
     category: "Chair",
-    avatarInitials: "DS"
+    avatarInitials: "DS",
+    image: "/organizers/dc-saxena.jpeg"
   },
   {
     name: "Prof. Sukhcharn Singh",
@@ -360,7 +363,8 @@ export const COMMITTEE_MEMBERS: CommitteeMember[] = [
     institution: "SLIET Longowal",
     category: "Secretary",
     avatarInitials: "SS",
-    phone: "98159-80334"
+    phone: "98159-80334",
+    image: "/organizers/sukhcharn-singh.jpeg"
   },
   {
     name: "Prof. Navdeep Jindal",
@@ -369,7 +373,8 @@ export const COMMITTEE_MEMBERS: CommitteeMember[] = [
     institution: "SLIET Longowal",
     category: "Secretary",
     avatarInitials: "NJ",
-    phone: "98159-82026"
+    phone: "98159-82026",
+    image: "/organizers/navdeep-jindal.jpeg"
   },
 
   // National Advisory Committee
@@ -380,7 +385,8 @@ export const COMMITTEE_MEMBERS: CommitteeMember[] = [
     institution: "DFRL Mysuru",
     category: "Advisory",
     avatarInitials: "AB",
-    location: "Mysuru"
+    location: "Mysuru",
+    image: "/organizers/as-bawa.jpeg"
   },
   {
     name: "Prof. Sudesh Kumar Yadav",
@@ -389,7 +395,8 @@ export const COMMITTEE_MEMBERS: CommitteeMember[] = [
     institution: "CSIR-IHBT, Palampur",
     category: "Advisory",
     avatarInitials: "SY",
-    location: "Palampur"
+    location: "Palampur",
+    image: "/organizers/sudesh-kumar-yadav.jpeg"
   },
   {
     name: "Prof. Nachiket Kotwaliwale",
@@ -398,7 +405,8 @@ export const COMMITTEE_MEMBERS: CommitteeMember[] = [
     institution: "ICAR-CIPHET, Ludhiana",
     category: "Advisory",
     avatarInitials: "NK",
-    location: "Ludhiana"
+    location: "Ludhiana",
+    image: "/organizers/nachiket-kotwaliwale.jpeg"
   },
   {
     name: "Prof. Ashwani Pareek",
@@ -407,7 +415,8 @@ export const COMMITTEE_MEMBERS: CommitteeMember[] = [
     institution: "NABI, Mohali",
     category: "Advisory",
     avatarInitials: "AP",
-    location: "Mohali"
+    location: "Mohali",
+    image: "/organizers/ashwani-pareek.jpeg"
   },
   {
     name: "Dr. Nilesh Amritkar",
@@ -416,7 +425,8 @@ export const COMMITTEE_MEMBERS: CommitteeMember[] = [
     institution: "Envirocare Labs",
     category: "Advisory",
     avatarInitials: "NA",
-    location: "Mumbai"
+    location: "Mumbai",
+    image: "/organizers/nilesh-amritkar.jpeg"
   },
   {
     name: "Prof. Ashok Kumar",
@@ -425,7 +435,8 @@ export const COMMITTEE_MEMBERS: CommitteeMember[] = [
     institution: "PAU Ludhiana",
     category: "Advisory",
     avatarInitials: "AK",
-    location: "Ludhiana"
+    location: "Ludhiana",
+    image: "/organizers/ashok-kumar.jpeg"
   },
   {
     name: "Prof. Rakesh Sharda",
@@ -443,7 +454,8 @@ export const COMMITTEE_MEMBERS: CommitteeMember[] = [
     institution: "Newly Weds Foods LLC",
     category: "Advisory",
     avatarInitials: "PG",
-    location: "India"
+    location: "India",
+    image: "/organizers/parmdeep-ghuman.jpeg"
   },
   {
     name: "Mr. Sartaj Singh Brar",

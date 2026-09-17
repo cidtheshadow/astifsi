@@ -38,8 +38,10 @@ export const Header: React.FC<HeaderProps> = ({ onOpenAbstractModal }) => {
           
           {/* Logo / Brand */}
           <a href="#" className="flex items-center gap-3 group">
-            <div className="w-10 h-10 rounded-2xl bg-amber-600/10 border border-amber-500/30 flex items-center justify-center text-amber-600 group-hover:scale-105 transition-transform shadow-sm">
-              <span className="text-xl">🌾</span>
+            <div className="flex items-center gap-1.5">
+              <img src="/logos/sliet-logo.jpeg" alt="SLIET Logo" className="h-9 w-auto rounded-lg border border-stone-200 bg-white p-0.5 object-contain shadow-2xs" />
+              <img src="/logos/afsti-longowal-logo.jpeg" alt="AFSTI Longowal" className="h-9 w-auto rounded-lg border border-stone-200 bg-white p-0.5 object-contain shadow-2xs" />
+              <img src="/logos/afsti-mysuru-logo.jpeg" alt="AFSTI Mysuru" className="h-9 w-auto rounded-lg border border-stone-200 bg-white p-0.5 object-contain shadow-2xs" />
             </div>
             <div>
               <div className="flex items-center gap-2">

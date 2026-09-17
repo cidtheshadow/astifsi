@@ -22,10 +22,20 @@ export const Hero: React.FC<HeroProps> = ({ onOpenAbstractModal }) => {
           {/* Left Column (7 Cols): Headline, Theme, CTAs */}
           <div className="lg:col-span-7 space-y-5">
             
-            {/* Top Occasion Pill */}
-            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full text-xs font-semibold bg-amber-100/90 text-amber-900 border border-amber-300 shadow-2xs">
-              <Sparkles className="w-3.5 h-3.5 text-amber-700" />
-              <span>AFST(I), Mysuru Sponsored Flagship Conference</span>
+            {/* Top Occasion & Official Organizers Logos */}
+            <div className="flex flex-wrap items-center gap-3">
+              <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full text-xs font-semibold bg-amber-100/90 text-amber-900 border border-amber-300 shadow-2xs">
+                <Sparkles className="w-3.5 h-3.5 text-amber-700" />
+                <span>AFST(I), Mysuru Sponsored Flagship Conference</span>
+              </div>
+
+              <div className="flex items-center gap-2 bg-white px-3 py-1 rounded-full border border-stone-200 shadow-2xs">
+                <img src="/logos/sliet-logo.jpeg" alt="SLIET Logo" className="h-6 w-auto rounded object-contain" />
+                <span className="text-[10px] font-bold text-stone-300">•</span>
+                <img src="/logos/afsti-longowal-logo.jpeg" alt="AFSTI Longowal Logo" className="h-6 w-auto rounded object-contain" />
+                <span className="text-[10px] font-bold text-stone-300">•</span>
+                <img src="/logos/afsti-mysuru-logo.jpeg" alt="AFSTI Mysuru Logo" className="h-6 w-auto rounded object-contain" />
+              </div>
             </div>
 
             {/* Headline with clean inline accent badge */}
