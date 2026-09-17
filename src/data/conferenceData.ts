@@ -318,7 +318,8 @@ export const COMMITTEE_MEMBERS: CommitteeMember[] = [
     designation: "Director",
     institution: "SLIET Longowal",
     category: "Patron",
-    avatarInitials: "MP"
+    avatarInitials: "MP",
+    image: "/organizers/mk-paswan.jpeg"
   },
   {
     name: "Prof. A. S. Shahi",
@@ -326,7 +327,8 @@ export const COMMITTEE_MEMBERS: CommitteeMember[] = [
     designation: "Dean (Academic)",
     institution: "SLIET Longowal",
     category: "Patron",
-    avatarInitials: "AS"
+    avatarInitials: "AS",
+    image: "/organizers/as-shahi.jpeg"
   },
   {
     name: "Prof. P. S. Panesar",
@@ -445,7 +447,8 @@ export const COMMITTEE_MEMBERS: CommitteeMember[] = [
     institution: "ICAR-CIPHET, Ludhiana",
     category: "Advisory",
     avatarInitials: "RS",
-    location: "Ludhiana"
+    location: "Ludhiana",
+    image: "/organizers/rakesh-sharda.jpeg"
   },
   {
     name: "Er. Parmdeep Ghuman",
@@ -464,6 +467,7 @@ export const COMMITTEE_MEMBERS: CommitteeMember[] = [
     institution: "Pagro Frozen Foods Pvt. Ltd.",
     category: "Advisory",
     avatarInitials: "SB",
-    location: "Punjab"
+    location: "Punjab",
+    image: "/organizers/sartaj-brar.jpeg"
   }
 ];
