@@ -532,6 +532,7 @@ export const WFD_CELEBRATIONS_DATA = {
         { name: "Bharat Bhushan", designation: "Ph.D. Scholar", phone: "62975-31362" },
         { name: "Amisha Kaushik", designation: "Ph.D. Scholar", phone: "83073-52267" }
       ],
+      image: "/wfd/unofficial-poster.png",
       iconName: "BookOpen"
     },
     {
@@ -545,6 +546,7 @@ export const WFD_CELEBRATIONS_DATA = {
       ],
       coordinator: "Pallavi Sharma (Ph.D. Research Scholar)",
       members: ["Satyarth Saindhaw", "Sparsh Parmar", "Mohit Nagar", "Jasmine Saini", "Satrudhan (M.Tech)", "Shubhankar (M.Tech)"],
+      image: "/wfd/unofficial-poster.png",
       iconName: "Utensils"
     },
     {
@@ -558,6 +560,7 @@ export const WFD_CELEBRATIONS_DATA = {
       ],
       coordinator: "Amandeep Singh (Ph.D. Research Scholar)",
       members: ["Riya Goyal", "Ambika Thakur", "Armandeep Kaur", "Rupali (M.Tech)", "Tarunpreet (M.Tech)"],
+      image: "/wfd/unofficial-poster.png",
       iconName: "Presentation"
     },
     {
@@ -573,6 +576,7 @@ export const WFD_CELEBRATIONS_DATA = {
       phone: "72756-90956",
       email: "tanya.sonker.3@gmail.com",
       members: ["Poonam Patil", "Gunjan Thakur", "Ramanjot Kaur", "Avani Sharma (M.Tech)", "Apurba Mishra (M.Tech)"],
+      image: "/wfd/scan-to-register.png",
       iconName: "HelpCircle"
     },
     {
@@ -586,6 +590,7 @@ export const WFD_CELEBRATIONS_DATA = {
       ],
       coordinator: "Divyanshi Thakur (Ph.D. Research Scholar)",
       members: ["Heena", "Sunil Kumar", "Ashmita Mittal", "Shubham Thakur (M.Tech)", "Dilpreet (M.Tech)"],
+      image: "/wfd/scan-to-register.png",
       iconName: "Palette"
     },
     {
