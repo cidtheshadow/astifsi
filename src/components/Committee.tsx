@@ -22,34 +22,34 @@ export const Committee: React.FC<CommitteeProps> = ({ onNavigateDepartmental }) 
   const MemberCard: React.FC<{ member: CommitteeMember }> = ({ member }) => (
     <div className="bg-[#FDFBF7] rounded-2xl p-5 border border-[#E8DEC8] flex flex-col justify-between shadow-2xs hover:shadow-md transition-shadow h-full">
       <div>
-        <div className="flex items-start justify-between gap-3 mb-3">
+        <div className="flex items-start justify-between gap-3 mb-4">
           {member.image ? (
             <img
               src={member.image}
               alt={member.name}
-              className="w-12 h-12 rounded-xl object-cover border border-[#E8DEC8] shadow-2xs shrink-0"
+              className="w-16 h-16 sm:w-20 sm:h-20 rounded-2xl object-cover border-2 border-[#E8DEC8] shadow-sm shrink-0"
             />
           ) : (
-            <div className="w-11 h-11 rounded-xl bg-[#F5EFE6] border border-[#E8DEC8] flex items-center justify-center font-bold text-sm text-[#580B1E] font-heading shrink-0">
+            <div className="w-16 h-16 sm:w-20 sm:h-20 rounded-2xl bg-[#F5EFE6] border-2 border-[#E8DEC8] flex items-center justify-center font-bold text-lg text-[#580B1E] font-heading shrink-0">
               {member.avatarInitials}
             </div>
           )}
 
-          <span className={`text-[10px] font-bold uppercase tracking-wider px-2.5 py-1 rounded-full border ${getRoleBadgeStyle(member.category)}`}>
+          <span className={`text-[10px] sm:text-xs font-bold uppercase tracking-widest px-3 py-1.5 rounded-full border whitespace-nowrap ${getRoleBadgeStyle(member.category)}`}>
             {member.role}
           </span>
         </div>
 
-        <h3 className="text-base font-bold text-[#580B1E] font-heading mb-1">
+        <h3 className="text-xl sm:text-2xl font-bold text-[#580B1E] font-heading mb-1.5 leading-tight">
           {member.name}
         </h3>
 
-        <p className="text-xs font-bold text-[#6B0F24] mb-1">
+        <p className="text-sm sm:text-base font-bold text-[#6B0F24] mb-3">
           {member.designation}
         </p>
 
-        <p className="text-xs text-[#52373D] leading-relaxed flex items-center gap-1.5 mt-2">
-          <Building2 className="w-3.5 h-3.5 text-[#580B1E]/60 shrink-0" />
+        <p className="text-sm text-[#52373D] leading-relaxed flex items-center gap-2">
+          <Building2 className="w-4 h-4 text-[#580B1E]/70 shrink-0" />
           <span>{member.institution}</span>
         </p>
       </div>
@@ -58,16 +58,16 @@ export const Committee: React.FC<CommitteeProps> = ({ onNavigateDepartmental }) 
         {member.phone && (
           <a
             href={`tel:${member.phone.replace(/[^0-9+]/g, '')}`}
-            className="pt-2.5 border-t border-[#E8DEC8] text-xs font-bold text-[#E67E22] hover:text-[#580B1E] flex items-center gap-1.5 transition-colors"
+            className="pt-3 border-t border-[#E8DEC8] text-sm font-bold text-[#E67E22] hover:text-[#580B1E] flex items-center gap-2 transition-colors"
           >
-            <Phone className="w-3.5 h-3.5 text-[#E67E22] shrink-0" />
+            <Phone className="w-4 h-4 text-[#E67E22] shrink-0" />
             <span>+91 {member.phone}</span>
           </a>
         )}
 
         {member.location && (
-          <div className={`${member.phone ? '' : 'pt-2.5 border-t border-[#E8DEC8]'} text-[11px] text-[#52373D] flex items-center gap-1`}>
-            <MapPin className="w-3 h-3 text-[#580B1E]/60" />
+          <div className={`${member.phone ? '' : 'pt-3 border-t border-[#E8DEC8]'} text-xs text-[#52373D] flex items-center gap-1.5`}>
+            <MapPin className="w-3.5 h-3.5 text-[#580B1E]/60" />
             <span>{member.location}</span>
           </div>
         )}
