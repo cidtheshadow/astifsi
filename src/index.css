@@ -1,10 +1,6 @@
 @import "tailwindcss";
 
 @layer base {
-  html {
-    font-size: 115%; /* 20% font size boost for maximum readability */
-  }
-
   body {
     font-family: 'Plus Jakarta Sans', sans-serif;
     background-color: #FAF8F5;
