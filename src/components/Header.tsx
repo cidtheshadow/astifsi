@@ -22,30 +22,32 @@ export const Header: React.FC<HeaderProps> = ({ onOpenAbstractModal }) => {
     { name: 'Committee', href: '#committee' },
     { name: 'Focus Areas', href: '#themes' },
     { name: 'Highlights', href: '#highlights' },
+    { name: 'WFD 2026', href: '#wfd' },
     { name: 'Dates', href: '#dates' },
     { name: 'Registration & Fees', href: '#registration' },
+    { name: 'Sponsors', href: '#sponsors' },
     { name: 'Venue & Travel', href: '#venue' },
   ];
 
   return (
     <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
       isScrolled 
-        ? 'bg-[#FAF8F5]/90 backdrop-blur-md border-b border-stone-200/80 shadow-sm py-3' 
-        : 'bg-[#FAF8F5]/60 backdrop-blur-sm py-5'
+        ? 'bg-[#FAF8F5]/95 backdrop-blur-md border-b border-stone-200/80 shadow-md py-2.5' 
+        : 'bg-[#FAF8F5]/80 backdrop-blur-sm py-4'
     }`}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between">
           
-          {/* Logo / Brand */}
-          <a href="#" className="flex items-center gap-3 group">
-            <div className="flex items-center gap-1.5">
-              <img src="/logos/sliet-logo.jpeg" alt="SLIET Logo" className="h-9 w-auto rounded-lg border border-stone-200 bg-white p-0.5 object-contain shadow-2xs" />
-              <img src="/logos/afsti-longowal-logo.jpeg" alt="AFSTI Longowal" className="h-9 w-auto rounded-lg border border-stone-200 bg-white p-0.5 object-contain shadow-2xs" />
-              <img src="/logos/afsti-mysuru-logo.jpeg" alt="AFSTI Mysuru" className="h-9 w-auto rounded-lg border border-stone-200 bg-white p-0.5 object-contain shadow-2xs" />
+          {/* Logo / Brand with Prominent Bigger Logos */}
+          <a href="#" className="flex items-center gap-3.5 group">
+            <div className="flex items-center gap-2">
+              <img src="/logos/sliet-logo.jpeg" alt="SLIET Logo" className="h-12 sm:h-14 lg:h-16 w-auto rounded-xl border border-stone-200 bg-white p-1 object-contain shadow-xs group-hover:scale-105 transition-transform" />
+              <img src="/logos/afsti-longowal-logo.jpeg" alt="AFSTI Longowal" className="h-12 sm:h-14 lg:h-16 w-auto rounded-xl border border-stone-200 bg-white p-1 object-contain shadow-xs group-hover:scale-105 transition-transform" />
+              <img src="/logos/afsti-mysuru-logo.jpeg" alt="AFSTI Mysuru" className="h-12 sm:h-14 lg:h-16 w-auto rounded-xl border border-stone-200 bg-white p-1 object-contain shadow-xs group-hover:scale-105 transition-transform" />
             </div>
-            <div>
+            <div className="hidden sm:block">
               <div className="flex items-center gap-2">
-                <span className="font-bold text-lg text-stone-900 tracking-tight font-heading">AFSTINFC-2026</span>
+                <span className="font-bold text-base sm:text-lg text-stone-900 tracking-tight font-heading">AFSTINFC-2026</span>
                 <span className="inline-flex items-center gap-1 text-[10px] uppercase font-bold tracking-wider px-2 py-0.5 rounded-full bg-emerald-100 text-emerald-800 border border-emerald-300">
                   <span className="w-1.5 h-1.5 rounded-full bg-emerald-600 animate-pulse" />
                   Hybrid
@@ -56,12 +58,12 @@ export const Header: React.FC<HeaderProps> = ({ onOpenAbstractModal }) => {
           </a>
 
           {/* Centered Navigation Links */}
-          <nav className="hidden lg:flex items-center gap-5">
+          <nav className="hidden xl:flex items-center gap-4">
             {navLinks.map((link) => (
               <a
                 key={link.name}
                 href={link.href}
-                className="text-xs font-medium text-stone-600 hover:text-stone-950 transition-colors"
+                className="text-xs sm:text-sm font-semibold text-stone-700 hover:text-[#E86024] transition-colors"
               >
                 {link.name}
               </a>

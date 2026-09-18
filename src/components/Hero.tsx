@@ -29,12 +29,12 @@ export const Hero: React.FC<HeroProps> = ({ onOpenAbstractModal }) => {
                 <span>AFST(I), Mysuru Sponsored Flagship Conference</span>
               </div>
 
-              <div className="flex items-center gap-2 bg-white px-3 py-1 rounded-full border border-stone-200 shadow-2xs">
-                <img src="/logos/sliet-logo.jpeg" alt="SLIET Logo" className="h-6 w-auto rounded object-contain" />
-                <span className="text-[10px] font-bold text-stone-300">•</span>
-                <img src="/logos/afsti-longowal-logo.jpeg" alt="AFSTI Longowal Logo" className="h-6 w-auto rounded object-contain" />
-                <span className="text-[10px] font-bold text-stone-300">•</span>
-                <img src="/logos/afsti-mysuru-logo.jpeg" alt="AFSTI Mysuru Logo" className="h-6 w-auto rounded object-contain" />
+              <div className="flex items-center gap-3 bg-white px-4 py-2 rounded-2xl border border-stone-200 shadow-xs">
+                <img src="/logos/sliet-logo.jpeg" alt="SLIET Logo" className="h-10 sm:h-12 w-auto rounded-lg object-contain" />
+                <span className="text-xs font-bold text-stone-300">•</span>
+                <img src="/logos/afsti-longowal-logo.jpeg" alt="AFSTI Longowal Logo" className="h-10 sm:h-12 w-auto rounded-lg object-contain" />
+                <span className="text-xs font-bold text-stone-300">•</span>
+                <img src="/logos/afsti-mysuru-logo.jpeg" alt="AFSTI Mysuru Logo" className="h-10 sm:h-12 w-auto rounded-lg object-contain" />
               </div>
             </div>
 

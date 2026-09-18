@@ -378,6 +378,15 @@ export const COMMITTEE_MEMBERS: CommitteeMember[] = [
     phone: "98159-82026",
     image: "/organizers/navdeep-jindal.jpeg"
   },
+  {
+    name: "Er. Ashwini Kumar",
+    role: "Co-Organizing Secretary",
+    designation: "Assistant Professor, Department of FET",
+    institution: "SLIET Longowal",
+    category: "Secretary",
+    avatarInitials: "AK",
+    image: "/organizers/ashwini-kumar.jpeg"
+  },
 
   // National Advisory Committee
   {
@@ -471,3 +480,111 @@ export const COMMITTEE_MEMBERS: CommitteeMember[] = [
     image: "/organizers/sartaj-brar.jpeg"
   }
 ];
+
+export const SPONSORS = [
+  {
+    name: "AFST(I), Mysuru",
+    role: "Sponsor & Parent Association",
+    description: "Association of Food Scientists and Technologists (India), Mysuru — Apex professional body promoting food science, technology & research.",
+    logo: "/logos/afsti-mysuru-logo.jpeg",
+    badge: "Parent Association"
+  },
+  {
+    name: "AFST(I) Longowal Chapter",
+    role: "Joint Organizer & Host Chapter",
+    description: "AFSTI Longowal Chapter — Driving academic innovation, student workshops and industry interaction.",
+    logo: "/logos/afsti-longowal-logo.jpeg",
+    badge: "Host Chapter"
+  },
+  {
+    name: "SLIET Longowal",
+    role: "Host Deemed University",
+    description: "Sant Longowal Institute of Engineering & Technology (Govt. of India Deemed University).",
+    logo: "/logos/sliet-logo.jpeg",
+    badge: "Host Institution"
+  }
+];
+
+export const WFD_CELEBRATIONS_DATA = {
+  title: "World Food Day 2026 Celebrations & Student Workshop",
+  theme: "Innovate Today. Nourish Tomorrow",
+  dates: "12 & 13 October 2026",
+  time: "10:00 AM – 11:00 AM",
+  venue: "Food & Chemical Block, SLIET Longowal",
+  registrationDeadline: "September 30, 2026",
+  categories: ["Diploma Students", "B.Tech / M.Tech / Ph.D. Scholars"],
+  overallCoordinators: [
+    { name: "Bharat Bhushan", designation: "Ph.D. Scholar", phone: "62975-31362" },
+    { name: "Amisha Kaushik", designation: "Ph.D. Scholar", phone: "83073-52267" }
+  ],
+  events: [
+    {
+      title: "Innovative Food Art",
+      tagline: "Transforming Ideas into Creative & Nutritious Products",
+      highlights: [
+        "Innovative New Product Development – Nutritious food formulations",
+        "Best Out of Waste – Upcycling food by-products into high-value products",
+        "Creativity Meets Sustainability – Reducing food waste in a circular economy",
+        "Student Innovation & Entrepreneurship – Showcase technical & culinary skills"
+      ],
+      coordinator: "Pallavi Sharma (Ph.D. Research Scholar)",
+      members: ["Satyarth Saindhaw", "Sparsh Parmar", "Mohit Nagar", "Jasmine Saini", "Satrudhan (M.Tech)", "Shubhankar (M.Tech)"],
+      iconName: "Utensils"
+    },
+    {
+      title: "Creative Oral Presentation",
+      tagline: "Innovate, Create, Present — Pitch Your Original Ideas",
+      highlights: [
+        "Theme Focus – Innovation in Food Science & Technology",
+        "10-Minute, 10-Slide Target – High-impact fast-paced presentation",
+        "Advanced Topics – 3D food printing, smart digital food systems & sustainable protein",
+        "Academic Presentation Stage – Present before expert faculty & peers"
+      ],
+      coordinator: "Amandeep Singh (Ph.D. Research Scholar)",
+      members: ["Riya Goyal", "Ambika Thakur", "Armandeep Kaur", "Rupali (M.Tech)", "Tarunpreet (M.Tech)"],
+      iconName: "Presentation"
+    },
+    {
+      title: "Technical Quiz Competition",
+      tagline: "Test Your Food Science & Nutrition Knowledge",
+      highlights: [
+        "Test Your Nutrition Knowledge – Explore food safety, processing & health",
+        "Two-Day Quiz Challenge – Qualifier round followed by buzzer final round",
+        "Team Up & Compete – Mixed teams of Diploma & B.Tech / M.Tech students",
+        "Pass & Buzzer Rounds – Fast-paced strategic team questions & prizes"
+      ],
+      coordinator: "Tanya Sonker (Ph.D. Research Scholar)",
+      phone: "72756-90956",
+      email: "tanya.sonker.3@gmail.com",
+      members: ["Poonam Patil", "Gunjan Thakur", "Ramanjot Kaur", "Avani Sharma (M.Tech)", "Apurba Mishra (M.Tech)"],
+      iconName: "HelpCircle"
+    },
+    {
+      title: "On-the-Spot Poster-Making Competition",
+      tagline: "Imagine, Create, Inspire — Sustainable Food Security",
+      highlights: [
+        "1-Hour On-the-Spot Challenge – Create an impactful visual poster within 60 minutes",
+        "Theme Focus – Food innovation, zero food waste, nutrition & technology",
+        "Creative Academic Platform – Showcase awareness, design & original ideas",
+        "Exciting Awards & Certificates for winners and top presentations"
+      ],
+      coordinator: "Divyanshi Thakur (Ph.D. Research Scholar)",
+      members: ["Heena", "Sunil Kumar", "Ashmita Mittal", "Shubham Thakur (M.Tech)", "Dilpreet (M.Tech)"],
+      iconName: "Palette"
+    },
+    {
+      title: "Guess It Right",
+      tagline: "Decode Food Tech Clues & Sensory Riddles",
+      highlights: [
+        "Identify the Unusual – Recognize sensory, equipment & chemical clues",
+        "Decode the Clues – Every clue hides an innovative food science answer",
+        "Multi-Level Competition – Participation & awards for ICD and UG/PG levels",
+        "Put your Knowledge to the Test in an engaging interactive game"
+      ],
+      coordinator: "Rishabh Thakur (Ph.D. Research Scholar)",
+      image: "/wfd/guess-it-right.png",
+      members: ["Amisha Gurung", "Nirbhay Kumar", "Shashank Wirutkar", "Anjali (M.Tech)", "Vishal (M.Tech)"],
+      iconName: "Sparkles"
+    }
+  ]
+};

@@ -1,10 +1,8 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { MapPin, Building2, Crown, Shield, Award, UserCheck, Star, Phone } from 'lucide-react';
 import { COMMITTEE_MEMBERS, type CommitteeMember } from '../data/conferenceData';
 
 export const Committee: React.FC = () => {
-  const [activeCategory, setActiveCategory] = useState<'organizing' | 'advisory'>('organizing');
-
   const organizingMembers = COMMITTEE_MEMBERS.filter(m => m.category !== 'Advisory');
   const advisoryMembers = COMMITTEE_MEMBERS.filter(m => m.category === 'Advisory');
 
@@ -78,47 +76,29 @@ export const Committee: React.FC = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Section Header */}
-        <div className="text-center max-w-3xl mx-auto mb-12">
+        <div className="text-center max-w-3xl mx-auto mb-16">
           <span className="text-xs font-bold uppercase tracking-widest text-amber-800 bg-amber-100 px-3.5 py-1 rounded-full border border-amber-300">
             Leadership &amp; Advisory
           </span>
           <h2 className="text-3xl sm:text-5xl font-bold text-stone-950 mt-4 font-serif-editorial">
             Organizing &amp; <span className="italic text-amber-700">National Advisory</span> Committees
           </h2>
-          <p className="text-sm text-stone-600 mt-3">
+          <p className="text-sm sm:text-base text-stone-600 mt-3">
             Eminent visionaries, institute directors, and food industry pioneers steering National Food Conference 2026.
           </p>
           <div className="w-16 h-1 bg-gradient-to-r from-amber-600 to-emerald-600 mx-auto mt-4 rounded-full" />
         </div>
 
-        {/* Category Tabs (Organizing Committee & National Advisory Board) */}
-        <div className="flex items-center justify-center gap-2 mb-12">
-          {[
-            { key: 'organizing', label: 'Organizing Committee', count: organizingMembers.length },
-            { key: 'advisory', label: 'National Advisory Board', count: advisoryMembers.length }
-          ].map(tab => (
-            <button
-              key={tab.key}
-              onClick={() => setActiveCategory(tab.key as any)}
-              className={`px-4 py-2 rounded-xl text-xs font-semibold transition-all flex items-center gap-2 ${
-                activeCategory === tab.key
-                  ? 'bg-stone-900 text-white font-bold shadow-sm'
-                  : 'bg-white text-stone-700 hover:text-stone-950 border border-stone-200'
-              }`}
-            >
-              <span>{tab.label}</span>
-              <span className={`text-[10px] font-bold px-1.5 py-0.5 rounded-md ${
-                activeCategory === tab.key ? 'bg-stone-700 text-white' : 'bg-stone-100 text-stone-600'
-              }`}>
-                {tab.count}
-              </span>
-            </button>
-          ))}
-        </div>
+        {/* 1. Organizing Committee Section */}
+        <div className="mb-20">
+          <div className="text-center mb-10">
+            <h3 className="text-2xl sm:text-3xl font-bold text-stone-900 font-serif-editorial">
+              Organizing Committee
+            </h3>
+            <p className="text-xs sm:text-sm text-stone-500 mt-1">Core organizing team &amp; leadership</p>
+          </div>
 
-        {/* Committee Display */}
-        {activeCategory === 'organizing' ? (
-          <div className="space-y-10 max-w-4xl mx-auto">
+          <div className="space-y-10 max-w-5xl mx-auto">
             
             {/* Tier 1: Patron in Chief */}
             <div>
@@ -178,23 +158,34 @@ export const Committee: React.FC = () => {
               <div className="flex items-center justify-center gap-2 mb-4">
                 <UserCheck className="w-4 h-4 text-teal-600" />
                 <span className="text-xs font-bold uppercase tracking-widest text-teal-900 bg-teal-100/90 px-3.5 py-1 rounded-full border border-teal-300">
-                  Organizing Secretaries
+                  Organizing Secretaries &amp; Co-Organizing Secretary
                 </span>
               </div>
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
                 {organizingMembers[5] && <MemberCard member={organizingMembers[5]} />}
                 {organizingMembers[6] && <MemberCard member={organizingMembers[6]} />}
+                {organizingMembers[7] && <MemberCard member={organizingMembers[7]} />}
               </div>
             </div>
 
           </div>
-        ) : (
+        </div>
+
+        {/* 2. National Advisory Board Section */}
+        <div className="pt-10 border-t border-stone-200">
+          <div className="text-center mb-10">
+            <h3 className="text-2xl sm:text-3xl font-bold text-stone-900 font-serif-editorial">
+              National Advisory Board
+            </h3>
+            <p className="text-xs sm:text-sm text-stone-500 mt-1">Eminent leaders from ICAR, CSIR, NABI, PAU, and Food Industry</p>
+          </div>
+
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-5">
             {advisoryMembers.map((member, idx) => (
               <MemberCard key={idx} member={member} />
             ))}
           </div>
-        )}
+        </div>
 
       </div>
     </section>

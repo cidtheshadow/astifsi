@@ -56,16 +56,18 @@ export const Footer: React.FC<FooterProps> = ({ onOpenAbstractModal }) => {
             </div>
           </div>
 
-          {/* Col 2: Quick Links (Updated Order) */}
+          {/* Col 2: Quick Links */}
           <div>
             <h4 className="text-sm font-bold text-stone-900 mb-4 font-heading">Quick Navigation</h4>
             <ul className="space-y-2 text-xs">
               <li><a href="#about" className="hover:text-amber-700 transition-colors">About Conference</a></li>
               <li><a href="#committee" className="hover:text-amber-700 transition-colors">Organizing Committee</a></li>
               <li><a href="#themes" className="hover:text-amber-700 transition-colors">10 Key Focus Areas</a></li>
-              <li><a href="#highlights" className="hover:text-amber-700 transition-colors">Conference Highlights &amp; Awards</a></li>
+              <li><a href="#highlights" className="hover:text-amber-700 transition-colors">Conference Highlights</a></li>
+              <li><a href="#wfd" className="hover:text-amber-700 transition-colors">WFD 2026 Celebrations</a></li>
               <li><a href="#dates" className="hover:text-amber-700 transition-colors">Important Dates &amp; Deadlines</a></li>
               <li><a href="#registration" className="hover:text-amber-700 transition-colors">Registration &amp; Fees</a></li>
+              <li><a href="#sponsors" className="hover:text-amber-700 transition-colors">Sponsors &amp; Partners</a></li>
               <li><a href="#venue" className="hover:text-amber-700 transition-colors">Venue &amp; Travel Matrix</a></li>
             </ul>
           </div>
@@ -85,7 +87,7 @@ export const Footer: React.FC<FooterProps> = ({ onOpenAbstractModal }) => {
 
           {/* Col 4: Secretariat Contact */}
           <div>
-            <h4 className="text-sm font-bold text-stone-900 mb-4 font-heading">Conference Secretariat</h4>
+            <h4 className="text-sm font-bold text-stone-900 mb-4 font-heading">Conference Secretariat Contact</h4>
             <div className="space-y-2.5 text-xs text-stone-700">
               <div className="flex items-start gap-2">
                 <MapPin className="w-4 h-4 text-amber-700 shrink-0 mt-0.5" />
@@ -93,11 +95,16 @@ export const Footer: React.FC<FooterProps> = ({ onOpenAbstractModal }) => {
               </div>
               <div className="flex items-center gap-2">
                 <Mail className="w-4 h-4 text-amber-700 shrink-0" />
-                <span>afstinfc2026@sliet.ac.in</span>
+                <a href="mailto:afstinfc2026@sliet.ac.in" className="hover:underline">afstinfc2026@sliet.ac.in</a>
               </div>
-              <div className="flex items-center gap-2">
-                <Phone className="w-4 h-4 text-amber-700 shrink-0" />
-                <span>+91 1672 253100 / 253101</span>
+              <div className="space-y-1 pt-1">
+                <div className="flex items-center gap-2">
+                  <Phone className="w-4 h-4 text-amber-700 shrink-0" />
+                  <a href="tel:9815980334" className="hover:underline font-semibold">+91 98159-80334</a>
+                </div>
+                <div className="flex items-center gap-2 pl-6">
+                  <a href="tel:9815982026" className="hover:underline font-semibold">+91 98159-82026</a>
+                </div>
               </div>
             </div>
           </div>

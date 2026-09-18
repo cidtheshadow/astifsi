@@ -4,9 +4,11 @@ import { Hero } from './components/Hero';
 import { AboutConference } from './components/AboutConference';
 import { FocusAreas } from './components/FocusAreas';
 import { Highlights } from './components/Highlights';
+import { WFDCelebrations } from './components/WFDCelebrations';
 import { ImportantDates } from './components/ImportantDates';
 import { AbstractSubmissionModal } from './components/AbstractSubmissionModal';
 import { Registration } from './components/Registration';
+import { Sponsors } from './components/Sponsors';
 import { VenueLocation } from './components/VenueLocation';
 import { Committee } from './components/Committee';
 import { Footer } from './components/Footer';
@@ -34,8 +36,10 @@ export function App() {
         <Committee />
         <FocusAreas onOpenAbstractModal={handleOpenAbstractModal} />
         <Highlights />
+        <WFDCelebrations />
         <ImportantDates onOpenAbstractModal={handleOpenAbstractModal} />
         <Registration onOpenAbstractModal={handleOpenAbstractModal} />
+        <Sponsors />
         <VenueLocation />
       </main>
 

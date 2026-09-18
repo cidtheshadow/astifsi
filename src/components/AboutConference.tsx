@@ -35,11 +35,18 @@ export const AboutConference: React.FC = () => {
           {/* Left: About Conference */}
           <div className="editorial-card rounded-2xl p-6 sm:p-8 border border-stone-200 flex flex-col justify-between shadow-sm">
             <div>
-              <div className="flex items-center gap-3 mb-4">
-                <div className="w-10 h-10 rounded-xl bg-amber-100 border border-amber-300 flex items-center justify-center text-amber-700">
-                  <Target className="w-5 h-5" />
+              <div className="flex items-center justify-between gap-3 mb-4">
+                <div className="flex items-center gap-3">
+                  <div className="w-10 h-10 rounded-xl bg-amber-100 border border-amber-300 flex items-center justify-center text-amber-700 shrink-0">
+                    <Target className="w-5 h-5" />
+                  </div>
+                  <h3 className="text-xl font-bold text-stone-900 font-heading">Conference Purpose &amp; Vision</h3>
                 </div>
-                <h3 className="text-xl font-bold text-stone-900 font-heading">Conference Purpose &amp; Vision</h3>
+                <img
+                  src="/logos/afsti-longowal-logo.jpeg"
+                  alt="AFSTI Longowal Chapter Logo"
+                  className="h-14 w-auto rounded-xl border border-stone-200 bg-white p-1 object-contain shadow-xs shrink-0"
+                />
               </div>
               <p className="text-stone-700 text-sm sm:text-base leading-relaxed mb-4">
                 {ABOUT_CONFERENCE}
