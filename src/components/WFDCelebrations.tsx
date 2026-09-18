@@ -1,11 +1,16 @@
 import React, { useState } from 'react';
 import { 
   Utensils, Presentation, HelpCircle, Palette, Sparkles, Calendar, Clock, MapPin, 
-  Phone, CheckCircle2, Award, ExternalLink, QrCode, BookOpen, Star
+  Phone, CheckCircle2, Award, ExternalLink, QrCode, BookOpen, Star, ArrowLeft
 } from 'lucide-react';
 import { WFD_CELEBRATIONS_DATA, CONFERENCE_INFO } from '../data/conferenceData';
 
-export const WFDCelebrations: React.FC = () => {
+interface WFDCelebrationsProps {
+  onBackToHome?: () => void;
+  isStandalonePage?: boolean;
+}
+
+export const WFDCelebrations: React.FC<WFDCelebrationsProps> = ({ onBackToHome, isStandalonePage = false }) => {
   const [activeTab, setActiveTab] = useState<number>(0);
 
   const getIcon = (iconName: string) => {
@@ -21,8 +26,21 @@ export const WFDCelebrations: React.FC = () => {
   };
 
   return (
-    <section id="wfd" className="py-20 bg-[#F5EFE6] relative overflow-hidden">
+    <section id="wfd" className="py-20 bg-[#F5EFE6] relative overflow-hidden text-[#2C070F]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        
+        {/* Navigation Back Header if on Standalone Page */}
+        {isStandalonePage && onBackToHome && (
+          <div className="mb-8">
+            <button
+              onClick={onBackToHome}
+              className="inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-[#FAF6F0] border border-[#E8DEC8] text-xs font-bold text-[#580B1E] hover:bg-[#580B1E] hover:text-white transition-all cursor-pointer shadow-xs"
+            >
+              <ArrowLeft className="w-4 h-4" />
+              <span>Back to Main Conference</span>
+            </button>
+          </div>
+        )}
         
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-16">

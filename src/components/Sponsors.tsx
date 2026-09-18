@@ -1,18 +1,36 @@
 import React from 'react';
-import { HeartHandshake } from 'lucide-react';
+import { HeartHandshake, ArrowLeft } from 'lucide-react';
 import { SPONSORS } from '../data/conferenceData';
 
-export const Sponsors: React.FC = () => {
+interface SponsorsProps {
+  onBackToHome?: () => void;
+  isStandalonePage?: boolean;
+}
+
+export const Sponsors: React.FC<SponsorsProps> = ({ onBackToHome, isStandalonePage = false }) => {
   return (
-    <section id="sponsors" className="py-20 bg-[#F5EFE6] relative border-y border-[#E8DEC8]">
+    <section id="sponsors" className="py-20 bg-[#F5EFE6] relative border-y border-[#E8DEC8] text-[#2C070F]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
+        {/* Navigation Back Header if on Standalone Page */}
+        {isStandalonePage && onBackToHome && (
+          <div className="mb-8">
+            <button
+              onClick={onBackToHome}
+              className="inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-[#FAF6F0] border border-[#E8DEC8] text-xs font-bold text-[#580B1E] hover:bg-[#580B1E] hover:text-white transition-all cursor-pointer shadow-xs"
+            >
+              <ArrowLeft className="w-4 h-4" />
+              <span>Back to Main Conference</span>
+            </button>
+          </div>
+        )}
+
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-16">
           <span className="text-xs font-bold uppercase tracking-widest text-[#580B1E] bg-[#FAF6F0] px-3.5 py-1 rounded-full border border-[#E8DEC8]">
             Official Organizers &amp; Sponsors
           </span>
-          <h2 className="text-3xl sm:text-5xl font-bold text-[#580B1E] mt-4 font-display-hero">
+          <h2 className="text-3xl sm:text-5xl font-bold text-[#580B1E] mt-4 font-serif-editorial">
             Supported &amp; <span className="italic text-[#6B0F24]">Sponsored By</span>
           </h2>
           <p className="text-sm sm:text-base text-[#52373D] mt-3">

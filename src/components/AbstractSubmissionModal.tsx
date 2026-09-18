@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
-import { X, CheckCircle2, AlertCircle, ExternalLink, FileText, Image } from 'lucide-react';
-import { ABSTRACT_GUIDELINES, CONFERENCE_INFO } from '../data/conferenceData';
+import { X, CheckCircle2, AlertCircle, ExternalLink, FileText, Image, Presentation } from 'lucide-react';
+import { ABSTRACT_GUIDELINES, ORAL_PRESENTATION_GUIDELINES, CONFERENCE_INFO } from '../data/conferenceData';
 
 interface AbstractSubmissionModalProps {
   isOpen: boolean;
@@ -8,7 +8,7 @@ interface AbstractSubmissionModalProps {
 }
 
 export const AbstractSubmissionModal: React.FC<AbstractSubmissionModalProps> = ({ isOpen, onClose }) => {
-  const [activeTab, setActiveTab] = useState<'abstract' | 'poster'>('abstract');
+  const [activeTab, setActiveTab] = useState<'abstract' | 'oral' | 'poster'>('abstract');
 
   if (!isOpen) return null;
 
@@ -40,29 +40,40 @@ export const AbstractSubmissionModal: React.FC<AbstractSubmissionModalProps> = (
           </button>
         </div>
 
-        {/* Tab Switcher: Abstract Guidelines vs Poster Presentation Guidelines */}
-        <div className="flex items-center gap-2 bg-[#F5EFE6] p-1 rounded-xl mb-4 border border-[#E8DEC8]">
+        {/* Tab Switcher: Abstract vs Oral vs Poster */}
+        <div className="flex items-center gap-1.5 bg-[#F5EFE6] p-1 rounded-xl mb-4 border border-[#E8DEC8]">
           <button
             onClick={() => setActiveTab('abstract')}
-            className={`flex-1 py-2 px-3 rounded-lg text-xs font-bold transition-all flex items-center justify-center gap-1.5 cursor-pointer ${
+            className={`flex-1 py-2 px-2.5 rounded-lg text-xs font-bold transition-all flex items-center justify-center gap-1 cursor-pointer ${
               activeTab === 'abstract'
                 ? 'bg-[#580B1E] text-white shadow-xs'
                 : 'text-[#52373D] hover:text-[#580B1E]'
             }`}
           >
-            <FileText className="w-4 h-4" />
-            <span>Abstract Guidelines</span>
+            <FileText className="w-3.5 h-3.5" />
+            <span className="truncate">Abstract</span>
+          </button>
+          <button
+            onClick={() => setActiveTab('oral')}
+            className={`flex-1 py-2 px-2.5 rounded-lg text-xs font-bold transition-all flex items-center justify-center gap-1 cursor-pointer ${
+              activeTab === 'oral'
+                ? 'bg-[#580B1E] text-white shadow-xs'
+                : 'text-[#52373D] hover:text-[#580B1E]'
+            }`}
+          >
+            <Presentation className="w-3.5 h-3.5" />
+            <span className="truncate">Oral Talk</span>
           </button>
           <button
             onClick={() => setActiveTab('poster')}
-            className={`flex-1 py-2 px-3 rounded-lg text-xs font-bold transition-all flex items-center justify-center gap-1.5 cursor-pointer ${
+            className={`flex-1 py-2 px-2.5 rounded-lg text-xs font-bold transition-all flex items-center justify-center gap-1 cursor-pointer ${
               activeTab === 'poster'
                 ? 'bg-[#580B1E] text-white shadow-xs'
                 : 'text-[#52373D] hover:text-[#580B1E]'
             }`}
           >
-            <Image className="w-4 h-4" />
-            <span>Poster Guidelines</span>
+            <Image className="w-3.5 h-3.5" />
+            <span className="truncate">Poster</span>
           </button>
         </div>
 
@@ -101,7 +112,39 @@ export const AbstractSubmissionModal: React.FC<AbstractSubmissionModalProps> = (
           </div>
         )}
 
-        {/* Tab 2: Poster Presentation Guidelines (From Official Document) */}
+        {/* Tab 2: Oral Presentation Guidelines */}
+        {activeTab === 'oral' && (
+          <div className="space-y-4 my-2">
+            <div className="grid grid-cols-2 sm:grid-cols-3 gap-3">
+              <div className="bg-[#FDFBF7] p-3 rounded-xl border border-[#E8DEC8] text-center">
+                <span className="text-[10px] uppercase text-[#52373D] font-bold block mb-0.5">Presentation Time</span>
+                <span className="text-xs font-bold text-[#580B1E]">{ORAL_PRESENTATION_GUIDELINES.duration}</span>
+              </div>
+              <div className="bg-[#FDFBF7] p-3 rounded-xl border border-[#E8DEC8] text-center">
+                <span className="text-[10px] uppercase text-[#52373D] font-bold block mb-0.5 font-heading">Recommended Slides</span>
+                <span className="text-xs font-bold text-[#580B1E]">{ORAL_PRESENTATION_GUIDELINES.slidesCount}</span>
+              </div>
+              <div className="bg-[#FDFBF7] p-3 rounded-xl border border-[#E8DEC8] text-center col-span-2 sm:col-span-1">
+                <span className="text-[10px] uppercase text-[#52373D] font-bold block mb-0.5 font-heading">Reporting Time</span>
+                <span className="text-xs font-bold text-[#580B1E]">{ORAL_PRESENTATION_GUIDELINES.reportingTime}</span>
+              </div>
+            </div>
+
+            <div className="bg-[#FDFBF7] p-4.5 rounded-xl border border-[#E8DEC8]">
+              <h4 className="text-xs font-bold text-[#580B1E] mb-3 uppercase tracking-wider">Oral Presentation Standards:</h4>
+              <ul className="space-y-2.5 text-xs text-[#52373D]">
+                {ORAL_PRESENTATION_GUIDELINES.requirements.map((req, idx) => (
+                  <li key={idx} className="flex items-start gap-2.5">
+                    <CheckCircle2 className="w-4 h-4 text-[#6B0F24] flex-shrink-0 mt-0.5" />
+                    <span className="leading-relaxed">{req}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </div>
+        )}
+
+        {/* Tab 3: Poster Presentation Guidelines (From Official Document) */}
         {activeTab === 'poster' && (
           <div className="space-y-4 my-2">
             <div className="grid grid-cols-2 sm:grid-cols-3 gap-3">

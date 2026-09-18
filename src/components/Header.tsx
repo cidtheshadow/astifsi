@@ -1,11 +1,19 @@
 import React, { useState, useEffect } from 'react';
 import { Menu, X, Send } from 'lucide-react';
 
+export type ActivePage = 'home' | 'wfd' | 'sponsors' | 'departmental-committees';
+
 interface HeaderProps {
   onOpenAbstractModal: () => void;
+  activePage?: ActivePage;
+  onNavigatePage?: (page: ActivePage, hash?: string) => void;
 }
 
-export const Header: React.FC<HeaderProps> = ({ onOpenAbstractModal }) => {
+export const Header: React.FC<HeaderProps> = ({ 
+  onOpenAbstractModal, 
+  activePage = 'home', 
+  onNavigatePage 
+}) => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
@@ -17,16 +25,24 @@ export const Header: React.FC<HeaderProps> = ({ onOpenAbstractModal }) => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  const navLinks = [
-    { name: 'About', href: '#about' },
-    { name: 'Focus Areas', href: '#themes' },
-    { name: 'Important Dates', href: '#deadlines' },
-    { name: 'Committees', href: '#committee' },
-    { name: 'Registration', href: '#registration' },
-    { name: 'Sponsors', href: '#sponsors' },
-    { name: 'Venue & Location', href: '#venue' },
-    { name: 'World Food Day 2026', href: '#wfd' },
+  const navLinks: { name: string; page: ActivePage; hash?: string }[] = [
+    { name: 'About', page: 'home', hash: '#about' },
+    { name: 'Focus Areas', page: 'home', hash: '#themes' },
+    { name: 'Important Dates', page: 'home', hash: '#deadlines' },
+    { name: 'Committees', page: 'home', hash: '#committee' },
+    { name: 'Local Committees', page: 'departmental-committees' },
+    { name: 'Registration', page: 'home', hash: '#registration' },
+    { name: 'Sponsors', page: 'sponsors' },
+    { name: 'Venue & Location', page: 'home', hash: '#venue' },
+    { name: 'World Food Day 2026', page: 'wfd' },
   ];
+
+  const handleLinkClick = (page: ActivePage, hash?: string) => {
+    setIsMobileMenuOpen(false);
+    if (onNavigatePage) {
+      onNavigatePage(page, hash);
+    }
+  };
 
   return (
     <header className="fixed top-0 left-0 right-0 z-50 transition-all duration-300">
@@ -57,7 +73,10 @@ export const Header: React.FC<HeaderProps> = ({ onOpenAbstractModal }) => {
           <div className="flex items-center justify-between gap-4">
             
             {/* Logos & Brand */}
-            <a href="#" className="flex items-center gap-3 shrink-0 group">
+            <button 
+              onClick={() => handleLinkClick('home')}
+              className="flex items-center gap-3 shrink-0 group text-left cursor-pointer"
+            >
               <div className="flex items-center gap-1.5 shrink-0">
                 <img src="/logos/sliet-logo.jpeg" alt="SLIET Logo" className="h-10 sm:h-11 w-auto rounded-lg border border-[#E8DEC8] bg-white p-0.5 object-contain shadow-2xs group-hover:scale-105 transition-transform shrink-0" />
                 <img src="/logos/afsti-longowal-logo.jpeg" alt="AFSTI Longowal" className="h-10 sm:h-11 w-auto rounded-lg border border-[#E8DEC8] bg-white p-0.5 object-contain shadow-2xs group-hover:scale-105 transition-transform shrink-0" />
@@ -73,22 +92,24 @@ export const Header: React.FC<HeaderProps> = ({ onOpenAbstractModal }) => {
                 </div>
                 <p className="text-[11px] text-[#52373D] font-medium">SLIET Longowal &amp; AFST(I) Mysuru</p>
               </div>
-            </a>
+            </button>
 
             {/* Navigation Links */}
-            <nav className="hidden xl:flex items-center gap-4">
+            <nav className="hidden xl:flex items-center gap-3">
               {navLinks.map((link) => (
-                <a
+                <button
                   key={link.name}
-                  href={link.href}
-                  className={`text-xs font-semibold transition-colors whitespace-nowrap ${
-                    link.name.includes('World Food Day')
-                      ? 'text-[#6B0F24] font-bold bg-[#F5EFE6] px-3 py-1.5 rounded-lg border border-[#E8DEC8] hover:bg-[#580B1E] hover:text-white'
-                      : 'text-[#2C070F] hover:text-[#6B0F24]'
-                  }`}
-                >
-                  {link.name}
-                </a>
+                  onClick={() => handleLinkClick(link.page, link.hash)}
+                    className={`text-xs font-semibold transition-all whitespace-nowrap cursor-pointer px-2.5 py-1.5 rounded-lg ${
+                      link.name.includes('World Food Day')
+                        ? 'text-[#6B0F24] font-bold bg-[#F5EFE6] border border-[#E8DEC8] hover:bg-[#580B1E] hover:text-white'
+                        : activePage === link.page && link.page !== 'home'
+                        ? 'bg-[#580B1E] text-white font-bold shadow-xs'
+                        : 'text-[#2C070F] hover:text-[#580B1E] hover:bg-[#F5EFE6]'
+                    }`}
+                  >
+                    {link.name}
+                  </button>
               ))}
             </nav>
 
@@ -96,7 +117,7 @@ export const Header: React.FC<HeaderProps> = ({ onOpenAbstractModal }) => {
             <div className="hidden sm:flex items-center gap-3">
               <button
                 onClick={onOpenAbstractModal}
-                className="relative inline-flex items-center gap-2 px-5 py-2.5 rounded-lg bg-[#580B1E] hover:bg-[#6B0F24] text-xs font-bold text-white shadow-md hover:shadow-lg transition-all duration-200 uppercase tracking-wider border border-[#6B0F24]"
+                className="relative inline-flex items-center gap-2 px-5 py-2.5 rounded-lg bg-[#580B1E] hover:bg-[#6B0F24] text-xs font-bold text-white shadow-md hover:shadow-lg transition-all duration-200 uppercase tracking-wider border border-[#6B0F24] cursor-pointer"
               >
                 <span className="relative flex h-2 w-2 mr-0.5">
                   <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#D4AF37] opacity-75"></span>
@@ -110,7 +131,7 @@ export const Header: React.FC<HeaderProps> = ({ onOpenAbstractModal }) => {
             {/* Mobile Menu Toggle Button */}
             <button
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-              className="xl:hidden p-2 rounded-xl text-[#2C070F] hover:text-[#580B1E] hover:bg-[#F5EFE6] transition-colors"
+              className="xl:hidden p-2 rounded-xl text-[#2C070F] hover:text-[#580B1E] hover:bg-[#F5EFE6] transition-colors cursor-pointer"
               aria-label="Toggle menu"
             >
               {isMobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
@@ -125,14 +146,13 @@ export const Header: React.FC<HeaderProps> = ({ onOpenAbstractModal }) => {
         <div className="xl:hidden bg-[#FDFBF7]/95 border-b border-[#E8DEC8] backdrop-blur-xl px-4 pt-3 pb-6 space-y-3 shadow-lg">
           <div className="flex flex-col space-y-1">
             {navLinks.map((link) => (
-              <a
+              <button
                 key={link.name}
-                href={link.href}
-                onClick={() => setIsMobileMenuOpen(false)}
-                className="px-4 py-2.5 rounded-lg text-sm font-semibold text-[#2C070F] hover:text-[#580B1E] hover:bg-[#F5EFE6] transition-colors"
+                onClick={() => handleLinkClick(link.page, link.hash)}
+                className="text-left px-4 py-2.5 rounded-lg text-sm font-semibold text-[#2C070F] hover:text-[#580B1E] hover:bg-[#F5EFE6] transition-colors cursor-pointer"
               >
                 {link.name}
-              </a>
+              </button>
             ))}
           </div>
 
@@ -142,7 +162,7 @@ export const Header: React.FC<HeaderProps> = ({ onOpenAbstractModal }) => {
                 setIsMobileMenuOpen(false);
                 onOpenAbstractModal();
               }}
-              className="w-full flex items-center justify-center gap-2 px-4 py-3 rounded-lg text-xs font-bold text-white bg-[#580B1E] shadow-md uppercase tracking-wider"
+              className="w-full flex items-center justify-center gap-2 px-4 py-3 rounded-lg text-xs font-bold text-white bg-[#580B1E] shadow-md uppercase tracking-wider cursor-pointer"
             >
               <Send className="w-4 h-4 text-[#D4AF37]" />
               Submit Abstract (Oct 4)
