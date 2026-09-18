@@ -108,19 +108,19 @@ export const WFDCelebrations: React.FC = () => {
 
                 {/* Event Image if available */}
                 {event.image && (
-                  <div className="mb-4 rounded-xl overflow-hidden border border-stone-200">
-                    <img src={event.image} alt={event.title} className="w-full h-40 object-cover" />
+                  <div className="mb-4 rounded-2xl overflow-hidden border border-stone-200 shadow-xs">
+                    <img src={event.image} alt={event.title} className="w-full h-52 sm:h-64 object-cover hover:scale-105 transition-transform duration-500" />
                   </div>
                 )}
 
                 {/* Highlights List */}
-                <div className="bg-stone-50 p-3.5 rounded-xl border border-stone-200 mb-4">
-                  <h4 className="text-[11px] font-bold text-stone-600 mb-2 uppercase">Key Highlights:</h4>
-                  <ul className="space-y-1.5 text-xs text-stone-700">
+                <div className="bg-stone-50 p-4 rounded-xl border border-stone-200 mb-4">
+                  <h4 className="text-[11px] font-bold text-stone-600 mb-2 uppercase tracking-wider">Key Highlights:</h4>
+                  <ul className="space-y-2 text-xs text-stone-700">
                     {event.highlights.map((hl, hIdx) => (
                       <li key={hIdx} className="flex items-start gap-2">
                         <CheckCircle2 className="w-3.5 h-3.5 text-emerald-600 shrink-0 mt-0.5" />
-                        <span className="leading-snug">{hl}</span>
+                        <span className="leading-relaxed">{hl}</span>
                       </li>
                     ))}
                   </ul>
@@ -130,7 +130,7 @@ export const WFDCelebrations: React.FC = () => {
               {/* Student Coordinator Details */}
               <div className="pt-3 border-t border-stone-200 space-y-2">
                 <div className="flex items-center justify-between text-xs">
-                  <span className="font-bold text-stone-900">Student Coordinator:</span>
+                  <span className="font-bold text-stone-900">Coordinator:</span>
                   <span className="font-semibold text-amber-800">{event.coordinator}</span>
                 </div>
 
@@ -154,8 +154,8 @@ export const WFDCelebrations: React.FC = () => {
           ))}
         </div>
 
-        {/* Overall Student Coordinators & Registration Box */}
-        <div className="bg-white p-6 sm:p-8 rounded-2xl border border-stone-200 shadow-sm flex flex-col md:flex-row items-center justify-between gap-6 max-w-4xl mx-auto">
+        {/* Bottom Registration & Overall Student Coordinators Box */}
+        <div className="bg-white p-6 sm:p-8 rounded-2xl border border-stone-200 shadow-sm flex flex-col md:flex-row items-center justify-between gap-6 max-w-4xl mx-auto mb-12">
           <div>
             <div className="flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-amber-800 mb-2">
               <UserCheck className="w-4 h-4 text-amber-600" />
@@ -184,6 +184,18 @@ export const WFDCelebrations: React.FC = () => {
             <span>Register for WFD Events</span>
             <ExternalLink className="w-3.5 h-3.5" />
           </a>
+        </div>
+
+        {/* Official Event Flyers Showcase at Bottom */}
+        <div className="max-w-4xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-6 pt-6 border-t border-stone-200">
+          <div className="editorial-card rounded-2xl p-4 border border-stone-200 shadow-xs bg-white text-center">
+            <span className="text-[10px] uppercase font-bold text-stone-400 block mb-2">Official WFD Event Flyer</span>
+            <img src="/wfd/unofficial-poster.png" alt="WFD Event Poster" className="w-full h-auto rounded-xl object-contain shadow-2xs max-h-96 mx-auto" />
+          </div>
+          <div className="editorial-card rounded-2xl p-4 border border-stone-200 shadow-xs bg-white text-center">
+            <span className="text-[10px] uppercase font-bold text-stone-400 block mb-2">Registration QR &amp; Portal</span>
+            <img src="/wfd/scan-to-register.png" alt="Scan to Register" className="w-full h-auto rounded-xl object-contain shadow-2xs max-h-96 mx-auto" />
+          </div>
         </div>
 
       </div>

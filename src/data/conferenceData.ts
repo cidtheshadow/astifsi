@@ -519,6 +519,19 @@ export const WFD_CELEBRATIONS_DATA = {
   ],
   events: [
     {
+      title: "Student Workshop on Food Innovation",
+      tagline: "Practical Hands-On Workshop for Students & Research Scholars",
+      highlights: [
+        "Hands-On Student Training – Practical demonstration of food processing & preservation",
+        "Expert Technical Sessions – Guidance from senior FET faculty & industry mentors",
+        "Interactive Modules – Novel food formulation, pilot plant tools & safety protocols",
+        "Official Certificate of Participation & skill enhancement badge for all attendees"
+      ],
+      coordinator: "FET Student Coordinators",
+      members: ["Bharat Bhushan", "Amisha Kaushik"],
+      iconName: "BookOpen"
+    },
+    {
       title: "Innovative Food Art",
       tagline: "Transforming Ideas into Creative & Nutritious Products",
       highlights: [

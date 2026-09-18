@@ -1,5 +1,5 @@
 import React from 'react';
-import { MapPin, Building2, Crown, Shield, Award, UserCheck, Star, Phone } from 'lucide-react';
+import { MapPin, Building2, Crown, Award, UserCheck, Phone } from 'lucide-react';
 import { COMMITTEE_MEMBERS, type CommitteeMember } from '../data/conferenceData';
 
 export const Committee: React.FC = () => {
@@ -90,74 +90,50 @@ export const Committee: React.FC = () => {
         </div>
 
         {/* 1. Organizing Committee Section */}
-        <div className="mb-20">
-          <div className="text-center mb-10">
+        <div className="mb-16">
+          <div className="text-center mb-8">
             <h3 className="text-2xl sm:text-3xl font-bold text-stone-900 font-serif-editorial">
               Organizing Committee
             </h3>
-            <p className="text-xs sm:text-sm text-stone-500 mt-1">Core organizing team &amp; leadership</p>
+            <p className="text-xs sm:text-sm text-stone-500 mt-1">Conference leadership &amp; organizing team</p>
           </div>
 
-          <div className="space-y-10 max-w-5xl mx-auto">
+          <div className="space-y-8 max-w-6xl mx-auto">
             
-            {/* Tier 1: Patron in Chief */}
+            {/* Group 1: Patron in Chief & Patrons (3 Cards) */}
             <div>
-              <div className="flex items-center justify-center gap-2 mb-4">
+              <div className="flex items-center gap-2 mb-3">
                 <Crown className="w-4 h-4 text-amber-600" />
-                <span className="text-xs font-bold uppercase tracking-widest text-amber-900 bg-amber-100/90 px-3.5 py-1 rounded-full border border-amber-300">
-                  Patron in Chief
+                <span className="text-xs font-bold uppercase tracking-widest text-amber-900">
+                  Patron in Chief &amp; Patrons
                 </span>
               </div>
-              <div className="max-w-md mx-auto">
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
                 {organizingMembers[0] && <MemberCard member={organizingMembers[0]} />}
-              </div>
-            </div>
-
-            {/* Tier 2: Patrons */}
-            <div>
-              <div className="flex items-center justify-center gap-2 mb-4">
-                <Shield className="w-4 h-4 text-amber-600" />
-                <span className="text-xs font-bold uppercase tracking-widest text-amber-900 bg-amber-100/90 px-3.5 py-1 rounded-full border border-amber-300">
-                  Patrons
-                </span>
-              </div>
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
                 {organizingMembers[1] && <MemberCard member={organizingMembers[1]} />}
                 {organizingMembers[2] && <MemberCard member={organizingMembers[2]} />}
               </div>
             </div>
 
-            {/* Tier 3: Chairman */}
+            {/* Group 2: Chairman & Co-chairman (2 Cards) */}
             <div>
-              <div className="flex items-center justify-center gap-2 mb-4">
+              <div className="flex items-center gap-2 mb-3">
                 <Award className="w-4 h-4 text-emerald-600" />
-                <span className="text-xs font-bold uppercase tracking-widest text-emerald-900 bg-emerald-100/90 px-3.5 py-1 rounded-full border border-emerald-300">
-                  Chairman
+                <span className="text-xs font-bold uppercase tracking-widest text-emerald-900">
+                  Chairman &amp; Co-Chairman
                 </span>
               </div>
-              <div className="max-w-md mx-auto">
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-5 max-w-3xl">
                 {organizingMembers[3] && <MemberCard member={organizingMembers[3]} />}
-              </div>
-            </div>
-
-            {/* Tier 4: Co-chairman */}
-            <div>
-              <div className="flex items-center justify-center gap-2 mb-4">
-                <Star className="w-4 h-4 text-emerald-600" />
-                <span className="text-xs font-bold uppercase tracking-widest text-emerald-900 bg-emerald-100/90 px-3.5 py-1 rounded-full border border-emerald-300">
-                  Co-chairman
-                </span>
-              </div>
-              <div className="max-w-md mx-auto">
                 {organizingMembers[4] && <MemberCard member={organizingMembers[4]} />}
               </div>
             </div>
 
-            {/* Tier 5: Organizing Secretaries */}
+            {/* Group 3: Organizing Secretaries (3 Cards) */}
             <div>
-              <div className="flex items-center justify-center gap-2 mb-4">
+              <div className="flex items-center gap-2 mb-3">
                 <UserCheck className="w-4 h-4 text-teal-600" />
-                <span className="text-xs font-bold uppercase tracking-widest text-teal-900 bg-teal-100/90 px-3.5 py-1 rounded-full border border-teal-300">
+                <span className="text-xs font-bold uppercase tracking-widest text-teal-900">
                   Organizing Secretaries &amp; Co-Organizing Secretary
                 </span>
               </div>
