@@ -129,17 +129,29 @@ export const Committee: React.FC = () => {
               </div>
             </div>
 
-            {/* Group 3: Organizing Secretaries (3 Cards) */}
+            {/* Group 3: Organizing Secretaries (2 Cards) */}
             <div>
               <div className="flex items-center gap-2 mb-3">
                 <UserCheck className="w-4 h-4 text-teal-600" />
                 <span className="text-xs font-bold uppercase tracking-widest text-teal-900">
-                  Organizing Secretaries &amp; Co-Organizing Secretary
+                  Organizing Secretaries
                 </span>
               </div>
-              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-5 max-w-3xl">
                 {organizingMembers[5] && <MemberCard member={organizingMembers[5]} />}
                 {organizingMembers[6] && <MemberCard member={organizingMembers[6]} />}
+              </div>
+            </div>
+
+            {/* Group 4: Co-Organizing Secretary (1 Card) */}
+            <div>
+              <div className="flex items-center gap-2 mb-3">
+                <UserCheck className="w-4 h-4 text-sky-600" />
+                <span className="text-xs font-bold uppercase tracking-widest text-sky-900">
+                  Co-Organizing Secretary
+                </span>
+              </div>
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 max-w-md">
                 {organizingMembers[7] && <MemberCard member={organizingMembers[7]} />}
               </div>
             </div>

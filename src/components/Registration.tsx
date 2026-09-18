@@ -26,10 +26,10 @@ export const Registration: React.FC<RegistrationProps> = ({ onOpenAbstractModal 
         </div>
 
         {/* 2-Column Grid: Registration Fees Table & Bank Payment Details */}
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start mb-12">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-stretch mb-12">
           
-          {/* Left Column (7 Cols): Registration Fees Table & Payment QR */}
-          <div className="lg:col-span-7 editorial-card rounded-2xl p-6 sm:p-8 border border-stone-200 shadow-sm flex flex-col justify-between">
+          {/* Left Column (7 Cols): Registration Fees Table */}
+          <div className="lg:col-span-7 editorial-card rounded-2xl p-6 sm:p-8 border border-stone-200 shadow-sm flex flex-col justify-between h-full bg-white">
             <div>
               <div className="flex items-center justify-between gap-3 mb-6 pb-4 border-b border-stone-200">
                 <div className="flex items-center gap-3">
@@ -85,10 +85,8 @@ export const Registration: React.FC<RegistrationProps> = ({ onOpenAbstractModal 
           </div>
 
           {/* Right Column (5 Cols): Bank Details & Payment QR Code */}
-          <div className="lg:col-span-5 space-y-6">
-            
-            {/* Bank Details & QR Card */}
-            <div className="editorial-card rounded-2xl p-6 border border-stone-200 shadow-sm">
+          <div className="lg:col-span-5 editorial-card rounded-2xl p-6 sm:p-8 border border-stone-200 shadow-sm flex flex-col justify-between h-full bg-white">
+            <div>
               <div className="flex items-center gap-3 mb-4 pb-3 border-b border-stone-200">
                 <div className="w-10 h-10 rounded-xl bg-amber-100 border border-amber-300 flex items-center justify-center text-amber-800">
                   <Building2 className="w-5 h-5" />
@@ -136,29 +134,28 @@ export const Registration: React.FC<RegistrationProps> = ({ onOpenAbstractModal 
                   </div>
                 </div>
               </div>
-
-              {/* Action Buttons */}
-              <div className="mt-6 pt-4 border-t border-stone-200 space-y-2">
-                <a
-                  href={CONFERENCE_INFO.abstractFormUrl}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="w-full flex items-center justify-center gap-2 px-5 py-3 rounded-full text-xs font-bold text-white bg-gradient-to-b from-[#ff6b35] via-[#E86024] to-[#d64f18] shadow-[0_6px_20px_-3px_rgba(232,96,36,0.45)] border border-white/30 hover:scale-[1.02] active:scale-[0.98] transition-all uppercase tracking-wider"
-                >
-                  <span>Complete Online Registration Form</span>
-                  <ExternalLink className="w-4 h-4" />
-                </a>
-
-                <button
-                  onClick={onOpenAbstractModal}
-                  className="w-full flex items-center justify-center gap-2 px-5 py-2.5 rounded-full text-xs font-bold bg-stone-100 hover:bg-stone-200 text-stone-800 border border-stone-300"
-                >
-                  <FileText className="w-4 h-4" />
-                  <span>Abstract Guidelines</span>
-                </button>
-              </div>
             </div>
 
+            {/* Action Buttons */}
+            <div className="mt-6 pt-4 border-t border-stone-200 space-y-2">
+              <a
+                href={CONFERENCE_INFO.abstractFormUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-full flex items-center justify-center gap-2 px-5 py-3 rounded-full text-xs font-bold text-white bg-gradient-to-b from-[#ff6b35] via-[#E86024] to-[#d64f18] shadow-[0_6px_20px_-3px_rgba(232,96,36,0.45)] border border-white/30 hover:scale-[1.02] active:scale-[0.98] transition-all uppercase tracking-wider"
+              >
+                <span>Complete Online Registration Form</span>
+                <ExternalLink className="w-4 h-4" />
+              </a>
+
+              <button
+                onClick={onOpenAbstractModal}
+                className="w-full flex items-center justify-center gap-2 px-5 py-2.5 rounded-full text-xs font-bold bg-stone-100 hover:bg-stone-200 text-stone-800 border border-stone-300"
+              >
+                <FileText className="w-4 h-4" />
+                <span>Abstract Guidelines</span>
+              </button>
+            </div>
           </div>
 
         </div>

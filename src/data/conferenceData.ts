@@ -527,8 +527,11 @@ export const WFD_CELEBRATIONS_DATA = {
         "Interactive Modules – Novel food formulation, pilot plant tools & safety protocols",
         "Official Certificate of Participation & skill enhancement badge for all attendees"
       ],
-      coordinator: "FET Student Coordinators",
-      members: ["Bharat Bhushan", "Amisha Kaushik"],
+      coordinator: "Overall Student Coordinators",
+      overallCoordinators: [
+        { name: "Bharat Bhushan", designation: "Ph.D. Scholar", phone: "62975-31362" },
+        { name: "Amisha Kaushik", designation: "Ph.D. Scholar", phone: "83073-52267" }
+      ],
       iconName: "BookOpen"
     },
     {

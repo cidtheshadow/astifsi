@@ -1,7 +1,7 @@
 import React from 'react';
 import { 
   Utensils, Presentation, HelpCircle, Palette, Sparkles, Calendar, Clock, MapPin, 
-  UserCheck, Phone, CheckCircle2, Award, ExternalLink, QrCode
+  Phone, CheckCircle2, Award, ExternalLink, QrCode
 } from 'lucide-react';
 import { WFD_CELEBRATIONS_DATA, CONFERENCE_INFO } from '../data/conferenceData';
 
@@ -37,54 +37,67 @@ export const WFDCelebrations: React.FC = () => {
 
         {/* WFD Event Meta Header Banner */}
         <div className="pastel-gradient-card rounded-2xl p-6 sm:p-8 mb-14 border border-stone-200 shadow-sm">
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-6 items-center">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-4 items-center">
             
-            <div className="flex items-center gap-3 bg-white p-4 rounded-xl border border-stone-200 shadow-2xs">
-              <div className="w-10 h-10 rounded-lg bg-amber-100 flex items-center justify-center text-amber-800 shrink-0">
-                <Calendar className="w-5 h-5" />
+            <div className="flex items-center gap-3 bg-white p-3.5 rounded-xl border border-stone-200 shadow-2xs">
+              <div className="w-9 h-9 rounded-lg bg-amber-100 flex items-center justify-center text-amber-800 shrink-0">
+                <Calendar className="w-4 h-4" />
               </div>
               <div>
                 <span className="text-[10px] font-bold text-stone-400 uppercase block">Event Dates</span>
-                <span className="text-sm font-bold text-stone-900 font-heading">{WFD_CELEBRATIONS_DATA.dates}</span>
+                <span className="text-xs font-bold text-stone-900 font-heading">{WFD_CELEBRATIONS_DATA.dates}</span>
               </div>
             </div>
 
-            <div className="flex items-center gap-3 bg-white p-4 rounded-xl border border-stone-200 shadow-2xs">
-              <div className="w-10 h-10 rounded-xl bg-teal-100 flex items-center justify-center text-teal-800 shrink-0">
-                <Clock className="w-5 h-5" />
+            <div className="flex items-center gap-3 bg-white p-3.5 rounded-xl border border-stone-200 shadow-2xs">
+              <div className="w-9 h-9 rounded-xl bg-teal-100 flex items-center justify-center text-teal-800 shrink-0">
+                <Clock className="w-4 h-4" />
               </div>
               <div>
                 <span className="text-[10px] font-bold text-stone-400 uppercase block">Timing</span>
-                <span className="text-sm font-bold text-stone-900 font-heading">{WFD_CELEBRATIONS_DATA.time}</span>
+                <span className="text-xs font-bold text-stone-900 font-heading">{WFD_CELEBRATIONS_DATA.time}</span>
               </div>
             </div>
 
-            <div className="flex items-center gap-3 bg-white p-4 rounded-xl border border-stone-200 shadow-2xs">
-              <div className="w-10 h-10 rounded-xl bg-emerald-100 flex items-center justify-center text-emerald-800 shrink-0">
-                <MapPin className="w-5 h-5" />
+            <div className="flex items-center gap-3 bg-white p-3.5 rounded-xl border border-stone-200 shadow-2xs">
+              <div className="w-9 h-9 rounded-xl bg-emerald-100 flex items-center justify-center text-emerald-800 shrink-0">
+                <MapPin className="w-4 h-4" />
               </div>
               <div>
                 <span className="text-[10px] font-bold text-stone-400 uppercase block">Venue</span>
-                <span className="text-sm font-bold text-stone-900 font-heading">{WFD_CELEBRATIONS_DATA.venue}</span>
+                <span className="text-xs font-bold text-stone-900 font-heading">{WFD_CELEBRATIONS_DATA.venue}</span>
               </div>
             </div>
 
-            <div className="flex items-center gap-3 bg-white p-4 rounded-xl border border-orange-300 shadow-2xs">
-              <div className="w-10 h-10 rounded-xl bg-orange-100 flex items-center justify-center text-[#E86024] shrink-0">
-                <Award className="w-5 h-5" />
+            <div className="flex items-center gap-3 bg-white p-3.5 rounded-xl border border-orange-300 shadow-2xs">
+              <div className="w-9 h-9 rounded-xl bg-orange-100 flex items-center justify-center text-[#E86024] shrink-0">
+                <Award className="w-4 h-4" />
               </div>
               <div>
                 <span className="text-[10px] font-bold text-stone-400 uppercase block">Reg. Deadline</span>
-                <span className="text-sm font-bold text-[#E86024] font-heading">{WFD_CELEBRATIONS_DATA.registrationDeadline}</span>
+                <span className="text-xs font-bold text-[#E86024] font-heading">{WFD_CELEBRATIONS_DATA.registrationDeadline}</span>
               </div>
+            </div>
+
+            <div className="flex items-center justify-center">
+              <a
+                href={CONFERENCE_INFO.abstractFormUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-full flex items-center justify-center gap-2 px-4 py-3 rounded-xl text-xs font-bold text-white bg-gradient-to-b from-[#ff6b35] via-[#E86024] to-[#d64f18] shadow-md border border-white/30 hover:scale-[1.02] active:scale-[0.98] transition-all uppercase tracking-wider"
+              >
+                <QrCode className="w-4 h-4" />
+                <span>Register for WFD</span>
+                <ExternalLink className="w-3.5 h-3.5" />
+              </a>
             </div>
 
           </div>
         </div>
 
-        {/* 5 WFD Competitions & Workshops Grid */}
+        {/* 6 WFD Competitions & Workshops Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-14">
-          {WFD_CELEBRATIONS_DATA.events.map((event, idx) => (
+          {WFD_CELEBRATIONS_DATA.events.map((event: any, idx: number) => (
             <div
               key={idx}
               className="editorial-card rounded-2xl p-6 border border-stone-200 shadow-xs flex flex-col justify-between bg-white hover:border-amber-400 transition-all"
@@ -117,7 +130,7 @@ export const WFDCelebrations: React.FC = () => {
                 <div className="bg-stone-50 p-4 rounded-xl border border-stone-200 mb-4">
                   <h4 className="text-[11px] font-bold text-stone-600 mb-2 uppercase tracking-wider">Key Highlights:</h4>
                   <ul className="space-y-2 text-xs text-stone-700">
-                    {event.highlights.map((hl, hIdx) => (
+                    {event.highlights.map((hl: string, hIdx: number) => (
                       <li key={hIdx} className="flex items-start gap-2">
                         <CheckCircle2 className="w-3.5 h-3.5 text-emerald-600 shrink-0 mt-0.5" />
                         <span className="leading-relaxed">{hl}</span>
@@ -128,73 +141,72 @@ export const WFDCelebrations: React.FC = () => {
               </div>
 
               {/* Student Coordinator Details */}
-              <div className="pt-3 border-t border-stone-200 space-y-2">
-                <div className="flex items-center justify-between text-xs">
-                  <span className="font-bold text-stone-900">Coordinator:</span>
-                  <span className="font-semibold text-amber-800">{event.coordinator}</span>
-                </div>
-
-                {event.phone && (
-                  <a
-                    href={`tel:${event.phone.replace(/[^0-9]/g, '')}`}
-                    className="flex items-center gap-1.5 text-xs font-bold text-amber-700 hover:text-amber-800"
-                  >
-                    <Phone className="w-3.5 h-3.5" />
-                    <span>+91 {event.phone}</span>
-                  </a>
-                )}
-
-                {event.members && (
-                  <div className="text-[11px] text-stone-500 pt-1">
-                    <strong className="text-stone-700">Committee Members:</strong> {event.members.join(', ')}
+              {event.overallCoordinators ? (
+                <div className="pt-3 border-t border-stone-200 space-y-2">
+                  <span className="text-xs font-bold text-stone-900 block">Overall Student Coordinators:</span>
+                  <div className="space-y-1 text-xs">
+                    {event.overallCoordinators.map((coord: any, cIdx: number) => (
+                      <div key={cIdx} className="flex items-center justify-between">
+                        <span className="font-semibold text-stone-800">{coord.name} <span className="text-stone-400">({coord.designation})</span></span>
+                        <a href={`tel:${coord.phone.replace(/[^0-9]/g, '')}`} className="font-bold text-amber-800 hover:underline">
+                          +91 {coord.phone}
+                        </a>
+                      </div>
+                    ))}
                   </div>
-                )}
-              </div>
+                </div>
+              ) : (
+                <div className="pt-3 border-t border-stone-200 space-y-2">
+                  <div className="flex items-center justify-between text-xs">
+                    <span className="font-bold text-stone-900">Coordinator:</span>
+                    <span className="font-semibold text-amber-800">{event.coordinator}</span>
+                  </div>
+
+                  {event.phone && (
+                    <a
+                      href={`tel:${event.phone.replace(/[^0-9]/g, '')}`}
+                      className="flex items-center gap-1.5 text-xs font-bold text-amber-700 hover:text-amber-800"
+                    >
+                      <Phone className="w-3.5 h-3.5" />
+                      <span>+91 {event.phone}</span>
+                    </a>
+                  )}
+
+                  {event.members && (
+                    <div className="text-[11px] text-stone-500 pt-1">
+                      <strong className="text-stone-700">Committee Members:</strong> {event.members.join(', ')}
+                    </div>
+                  )}
+                </div>
+              )}
             </div>
           ))}
         </div>
 
-        {/* Bottom Registration & Overall Student Coordinators Box */}
-        <div className="bg-white p-6 sm:p-8 rounded-2xl border border-stone-200 shadow-sm flex flex-col md:flex-row items-center justify-between gap-6 max-w-4xl mx-auto mb-12">
-          <div>
-            <div className="flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-amber-800 mb-2">
-              <UserCheck className="w-4 h-4 text-amber-600" />
-              <span>Overall Student Coordinators</span>
-            </div>
-            <div className="flex flex-wrap items-center gap-6 text-xs sm:text-sm text-stone-800">
-              {WFD_CELEBRATIONS_DATA.overallCoordinators.map((coord, idx) => (
-                <div key={idx} className="flex items-center gap-2">
-                  <span className="font-bold">{coord.name}</span>
-                  <span className="text-stone-400">({coord.designation}):</span>
-                  <a href={`tel:${coord.phone.replace(/[^0-9]/g, '')}`} className="font-semibold text-amber-800 hover:underline">
-                    +91 {coord.phone}
-                  </a>
-                </div>
-              ))}
-            </div>
-          </div>
-
-          <a
-            href={CONFERENCE_INFO.abstractFormUrl}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 px-6 py-3 rounded-full text-xs font-bold text-white bg-gradient-to-b from-[#ff6b35] via-[#E86024] to-[#d64f18] shadow-md border border-white/30 hover:scale-[1.03] active:scale-[0.97] transition-all uppercase tracking-wider shrink-0"
-          >
-            <QrCode className="w-4 h-4" />
-            <span>Register for WFD Events</span>
-            <ExternalLink className="w-3.5 h-3.5" />
-          </a>
-        </div>
-
         {/* Official Event Flyers Showcase at Bottom */}
-        <div className="max-w-4xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-6 pt-6 border-t border-stone-200">
-          <div className="editorial-card rounded-2xl p-4 border border-stone-200 shadow-xs bg-white text-center">
-            <span className="text-[10px] uppercase font-bold text-stone-400 block mb-2">Official WFD Event Flyer</span>
-            <img src="/wfd/unofficial-poster.png" alt="WFD Event Poster" className="w-full h-auto rounded-xl object-contain shadow-2xs max-h-96 mx-auto" />
+        <div className="max-w-4xl mx-auto pt-6 border-t border-stone-200">
+          <div className="text-center mb-6">
+            <a
+              href={CONFERENCE_INFO.abstractFormUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 px-6 py-3 rounded-full text-xs font-bold text-white bg-gradient-to-b from-[#ff6b35] via-[#E86024] to-[#d64f18] shadow-md border border-white/30 hover:scale-[1.03] active:scale-[0.97] transition-all uppercase tracking-wider"
+            >
+              <QrCode className="w-4 h-4" />
+              <span>Register for WFD Events</span>
+              <ExternalLink className="w-3.5 h-3.5" />
+            </a>
           </div>
-          <div className="editorial-card rounded-2xl p-4 border border-stone-200 shadow-xs bg-white text-center">
-            <span className="text-[10px] uppercase font-bold text-stone-400 block mb-2">Registration QR &amp; Portal</span>
-            <img src="/wfd/scan-to-register.png" alt="Scan to Register" className="w-full h-auto rounded-xl object-contain shadow-2xs max-h-96 mx-auto" />
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div className="editorial-card rounded-2xl p-4 border border-stone-200 shadow-xs bg-white text-center">
+              <span className="text-[10px] uppercase font-bold text-stone-400 block mb-2">Official WFD Event Flyer</span>
+              <img src="/wfd/unofficial-poster.png" alt="WFD Event Poster" className="w-full h-auto rounded-xl object-contain shadow-2xs max-h-96 mx-auto" />
+            </div>
+            <div className="editorial-card rounded-2xl p-4 border border-stone-200 shadow-xs bg-white text-center">
+              <span className="text-[10px] uppercase font-bold text-stone-400 block mb-2">Registration QR &amp; Portal</span>
+              <img src="/wfd/scan-to-register.png" alt="Scan to Register" className="w-full h-auto rounded-xl object-contain shadow-2xs max-h-96 mx-auto" />
+            </div>
           </div>
         </div>
 
