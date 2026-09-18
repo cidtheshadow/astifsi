@@ -47,14 +47,14 @@ export const CountdownTimer: React.FC = () => {
   }, [targetType]);
 
   return (
-    <div className="editorial-card rounded-2xl p-4 sm:p-6 border border-stone-200 shadow-sm max-w-xl mx-auto">
+    <div className="bg-white/95 backdrop-blur-md rounded-2xl p-5 border border-stone-200 shadow-md max-w-xl mx-auto">
       {/* Target selector tabs */}
-      <div className="flex items-center justify-between gap-2 bg-stone-100 p-1 rounded-xl mb-4 border border-stone-200">
+      <div className="flex items-center justify-between gap-2 bg-[#FAF8F5] p-1.5 rounded-xl mb-4 border border-stone-200">
         <button
           onClick={() => setTargetType('abstract')}
           className={`flex-1 text-xs font-semibold py-2 px-3 rounded-lg transition-all flex items-center justify-center gap-1.5 ${
             targetType === 'abstract'
-              ? 'bg-[#E86024] text-white font-bold shadow-sm'
+              ? 'bg-[#E67E22] text-white font-bold shadow-xs'
               : 'text-stone-600 hover:text-stone-900'
           }`}
         >
@@ -65,7 +65,7 @@ export const CountdownTimer: React.FC = () => {
           onClick={() => setTargetType('conference')}
           className={`flex-1 text-xs font-semibold py-2 px-3 rounded-lg transition-all flex items-center justify-center gap-1.5 ${
             targetType === 'conference'
-              ? 'bg-amber-600 text-white font-bold shadow-sm'
+              ? 'bg-[#002e1f] text-white font-bold shadow-xs'
               : 'text-stone-600 hover:text-stone-900'
           }`}
         >
@@ -76,14 +76,14 @@ export const CountdownTimer: React.FC = () => {
 
       <div className="text-center mb-3">
         <p className="text-[11px] sm:text-xs uppercase tracking-wider text-stone-500 font-semibold flex flex-wrap items-center justify-center gap-1">
-          <Clock className="w-3.5 h-3.5 text-amber-600 shrink-0" />
+          <Clock className="w-3.5 h-3.5 text-[#0D9488] shrink-0" />
           <span>Countdown to {targets[targetType].name}</span>
-          <span className="whitespace-nowrap font-bold text-stone-800">({targets[targetType].formatted})</span>
+          <span className="whitespace-nowrap font-bold text-[#002e1f]">({targets[targetType].formatted})</span>
         </p>
       </div>
 
       {/* Counter Grid */}
-      <div className="grid grid-cols-4 gap-2 sm:gap-4">
+      <div className="grid grid-cols-4 gap-2 sm:gap-3">
         {[
           { label: 'Days', value: timeLeft.days },
           { label: 'Hours', value: timeLeft.hours },
@@ -92,12 +92,12 @@ export const CountdownTimer: React.FC = () => {
         ].map((item, idx) => (
           <div 
             key={idx} 
-            className="bg-white rounded-xl p-2.5 sm:p-3 text-center border border-stone-200 shadow-sm hover:border-amber-500/50 transition-colors"
+            className="bg-[#FAF8F5] rounded-xl p-3 text-center border border-stone-200 shadow-2xs hover:border-[#0D9488]/50 transition-colors"
           >
-            <div className="text-2xl sm:text-3xl font-bold text-stone-900 font-serif-editorial">
+            <div className="text-2xl sm:text-3xl font-extrabold text-[#002e1f] font-serif-editorial">
               {String(item.value).padStart(2, '0')}
             </div>
-            <div className="text-[10px] sm:text-xs font-medium text-stone-500 uppercase tracking-wider mt-0.5">
+            <div className="text-[10px] sm:text-xs font-bold text-stone-500 uppercase tracking-wider mt-0.5 font-heading">
               {item.label}
             </div>
           </div>

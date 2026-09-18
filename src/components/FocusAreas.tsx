@@ -17,17 +17,17 @@ export const FocusAreas: React.FC<FocusAreasProps> = ({ onOpenAbstractModal }) =
 
   const getIcon = (iconName: string) => {
     switch (iconName) {
-      case 'Zap': return <Zap className="w-5 h-5 text-amber-600" />;
-      case 'Cpu': return <Cpu className="w-5 h-5 text-teal-600" />;
+      case 'Zap': return <Zap className="w-5 h-5 text-[#E67E22]" />;
+      case 'Cpu': return <Cpu className="w-5 h-5 text-[#0D9488]" />;
       case 'Bot': return <Bot className="w-5 h-5 text-indigo-600" />;
-      case 'ShieldCheck': return <ShieldCheck className="w-5 h-5 text-emerald-600" />;
+      case 'ShieldCheck': return <ShieldCheck className="w-5 h-5 text-[#0B4632]" />;
       case 'HeartPulse': return <HeartPulse className="w-5 h-5 text-rose-600" />;
-      case 'Leaf': return <Leaf className="w-5 h-5 text-emerald-600" />;
-      case 'Recycle': return <Recycle className="w-5 h-5 text-green-600" />;
+      case 'Leaf': return <Leaf className="w-5 h-5 text-[#0B4632]" />;
+      case 'Recycle': return <Recycle className="w-5 h-5 text-[#E67E22]" />;
       case 'Dna': return <Dna className="w-5 h-5 text-purple-600" />;
-      case 'Rocket': return <Rocket className="w-5 h-5 text-amber-600" />;
-      case 'Handshake': return <Handshake className="w-5 h-5 text-cyan-600" />;
-      default: return <Zap className="w-5 h-5 text-amber-600" />;
+      case 'Rocket': return <Rocket className="w-5 h-5 text-[#E67E22]" />;
+      case 'Handshake': return <Handshake className="w-5 h-5 text-[#0D9488]" />;
+      default: return <Zap className="w-5 h-5 text-[#E67E22]" />;
     }
   };
 
@@ -41,65 +41,61 @@ export const FocusAreas: React.FC<FocusAreasProps> = ({ onOpenAbstractModal }) =
   });
 
   return (
-    <section id="themes" className="py-20 bg-[#FAF8F5] relative overflow-hidden">
+    <section id="themes" className="py-20 bg-[#fff8f5] relative overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         
-        {/* Section Header */}
-        <div className="text-center max-w-3xl mx-auto mb-12">
-          <span className="text-xs font-bold uppercase tracking-widest text-amber-700 bg-amber-100 px-3.5 py-1 rounded-full border border-amber-300">
-            Scientific Scope
-          </span>
-          <h2 className="text-3xl sm:text-5xl font-bold text-stone-950 mt-4 font-serif-editorial">
-            Key Focus Areas
-          </h2>
-          <p className="text-sm text-stone-600 mt-3">
-            Present your groundbreaking research across 10 specialized domains driving the future of food engineering.
-          </p>
-          <div className="w-16 h-1 bg-gradient-to-r from-amber-600 to-emerald-600 mx-auto mt-4 rounded-full" />
+        {/* Section Header (Stitch Style) */}
+        <div className="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-4">
+          <div>
+            <div className="flex items-center gap-2 text-[#0D9488] font-heading font-bold text-xs uppercase tracking-wider mb-2">
+              <span className="w-2 h-2 rounded-full bg-[#E67E22]" />
+              <span>Research Call &amp; Peer-Review Disciplines</span>
+            </div>
+            <h2 className="text-3xl sm:text-5xl font-bold text-[#002e1f] tracking-tight font-display-hero">
+              Conference Scientific Tracks
+            </h2>
+            <p className="text-sm text-stone-600 mt-2 max-w-2xl leading-relaxed">
+              Original research papers, review articles, and scientific poster submissions are invited across 10 curated technological thrust areas.
+            </p>
+          </div>
+
+          {/* Filter Chips */}
+          <div className="flex flex-wrap gap-2">
+            {categories.map((category) => (
+              <button
+                key={category}
+                onClick={() => setSelectedCategory(category)}
+                className={`px-4 py-2 rounded-lg text-xs font-semibold transition-all cursor-pointer ${
+                  selectedCategory === category
+                    ? 'bg-[#002e1f] text-white shadow-sm font-bold'
+                    : 'bg-[#f4ece8] text-stone-700 hover:bg-[#86f2e4] hover:text-[#00201d]'
+                }`}
+              >
+                {category}
+              </button>
+            ))}
+          </div>
         </div>
 
-        {/* Category Filters */}
-        <div className="flex flex-wrap items-center justify-center gap-2 mb-10">
-          {categories.map((category) => (
-            <button
-              key={category}
-              onClick={() => setSelectedCategory(category)}
-              className={`px-4 py-2 rounded-xl text-xs font-semibold transition-all ${
-                selectedCategory === category
-                  ? 'bg-stone-950 text-white shadow-sm font-bold'
-                  : 'bg-white text-stone-600 hover:text-stone-900 border border-stone-200'
-              }`}
-            >
-              {category}
-            </button>
-          ))}
-        </div>
-
-        {/* 10 Focus Areas Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
+        {/* 10 Focus Areas Bento Grid */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {filteredAreas.map((area) => (
             <div
               key={area.id}
               onClick={() => setActiveModalArea(area)}
-              className="editorial-card editorial-card-hover rounded-2xl p-6 border border-stone-200 flex flex-col justify-between cursor-pointer group"
+              className="bg-white rounded-2xl p-6 border border-stone-200 shadow-2xs hover:shadow-md transition-all duration-300 flex flex-col justify-between cursor-pointer group"
             >
               <div>
                 <div className="flex items-center justify-between mb-4">
-                  <div className="flex items-center gap-3">
-                    <div className="w-10 h-10 rounded-xl bg-stone-100 border border-stone-200 flex items-center justify-center group-hover:scale-110 transition-transform">
-                      {getIcon(area.iconName)}
-                    </div>
-                    <span className="text-sm font-extrabold text-stone-400 tracking-wider font-heading">
-                      {area.number}
-                    </span>
+                  <div className="w-10 h-10 rounded-xl bg-[#D1FAE5] border border-emerald-200 flex items-center justify-center group-hover:scale-110 transition-transform">
+                    {getIcon(area.iconName)}
                   </div>
-
-                  <span className="text-[10px] font-bold text-amber-700 bg-amber-100 px-2.5 py-1 rounded-full border border-amber-300">
-                    {area.tag}
+                  <span className="px-2.5 py-1 rounded-full bg-[#FEF3C7] text-[#713700] text-[10px] font-bold uppercase tracking-wider">
+                    Track {area.number}
                   </span>
                 </div>
 
-                <h3 className="text-base font-bold text-stone-900 group-hover:text-amber-700 transition-colors font-heading mb-2">
+                <h3 className="text-base font-bold text-[#002e1f] group-hover:text-[#0D9488] transition-colors font-heading mb-2">
                   {area.title}
                 </h3>
 
@@ -108,23 +104,23 @@ export const FocusAreas: React.FC<FocusAreasProps> = ({ onOpenAbstractModal }) =
                 </p>
               </div>
 
-              <div className="mt-5 pt-3 border-t border-stone-200/80 flex items-center justify-between text-xs font-medium text-stone-500 group-hover:text-amber-700 transition-colors">
-                <span>View Details</span>
+              <div className="mt-5 pt-3 border-t border-stone-100 flex items-center justify-between text-xs font-semibold text-[#0D9488] group-hover:text-[#002e1f] transition-colors">
+                <span>View Scope &amp; Topics</span>
                 <ArrowUpRight className="w-4 h-4 transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
               </div>
             </div>
           ))}
         </div>
 
-        {/* CTA Footer inside Focus Areas */}
-        <div className="mt-12 text-center bg-white p-6 rounded-2xl border border-stone-200 max-w-2xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-4 shadow-sm">
+        {/* Callout Banner at bottom of tracks */}
+        <div className="mt-12 text-center bg-white p-6 rounded-2xl border border-stone-200 max-w-3xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-4 shadow-sm">
           <div className="text-left">
-            <h4 className="text-sm font-bold text-stone-900">Have research matching these focus areas?</h4>
-            <p className="text-xs text-stone-500 mt-0.5">Submit your 300-word abstract before Oct 4, 2026.</p>
+            <h4 className="text-sm font-bold text-[#002e1f]">Have research matching these scientific tracks?</h4>
+            <p className="text-xs text-stone-500 mt-0.5">Submit your 300-word abstract online before Oct 4, 2026.</p>
           </div>
           <button
             onClick={onOpenAbstractModal}
-            className="whitespace-nowrap px-6 py-2.5 rounded-full text-xs font-bold text-white bg-gradient-to-b from-[#ff6b35] via-[#E86024] to-[#d64f18] shadow-[0_6px_20px_-3px_rgba(232,96,36,0.45)] border border-white/30 hover:scale-[1.04] active:scale-[0.96] transition-all duration-300 ease-out uppercase tracking-wider"
+            className="whitespace-nowrap px-6 py-3 rounded-lg text-xs font-bold text-white bg-[#002e1f] hover:bg-[#0E5A40] shadow-md uppercase tracking-wider transition-all"
           >
             Submit Abstract
           </button>
@@ -132,10 +128,10 @@ export const FocusAreas: React.FC<FocusAreasProps> = ({ onOpenAbstractModal }) =
 
       </div>
 
-      {/* Focus Area Detail Modal */}
+      {/* Detail Modal */}
       {activeModalArea && (
         <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-stone-950/40 backdrop-blur-md animate-in fade-in">
-          <div className="editorial-card rounded-2xl p-6 sm:p-8 max-w-lg w-full border border-stone-300 shadow-2xl relative bg-white">
+          <div className="bg-white rounded-2xl p-6 sm:p-8 max-w-lg w-full border border-stone-300 shadow-2xl relative">
             <button
               onClick={() => setActiveModalArea(null)}
               className="absolute top-4 right-4 p-2 rounded-xl text-stone-400 hover:text-stone-900 hover:bg-stone-100"
@@ -144,14 +140,14 @@ export const FocusAreas: React.FC<FocusAreasProps> = ({ onOpenAbstractModal }) =
             </button>
 
             <div className="flex items-center gap-3 mb-4">
-              <div className="w-12 h-12 rounded-xl bg-stone-100 border border-stone-200 flex items-center justify-center">
+              <div className="w-12 h-12 rounded-xl bg-[#D1FAE5] border border-emerald-200 flex items-center justify-center">
                 {getIcon(activeModalArea.iconName)}
               </div>
               <div>
-                <span className="text-xs font-bold text-amber-700 uppercase tracking-wider font-heading">
-                  Focus Area {activeModalArea.number}
+                <span className="text-xs font-bold text-[#E67E22] uppercase tracking-wider font-heading">
+                  Track {activeModalArea.number} Scope
                 </span>
-                <h3 className="text-lg font-bold text-stone-900 font-heading">
+                <h3 className="text-lg font-bold text-[#002e1f] font-heading">
                   {activeModalArea.title}
                 </h3>
               </div>
@@ -162,19 +158,19 @@ export const FocusAreas: React.FC<FocusAreasProps> = ({ onOpenAbstractModal }) =
                 {activeModalArea.description}
               </p>
 
-              <div className="bg-stone-50 p-4 rounded-xl border border-stone-200">
+              <div className="bg-[#fff8f5] p-4 rounded-xl border border-stone-200">
                 <h4 className="text-xs font-semibold text-stone-600 mb-2">Scope &amp; Abstract Topics:</h4>
                 <ul className="space-y-1.5 text-xs text-stone-700">
                   <li className="flex items-center gap-2">
-                    <CheckCircle2 className="w-3.5 h-3.5 text-emerald-600 flex-shrink-0" />
+                    <CheckCircle2 className="w-3.5 h-3.5 text-[#0D9488] flex-shrink-0" />
                     Original experimental &amp; applied engineering research
                   </li>
                   <li className="flex items-center gap-2">
-                    <CheckCircle2 className="w-3.5 h-3.5 text-emerald-600 flex-shrink-0" />
-                    Emerging industrial applications &amp; pilot studies
+                    <CheckCircle2 className="w-3.5 h-3.5 text-[#0D9488] flex-shrink-0" />
+                    Emerging industrial applications &amp; pilot scale studies
                   </li>
                   <li className="flex items-center gap-2">
-                    <CheckCircle2 className="w-3.5 h-3.5 text-emerald-600 flex-shrink-0" />
+                    <CheckCircle2 className="w-3.5 h-3.5 text-[#0D9488] flex-shrink-0" />
                     Sustainability impact assessment &amp; commercialization
                   </li>
                 </ul>
@@ -193,7 +189,7 @@ export const FocusAreas: React.FC<FocusAreasProps> = ({ onOpenAbstractModal }) =
                   setActiveModalArea(null);
                   onOpenAbstractModal();
                 }}
-                className="px-5 py-2.5 rounded-full text-xs font-bold text-white bg-gradient-to-b from-[#ff6b35] via-[#E86024] to-[#d64f18] shadow-md border border-white/30 hover:scale-[1.03] active:scale-[0.97] transition-all uppercase tracking-wider"
+                className="px-5 py-2.5 rounded-lg text-xs font-bold text-white bg-[#002e1f] hover:bg-[#0E5A40] shadow-md uppercase tracking-wider"
               >
                 Submit Abstract
               </button>
