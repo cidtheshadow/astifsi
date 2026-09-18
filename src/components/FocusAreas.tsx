@@ -18,7 +18,7 @@ export const FocusAreas: React.FC<FocusAreasProps> = ({ onOpenAbstractModal }) =
   const getIcon = (iconName: string) => {
     switch (iconName) {
       case 'Zap': return <Zap className="w-5 h-5 text-[#E67E22]" />;
-      case 'Cpu': return <Cpu className="w-5 h-5 text-[#0D9488]" />;
+      case 'Cpu': return <Cpu className="w-5 h-5 text-[#D4AF37]" />;
       case 'Bot': return <Bot className="w-5 h-5 text-indigo-600" />;
       case 'ShieldCheck': return <ShieldCheck className="w-5 h-5 text-[#0B4632]" />;
       case 'HeartPulse': return <HeartPulse className="w-5 h-5 text-rose-600" />;
@@ -26,7 +26,7 @@ export const FocusAreas: React.FC<FocusAreasProps> = ({ onOpenAbstractModal }) =
       case 'Recycle': return <Recycle className="w-5 h-5 text-[#E67E22]" />;
       case 'Dna': return <Dna className="w-5 h-5 text-purple-600" />;
       case 'Rocket': return <Rocket className="w-5 h-5 text-[#E67E22]" />;
-      case 'Handshake': return <Handshake className="w-5 h-5 text-[#0D9488]" />;
+      case 'Handshake': return <Handshake className="w-5 h-5 text-[#D4AF37]" />;
       default: return <Zap className="w-5 h-5 text-[#E67E22]" />;
     }
   };
@@ -47,11 +47,11 @@ export const FocusAreas: React.FC<FocusAreasProps> = ({ onOpenAbstractModal }) =
         {/* Section Header (Stitch Style) */}
         <div className="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-4">
           <div>
-            <div className="flex items-center gap-2 text-[#0D9488] font-heading font-bold text-xs uppercase tracking-wider mb-2">
+            <div className="flex items-center gap-2 text-[#D4AF37] font-heading font-bold text-xs uppercase tracking-wider mb-2">
               <span className="w-2 h-2 rounded-full bg-[#E67E22]" />
               <span>Research Call &amp; Peer-Review Disciplines</span>
             </div>
-            <h2 className="text-3xl sm:text-5xl font-bold text-[#002e1f] tracking-tight font-display-hero">
+            <h2 className="text-3xl sm:text-5xl font-bold text-[#580B1E] tracking-tight font-display-hero">
               Conference Scientific Tracks
             </h2>
             <p className="text-sm text-stone-600 mt-2 max-w-2xl leading-relaxed">
@@ -67,7 +67,7 @@ export const FocusAreas: React.FC<FocusAreasProps> = ({ onOpenAbstractModal }) =
                 onClick={() => setSelectedCategory(category)}
                 className={`px-4 py-2 rounded-lg text-xs font-semibold transition-all cursor-pointer ${
                   selectedCategory === category
-                    ? 'bg-[#002e1f] text-white shadow-sm font-bold'
+                    ? 'bg-[#580B1E] text-white shadow-sm font-bold'
                     : 'bg-[#f4ece8] text-stone-700 hover:bg-[#86f2e4] hover:text-[#00201d]'
                 }`}
               >
@@ -95,7 +95,7 @@ export const FocusAreas: React.FC<FocusAreasProps> = ({ onOpenAbstractModal }) =
                   </span>
                 </div>
 
-                <h3 className="text-base font-bold text-[#002e1f] group-hover:text-[#0D9488] transition-colors font-heading mb-2">
+                <h3 className="text-base font-bold text-[#580B1E] group-hover:text-[#D4AF37] transition-colors font-heading mb-2">
                   {area.title}
                 </h3>
 
@@ -104,7 +104,7 @@ export const FocusAreas: React.FC<FocusAreasProps> = ({ onOpenAbstractModal }) =
                 </p>
               </div>
 
-              <div className="mt-5 pt-3 border-t border-stone-100 flex items-center justify-between text-xs font-semibold text-[#0D9488] group-hover:text-[#002e1f] transition-colors">
+              <div className="mt-5 pt-3 border-t border-orange-100 flex items-center justify-between text-xs font-semibold text-[#D4AF37] group-hover:text-[#580B1E] transition-colors">
                 <span>View Scope &amp; Topics</span>
                 <ArrowUpRight className="w-4 h-4 transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
               </div>
@@ -115,12 +115,12 @@ export const FocusAreas: React.FC<FocusAreasProps> = ({ onOpenAbstractModal }) =
         {/* Callout Banner at bottom of tracks */}
         <div className="mt-12 text-center bg-white p-6 rounded-2xl border border-stone-200 max-w-3xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-4 shadow-sm">
           <div className="text-left">
-            <h4 className="text-sm font-bold text-[#002e1f]">Have research matching these scientific tracks?</h4>
-            <p className="text-xs text-stone-500 mt-0.5">Submit your 300-word abstract online before Oct 4, 2026.</p>
+            <h4 className="text-sm font-bold text-[#580B1E]">Have research matching these scientific tracks?</h4>
+            <p className="text-xs text-orange-500 mt-0.5">Submit your 300-word abstract online before Oct 4, 2026.</p>
           </div>
           <button
             onClick={onOpenAbstractModal}
-            className="whitespace-nowrap px-6 py-3 rounded-lg text-xs font-bold text-white bg-[#002e1f] hover:bg-[#0E5A40] shadow-md uppercase tracking-wider transition-all"
+            className="whitespace-nowrap px-6 py-3 rounded-lg text-xs font-bold text-white bg-[#580B1E] hover:bg-[#0E5A40] shadow-md uppercase tracking-wider transition-all"
           >
             Submit Abstract
           </button>
@@ -134,7 +134,7 @@ export const FocusAreas: React.FC<FocusAreasProps> = ({ onOpenAbstractModal }) =
           <div className="bg-white rounded-2xl p-6 sm:p-8 max-w-lg w-full border border-stone-300 shadow-2xl relative">
             <button
               onClick={() => setActiveModalArea(null)}
-              className="absolute top-4 right-4 p-2 rounded-xl text-stone-400 hover:text-stone-900 hover:bg-stone-100"
+              className="absolute top-4 right-4 p-2 rounded-xl text-stone-400 hover:text-stone-900 hover:bg-orange-100"
             >
               <X className="w-5 h-5" />
             </button>
@@ -147,7 +147,7 @@ export const FocusAreas: React.FC<FocusAreasProps> = ({ onOpenAbstractModal }) =
                 <span className="text-xs font-bold text-[#E67E22] uppercase tracking-wider font-heading">
                   Track {activeModalArea.number} Scope
                 </span>
-                <h3 className="text-lg font-bold text-[#002e1f] font-heading">
+                <h3 className="text-lg font-bold text-[#580B1E] font-heading">
                   {activeModalArea.title}
                 </h3>
               </div>
@@ -162,15 +162,15 @@ export const FocusAreas: React.FC<FocusAreasProps> = ({ onOpenAbstractModal }) =
                 <h4 className="text-xs font-semibold text-stone-600 mb-2">Scope &amp; Abstract Topics:</h4>
                 <ul className="space-y-1.5 text-xs text-stone-700">
                   <li className="flex items-center gap-2">
-                    <CheckCircle2 className="w-3.5 h-3.5 text-[#0D9488] flex-shrink-0" />
+                    <CheckCircle2 className="w-3.5 h-3.5 text-[#D4AF37] flex-shrink-0" />
                     Original experimental &amp; applied engineering research
                   </li>
                   <li className="flex items-center gap-2">
-                    <CheckCircle2 className="w-3.5 h-3.5 text-[#0D9488] flex-shrink-0" />
+                    <CheckCircle2 className="w-3.5 h-3.5 text-[#D4AF37] flex-shrink-0" />
                     Emerging industrial applications &amp; pilot scale studies
                   </li>
                   <li className="flex items-center gap-2">
-                    <CheckCircle2 className="w-3.5 h-3.5 text-[#0D9488] flex-shrink-0" />
+                    <CheckCircle2 className="w-3.5 h-3.5 text-[#D4AF37] flex-shrink-0" />
                     Sustainability impact assessment &amp; commercialization
                   </li>
                 </ul>
@@ -180,7 +180,7 @@ export const FocusAreas: React.FC<FocusAreasProps> = ({ onOpenAbstractModal }) =
             <div className="flex items-center justify-end gap-3 pt-4 border-t border-stone-200">
               <button
                 onClick={() => setActiveModalArea(null)}
-                className="px-4 py-2 rounded-xl text-xs font-semibold text-stone-500 hover:text-stone-900"
+                className="px-4 py-2 rounded-xl text-xs font-semibold text-orange-500 hover:text-stone-900"
               >
                 Close
               </button>
@@ -189,7 +189,7 @@ export const FocusAreas: React.FC<FocusAreasProps> = ({ onOpenAbstractModal }) =
                   setActiveModalArea(null);
                   onOpenAbstractModal();
                 }}
-                className="px-5 py-2.5 rounded-lg text-xs font-bold text-white bg-[#002e1f] hover:bg-[#0E5A40] shadow-md uppercase tracking-wider"
+                className="px-5 py-2.5 rounded-lg text-xs font-bold text-white bg-[#580B1E] hover:bg-[#0E5A40] shadow-md uppercase tracking-wider"
               >
                 Submit Abstract
               </button>

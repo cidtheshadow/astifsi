@@ -13,16 +13,16 @@ export const Registration: React.FC<RegistrationProps> = ({ onOpenAbstractModal 
         
         {/* Section Header (Stitch Style) */}
         <div className="text-center max-w-3xl mx-auto mb-16">
-          <span className="text-xs font-bold uppercase tracking-widest text-[#002e1f] bg-[#D1FAE5] px-3.5 py-1 rounded-full border border-emerald-300">
+          <span className="text-xs font-bold uppercase tracking-widest text-[#580B1E] bg-[#D1FAE5] px-3.5 py-1 rounded-full border border-emerald-300">
             Participation &amp; Delegate Matrix
           </span>
-          <h2 className="text-3xl sm:text-5xl font-bold text-[#002e1f] mt-4 font-display-hero">
-            Registration Fees &amp; <span className="italic text-[#0D9488]">Payment Details</span>
+          <h2 className="text-3xl sm:text-5xl font-bold text-[#580B1E] mt-4 font-display-hero">
+            Registration Fees &amp; <span className="italic text-[#D4AF37]">Payment Details</span>
           </h2>
           <p className="text-sm text-stone-600 mt-3 leading-relaxed">
             Register for AFSTINFC-2026 to participate in 3 technical oral sessions, 1 poster session, plenary keynotes, and conference kit.
           </p>
-          <div className="w-16 h-1 bg-gradient-to-r from-[#E67E22] to-[#0D9488] mx-auto mt-4 rounded-full" />
+          <div className="w-16 h-1 bg-gradient-to-r from-[#E67E22] to-[#D4AF37] mx-auto mt-4 rounded-full" />
         </div>
 
         {/* 2-Column Grid: Registration Fees Cards & Bank Payment Details */}
@@ -37,8 +37,8 @@ export const Registration: React.FC<RegistrationProps> = ({ onOpenAbstractModal 
                     <CreditCard className="w-5 h-5" />
                   </div>
                   <div>
-                    <h3 className="text-lg font-bold text-[#002e1f] font-heading">Registration Fee Categories</h3>
-                    <p className="text-xs text-stone-500">AFST(I) Member &amp; Non-Member Tier Rates</p>
+                    <h3 className="text-lg font-bold text-[#580B1E] font-heading">Registration Fee Categories</h3>
+                    <p className="text-xs text-orange-500">AFST(I) Member &amp; Non-Member Tier Rates</p>
                   </div>
                 </div>
 
@@ -59,11 +59,11 @@ export const Registration: React.FC<RegistrationProps> = ({ onOpenAbstractModal 
                     }`}
                   >
                     <div className="flex items-center gap-3">
-                      <CheckCircle2 className={`w-4 h-4 ${fee.isDiscounted ? 'text-[#0D9488]' : 'text-stone-400'}`} />
+                      <CheckCircle2 className={`w-4 h-4 ${fee.isDiscounted ? 'text-[#D4AF37]' : 'text-stone-400'}`} />
                       <div>
-                        <span className="text-xs font-bold text-[#002e1f] block">{fee.category}</span>
+                        <span className="text-xs font-bold text-[#580B1E] block">{fee.category}</span>
                         {fee.isDiscounted && (
-                          <span className="text-[10px] uppercase font-extrabold text-[#0D9488]">
+                          <span className="text-[10px] uppercase font-extrabold text-[#D4AF37]">
                             Special Member Privilege
                           </span>
                         )}
@@ -80,12 +80,12 @@ export const Registration: React.FC<RegistrationProps> = ({ onOpenAbstractModal 
               </div>
             </div>
 
-            <div className="pt-4 border-t border-stone-200 text-xs text-stone-500 flex items-center justify-between">
+            <div className="pt-4 border-t border-stone-200 text-xs text-orange-500 flex items-center justify-between">
               <span className="flex items-center gap-1">
-                <ShieldCheck className="w-3.5 h-3.5 text-[#0D9488]" />
+                <ShieldCheck className="w-3.5 h-3.5 text-[#D4AF37]" />
                 * Includes conference access, presentation certificate &amp; kit
               </span>
-              <span className="font-bold text-[#002e1f]">All prices in INR (Rs.)</span>
+              <span className="font-bold text-[#580B1E]">All prices in INR (Rs.)</span>
             </div>
           </div>
 
@@ -97,14 +97,14 @@ export const Registration: React.FC<RegistrationProps> = ({ onOpenAbstractModal 
                   <Building2 className="w-5 h-5" />
                 </div>
                 <div>
-                  <h3 className="text-base font-bold text-[#002e1f] font-heading">Bank Payment Details</h3>
-                  <p className="text-xs text-stone-500">UPI QR / NEFT / RTGS Online Transfer</p>
+                  <h3 className="text-base font-bold text-[#580B1E] font-heading">Bank Payment Details</h3>
+                  <p className="text-xs text-orange-500">UPI QR / NEFT / RTGS Online Transfer</p>
                 </div>
               </div>
 
               {/* Payment QR Code Box */}
               <div className="bg-[#fff8f5] p-4 rounded-xl border border-stone-200 text-center flex flex-col items-center mb-4">
-                <div className="flex items-center gap-1.5 text-xs font-bold text-[#002e1f] mb-2 font-heading">
+                <div className="flex items-center gap-1.5 text-xs font-bold text-[#580B1E] mb-2 font-heading">
                   <QrCode className="w-4 h-4 text-[#E67E22]" />
                   <span>Scan QR Code for Direct Payment</span>
                 </div>
@@ -113,29 +113,29 @@ export const Registration: React.FC<RegistrationProps> = ({ onOpenAbstractModal 
                   alt="Official Payment QR Code for AFSTI Longowal" 
                   className="w-44 h-44 object-contain rounded-lg border border-stone-300 shadow-2xs bg-white p-1"
                 />
-                <span className="text-[10px] text-stone-500 mt-2 font-medium">Scan using any UPI app (GPay, PhonePe, Paytm, BHIM)</span>
+                <span className="text-[10px] text-orange-500 mt-2 font-medium">Scan using any UPI app (GPay, PhonePe, Paytm, BHIM)</span>
               </div>
 
               <div className="space-y-2.5 text-xs">
                 <div className="bg-[#fff8f5] p-3 rounded-xl border border-stone-200">
-                  <span className="text-[10px] uppercase text-stone-500 font-bold block mb-0.5">Account Name</span>
-                  <span className="text-sm font-bold text-[#002e1f] font-heading">{BANK_DETAILS.accountName}</span>
+                  <span className="text-[10px] uppercase text-orange-500 font-bold block mb-0.5">Account Name</span>
+                  <span className="text-sm font-bold text-[#580B1E] font-heading">{BANK_DETAILS.accountName}</span>
                 </div>
 
                 <div className="bg-[#fff8f5] p-3 rounded-xl border border-stone-200">
-                  <span className="text-[10px] uppercase text-stone-500 font-bold block mb-0.5">Bank Name &amp; Branch</span>
+                  <span className="text-[10px] uppercase text-orange-500 font-bold block mb-0.5">Bank Name &amp; Branch</span>
                   <span className="text-xs font-bold text-stone-800">{BANK_DETAILS.bankName}</span>
                 </div>
 
                 <div className="grid grid-cols-2 gap-2">
                   <div className="bg-[#fff8f5] p-3 rounded-xl border border-stone-200">
-                    <span className="text-[10px] uppercase text-stone-500 font-bold block mb-0.5">Account Number</span>
+                    <span className="text-[10px] uppercase text-orange-500 font-bold block mb-0.5">Account Number</span>
                     <span className="text-xs font-extrabold text-[#E67E22] font-mono tracking-wider">{BANK_DETAILS.accountNo}</span>
                   </div>
 
                   <div className="bg-[#fff8f5] p-3 rounded-xl border border-stone-200">
-                    <span className="text-[10px] uppercase text-stone-500 font-bold block mb-0.5">IFSC Code</span>
-                    <span className="text-xs font-extrabold text-[#002e1f] font-mono tracking-wider">{BANK_DETAILS.ifscCode}</span>
+                    <span className="text-[10px] uppercase text-orange-500 font-bold block mb-0.5">IFSC Code</span>
+                    <span className="text-xs font-extrabold text-[#580B1E] font-mono tracking-wider">{BANK_DETAILS.ifscCode}</span>
                   </div>
                 </div>
               </div>
@@ -147,7 +147,7 @@ export const Registration: React.FC<RegistrationProps> = ({ onOpenAbstractModal 
                 href={CONFERENCE_INFO.abstractFormUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-full flex items-center justify-center gap-2 px-5 py-3 rounded-lg text-xs font-bold text-white bg-[#002e1f] hover:bg-[#0E5A40] shadow-md transition-all uppercase tracking-wider"
+                className="w-full flex items-center justify-center gap-2 px-5 py-3 rounded-lg text-xs font-bold text-white bg-[#580B1E] hover:bg-[#0E5A40] shadow-md transition-all uppercase tracking-wider"
               >
                 <span>Complete Online Registration Form</span>
                 <ExternalLink className="w-4 h-4" />
@@ -155,7 +155,7 @@ export const Registration: React.FC<RegistrationProps> = ({ onOpenAbstractModal 
 
               <button
                 onClick={onOpenAbstractModal}
-                className="w-full flex items-center justify-center gap-2 px-5 py-2.5 rounded-lg text-xs font-bold bg-[#f4ece8] hover:bg-[#86f2e4] text-[#002e1f] border border-stone-300 transition-colors"
+                className="w-full flex items-center justify-center gap-2 px-5 py-2.5 rounded-lg text-xs font-bold bg-[#f4ece8] hover:bg-[#86f2e4] text-[#580B1E] border border-stone-300 transition-colors"
               >
                 <FileText className="w-4 h-4" />
                 <span>Abstract Guidelines</span>

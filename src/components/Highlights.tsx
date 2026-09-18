@@ -6,7 +6,7 @@ export const Highlights: React.FC = () => {
   const getIcon = (iconName: string) => {
     switch (iconName) {
       case 'Presentation': return <Presentation className="w-6 h-6 text-amber-700" />;
-      case 'Layers': return <Layers className="w-6 h-6 text-teal-700" />;
+      case 'Layers': return <Layers className="w-6 h-6 text-amber-700" />;
       case 'Sparkles': return <Sparkles className="w-6 h-6 text-orange-600" />;
       case 'Users': return <Users className="w-6 h-6 text-cyan-700" />;
       case 'Trophy': return <Trophy className="w-6 h-6 text-amber-600" />;
@@ -21,7 +21,7 @@ export const Highlights: React.FC = () => {
         
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-16">
-          <span className="text-xs font-bold uppercase tracking-widest text-teal-800 bg-teal-100 px-3.5 py-1 rounded-full border border-teal-300">
+          <span className="text-xs font-bold uppercase tracking-widest text-teal-800 bg-orange-100 px-3.5 py-1 rounded-full border border-teal-300">
             Conference Features
           </span>
           <h2 className="text-3xl sm:text-5xl font-bold text-stone-950 mt-4 font-serif-editorial">
@@ -30,7 +30,7 @@ export const Highlights: React.FC = () => {
           <p className="text-sm text-stone-600 mt-3">
             Designed for high-impact knowledge exchange, scientific dissemination, and recognition.
           </p>
-          <div className="w-16 h-1 bg-gradient-to-r from-amber-600 to-emerald-600 mx-auto mt-4 rounded-full" />
+          <div className="w-16 h-1 bg-gradient-to-r from-amber-600 to-amber-600 mx-auto mt-4 rounded-full" />
         </div>
 
         {/* Highlights Cards Grid (6 Cards 3x2) */}
@@ -54,8 +54,8 @@ export const Highlights: React.FC = () => {
                     item.badge === 'Awards'
                       ? 'bg-amber-100 text-amber-800 border-amber-300'
                       : item.badge === 'Certificates'
-                      ? 'bg-emerald-100 text-emerald-800 border-emerald-300'
-                      : 'bg-stone-100 text-stone-600 border-stone-300'
+                      ? 'bg-orange-100 text-amber-800 border-emerald-300'
+                      : 'bg-orange-100 text-stone-600 border-stone-300'
                   }`}>
                     {item.badge}
                   </span>
