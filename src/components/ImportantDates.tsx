@@ -1,5 +1,5 @@
 import React from 'react';
-import { Clock, Send } from 'lucide-react';
+import { Clock, Send, Calendar, CheckCircle2 } from 'lucide-react';
 import { IMPORTANT_DATES } from '../data/conferenceData';
 
 interface ImportantDatesProps {
@@ -8,48 +8,55 @@ interface ImportantDatesProps {
 
 export const ImportantDates: React.FC<ImportantDatesProps> = ({ onOpenAbstractModal }) => {
   return (
-    <section id="dates" className="py-20 bg-[#FAF8F5] relative">
+    <section id="deadlines" className="py-20 bg-[#faf2ee] relative">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Section Header */}
-        <div className="text-center max-w-3xl mx-auto mb-16">
-          <span className="text-xs font-bold uppercase tracking-widest text-emerald-800 bg-emerald-100 px-3.5 py-1 rounded-full border border-emerald-300">
-            Timeline &amp; Schedule
-          </span>
-          <h2 className="text-3xl sm:text-5xl font-bold text-stone-950 mt-4 font-serif-editorial">
-            Important <span className="italic text-amber-700">Submission Dates</span>
-          </h2>
-          <p className="text-sm text-stone-600 mt-3">
-            Mark your calendar for abstract submission, peer-review acceptance, and manuscript deadlines.
-          </p>
-          <div className="w-16 h-1 bg-gradient-to-r from-amber-600 to-emerald-600 mx-auto mt-4 rounded-full" />
+        <div className="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-4">
+          <div>
+            <div className="flex items-center gap-2 text-[#D4AF37] font-heading font-bold text-xs uppercase tracking-wider mb-2">
+              <Calendar className="w-4 h-4 text-[#E67E22]" />
+              <span>Conclave Milestones</span>
+            </div>
+            <h2 className="text-3xl sm:text-5xl font-bold text-[#580B1E] tracking-tight font-display-hero">
+              Important Dates &amp; Deadlines
+            </h2>
+            <p className="text-sm text-stone-600 mt-2 max-w-xl leading-relaxed">
+              Mark your calendar for abstract submission, peer-review acceptance notification, and camera-ready manuscript deadlines.
+            </p>
+          </div>
+
+          <div className="bg-white p-3.5 rounded-xl border border-stone-200 shadow-2xs flex items-center gap-3 shrink-0">
+            <span className="w-3 h-3 rounded-full bg-[#E67E22] animate-pulse shrink-0" />
+            <span className="text-xs font-bold text-[#580B1E]">Abstract Submission Closes: October 4, 2026</span>
+          </div>
         </div>
 
         {/* Stepper Timeline Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto relative">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-7xl mx-auto relative">
           
           {IMPORTANT_DATES.map((item, idx) => (
             <div
               key={idx}
-              className={`editorial-card rounded-2xl p-6 border relative flex flex-col justify-between transition-all ${
+              className={`rounded-2xl p-6 border relative flex flex-col justify-between transition-all bg-white shadow-2xs ${
                 item.isUrgent
-                  ? 'border-orange-400 bg-gradient-to-b from-amber-50/50 to-orange-50/30 shadow-md'
+                  ? 'border-[#E67E22] bg-gradient-to-b from-[#FEF3C7]/40 to-white shadow-md'
                   : 'border-stone-200 hover:border-stone-300'
               }`}
             >
               <div>
                 {/* Step Number & Urgency Badge */}
                 <div className="flex items-center justify-between mb-4">
-                  <span className="w-8 h-8 rounded-full bg-white border border-stone-300 text-xs font-extrabold text-stone-800 flex items-center justify-center font-heading shadow-2xs">
+                  <span className="text-2xl font-black text-[#580B1E] font-display-hero">
                     0{idx + 1}
                   </span>
 
                   {item.isUrgent ? (
-                    <span className="text-[10px] uppercase font-bold tracking-wider px-2.5 py-0.5 rounded-full bg-orange-100 text-orange-800 border border-orange-300">
-                      Urgent Deadline
+                    <span className="text-[10px] uppercase font-bold tracking-wider px-2.5 py-0.5 rounded-full bg-[#FEF3C7] text-[#713700] border border-amber-300">
+                      Early Bird Active
                     </span>
                   ) : (
-                    <span className="text-[10px] uppercase font-bold tracking-wider px-2.5 py-0.5 rounded-full bg-stone-100 text-stone-600 border border-stone-300">
+                    <span className="text-[10px] uppercase font-bold tracking-wider px-2.5 py-0.5 rounded-full bg-orange-100 text-stone-600 border border-stone-200">
                       Milestone
                     </span>
                   )}
@@ -57,12 +64,12 @@ export const ImportantDates: React.FC<ImportantDatesProps> = ({ onOpenAbstractMo
 
                 {/* Date Display */}
                 <div className="mb-3">
-                  <div className="text-xl sm:text-2xl font-bold text-stone-950 font-serif-editorial tracking-tight">
+                  <span className="inline-block px-3 py-1 rounded-full bg-[#D1FAE5] text-[#580B1E] text-xs font-bold font-heading">
                     {item.date}
-                  </div>
+                  </span>
                 </div>
 
-                <h3 className="text-sm font-bold text-amber-800 mb-2 font-heading">
+                <h3 className="text-base font-bold text-[#580B1E] mb-2 font-heading">
                   {item.title}
                 </h3>
 
@@ -72,15 +79,20 @@ export const ImportantDates: React.FC<ImportantDatesProps> = ({ onOpenAbstractMo
               </div>
 
               {/* Action for Urgent Step */}
-              {item.isUrgent && (
-                <div className="pt-3 border-t border-orange-200">
+              {item.isUrgent ? (
+                <div className="pt-3 border-t border-amber-200">
                   <button
                     onClick={onOpenAbstractModal}
-                    className="w-full flex items-center justify-center gap-2 px-3 py-2 rounded-xl text-xs font-bold bg-[#E86024] text-white hover:bg-[#d4521a] transition-colors uppercase tracking-wider shadow-sm"
+                    className="w-full flex items-center justify-center gap-2 px-3 py-2.5 rounded-lg text-xs font-bold bg-[#580B1E] text-white hover:bg-[#0E5A40] transition-colors uppercase tracking-wider shadow-xs"
                   >
-                    <Send className="w-3.5 h-3.5" />
-                    Submit Abstract Now
+                    <Send className="w-3.5 h-3.5 text-[#E67E22]" />
+                    <span>Submit Abstract Now</span>
                   </button>
+                </div>
+              ) : (
+                <div className="pt-3 border-t border-orange-100 flex items-center gap-1.5 text-xs text-orange-500 font-medium">
+                  <CheckCircle2 className="w-3.5 h-3.5 text-[#D4AF37]" />
+                  <span>Official Schedule</span>
                 </div>
               )}
             </div>
@@ -89,9 +101,9 @@ export const ImportantDates: React.FC<ImportantDatesProps> = ({ onOpenAbstractMo
         </div>
 
         {/* Date Reminder Note */}
-        <div className="mt-12 text-center text-xs text-stone-500 flex items-center justify-center gap-2">
-          <Clock className="w-4 h-4 text-amber-600" />
-          <span>All abstracts will undergo peer evaluation by the scientific review committee upon receipt.</span>
+        <div className="mt-12 text-center text-xs text-orange-500 flex items-center justify-center gap-2">
+          <Clock className="w-4 h-4 text-[#D4AF37]" />
+          <span>All submitted abstracts undergo double-blind peer review by the national scientific committee.</span>
         </div>
 
       </div>

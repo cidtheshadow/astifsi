@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { MapPin, Car, Train, Building2, Compass, ExternalLink, Landmark } from 'lucide-react';
+import { MapPin, Car, Train, Building2, Compass, ExternalLink, Landmark, Navigation } from 'lucide-react';
 import { SLIET_DETAILS, NEARBY_ATTRACTIONS } from '../data/conferenceData';
 
 export const VenueLocation: React.FC = () => {
@@ -11,107 +11,152 @@ export const VenueLocation: React.FC = () => {
   });
 
   return (
-    <section id="venue" className="py-20 bg-[#F5F2ED] relative border-y border-stone-200/80">
+    <section id="venue" className="py-20 bg-[#F5EFE6] relative border-y border-[#E8DEC8] text-[#2C070F]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
-        {/* Section Header */}
-        <div className="text-center max-w-3xl mx-auto mb-16">
-          <span className="text-xs font-bold uppercase tracking-widest text-amber-800 bg-amber-100 px-3.5 py-1 rounded-full border border-amber-300">
-            Host Institution &amp; Connectivity
-          </span>
-          <h2 className="text-3xl sm:text-5xl font-bold text-stone-950 mt-4 font-serif-editorial">
-            About <span className="italic text-amber-700">SLIET Longowal</span> &amp; Location
-          </h2>
-          <p className="text-sm text-stone-600 mt-3">
-            An autonomous, Govt. of India funded Deemed University situated on a lush 451-acre green campus in Punjab.
-          </p>
-          <div className="w-16 h-1 bg-gradient-to-r from-amber-600 to-emerald-600 mx-auto mt-4 rounded-full" />
+        {/* Section Header (Maroon & Beige Style) */}
+        <div className="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-4">
+          <div>
+            <div className="flex items-center gap-2 text-[#6B0F24] font-heading font-bold text-xs uppercase tracking-wider mb-2">
+              <Navigation className="w-4 h-4 text-[#E67E22]" />
+              <span>Host Institution &amp; Destination Logistics</span>
+            </div>
+            <h2 className="text-3xl sm:text-5xl font-bold text-[#580B1E] tracking-tight font-serif-editorial">
+              About SLIET Longowal &amp; Location Map
+            </h2>
+            <p className="text-sm text-[#52373D] mt-2 max-w-2xl leading-relaxed">
+              Sant Longowal Institute of Engineering &amp; Technology (SLIET) is an autonomous CFTI &amp; Deemed University established by the Ministry of Education, Govt. of India on a 451-acre lush green campus in Punjab.
+            </p>
+          </div>
+
+          <a
+            href="https://maps.google.com/?q=SLIET+Longowal+Punjab"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-2 px-5 py-3 rounded-lg text-xs font-bold text-white bg-[#580B1E] hover:bg-[#6B0F24] shadow-md transition-all uppercase tracking-wider shrink-0 border border-[#6B0F24]"
+          >
+            <MapPin className="w-4 h-4 text-[#D4AF37]" />
+            <span>Open Google Maps</span>
+            <ExternalLink className="w-3.5 h-3.5" />
+          </a>
         </div>
 
-        {/* 2-Column Campus & Location Info */}
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-stretch mb-14">
+        {/* 2-Column Campus spotlight & Interactive Google Map */}
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-stretch mb-12">
           
-          {/* Left Column: SLIET Campus Spotlight (7 Cols) */}
-          <div className="lg:col-span-7 editorial-card rounded-2xl p-6 sm:p-8 border border-stone-200 flex flex-col justify-between shadow-sm">
+          {/* Left Column: SLIET Campus Spotlight (6 Cols) */}
+          <div className="lg:col-span-6 bg-[#FAF6F0] rounded-2xl p-6 sm:p-8 border border-[#E8DEC8] flex flex-col justify-between shadow-sm">
             <div>
               <div className="flex items-center gap-3 mb-4">
-                <div className="w-10 h-10 rounded-xl bg-amber-100 border border-amber-300 flex items-center justify-center text-amber-800">
-                  <Building2 className="w-5 h-5" />
+                <div className="w-10 h-10 rounded-xl bg-[#F5EFE6] border border-[#E8DEC8] flex items-center justify-center text-[#580B1E]">
+                  <Building2 className="w-5 h-5 text-[#6B0F24]" />
                 </div>
                 <div>
-                  <h3 className="text-xl font-bold text-stone-900 font-heading">
+                  <h3 className="text-xl font-bold text-[#580B1E] font-heading">
                     Sant Longowal Institute of Engineering &amp; Technology
                   </h3>
-                  <p className="text-xs text-amber-700 font-semibold">Deemed-to-be-University (Govt. of India)</p>
+                  <p className="text-xs text-[#E67E22] font-semibold">Deemed-to-be-University (MoE, Govt. of India)</p>
                 </div>
               </div>
 
-              <p className="text-stone-700 text-sm leading-relaxed mb-6">
+              <p className="text-[#52373D] text-sm leading-relaxed mb-6">
                 {SLIET_DETAILS.description}
               </p>
 
               {/* Campus Highlights Grid */}
-              <div className="grid grid-cols-3 gap-3 pt-4 border-t border-stone-200">
-                <div className="bg-white p-3 rounded-xl border border-stone-200 text-center">
-                  <span className="text-[10px] uppercase text-stone-500 font-semibold block">Established</span>
-                  <span className="text-base font-extrabold text-stone-900 font-heading">1989</span>
+              <div className="grid grid-cols-3 gap-3 pt-4 border-t border-[#E8DEC8]">
+                <div className="bg-white p-3 rounded-xl border border-[#E8DEC8] text-center">
+                  <span className="text-[10px] uppercase text-[#52373D] font-bold block mb-0.5">Established</span>
+                  <span className="text-base font-extrabold text-[#580B1E] font-heading">1989</span>
                 </div>
-                <div className="bg-white p-3 rounded-xl border border-stone-200 text-center">
-                  <span className="text-[10px] uppercase text-stone-500 font-semibold block">Campus Area</span>
-                  <span className="text-base font-extrabold text-emerald-700 font-heading">451 Acres</span>
+                <div className="bg-white p-3 rounded-xl border border-[#E8DEC8] text-center">
+                  <span className="text-[10px] uppercase text-[#52373D] font-bold block mb-0.5">Campus Area</span>
+                  <span className="text-base font-extrabold text-[#6B0F24] font-heading">451 Acres</span>
                 </div>
-                <div className="bg-white p-3 rounded-xl border border-stone-200 text-center">
-                  <span className="text-[10px] uppercase text-stone-500 font-semibold block">Status</span>
-                  <span className="text-base font-extrabold text-amber-700 font-heading">Deemed Univ</span>
+                <div className="bg-white p-3 rounded-xl border border-[#E8DEC8] text-center">
+                  <span className="text-[10px] uppercase text-[#52373D] font-bold block mb-0.5">NIRF &amp; NAAC</span>
+                  <span className="text-base font-extrabold text-[#E67E22] font-heading">NAAC 'A'</span>
                 </div>
               </div>
             </div>
           </div>
 
-          {/* Right Column: Places to Visit Nearby (5 Cols) */}
-          <div className="lg:col-span-5 editorial-card rounded-2xl p-6 border border-stone-200 shadow-sm flex flex-col justify-between bg-white">
-            <div>
-              <div className="flex items-center gap-3 mb-4 border-b border-stone-200 pb-3">
-                <div className="w-10 h-10 rounded-xl bg-amber-100 border border-amber-300 flex items-center justify-center text-amber-800 shrink-0">
-                  <Landmark className="w-5 h-5" />
+          {/* Right Column: Embedded Google Map (6 Cols) */}
+          <div className="lg:col-span-6 bg-[#FAF6F0] rounded-2xl p-4 sm:p-6 border border-[#E8DEC8] shadow-sm flex flex-col justify-between">
+            <div className="h-full flex flex-col">
+              <div className="flex items-center justify-between mb-3">
+                <div className="flex items-center gap-2">
+                  <MapPin className="w-4 h-4 text-[#6B0F24]" />
+                  <span className="text-xs font-bold text-[#580B1E] uppercase tracking-wider font-heading">
+                    SLIET Campus Google Map Location
+                  </span>
                 </div>
-                <div>
-                  <h4 className="text-base font-bold text-stone-900 font-heading">Places to Visit Nearby</h4>
-                  <p className="text-[11px] text-stone-500">Popular tourist &amp; heritage attractions around SLIET</p>
-                </div>
+                <span className="text-[11px] font-semibold text-[#E67E22] bg-[#F5EFE6] px-2.5 py-0.5 rounded-full border border-[#E8DEC8]">
+                  Longowal, Sangrur
+                </span>
               </div>
 
-              <div className="space-y-3">
-                {NEARBY_ATTRACTIONS.map((spot, idx) => (
-                  <div key={idx} className="bg-stone-50 p-3 rounded-xl border border-stone-200 hover:border-amber-300 transition-colors">
-                    <div className="flex items-start justify-between gap-2 mb-1">
-                      <h5 className="text-xs font-bold text-stone-900 leading-snug">{spot.name}</h5>
-                      <span className="text-[10px] font-bold text-amber-800 bg-amber-100 px-2 py-0.5 rounded-full border border-amber-200 shrink-0">
-                        {spot.distance}
-                      </span>
-                    </div>
-                    <p className="text-[11px] text-stone-600 line-clamp-2 leading-relaxed">{spot.description}</p>
-                  </div>
-                ))}
+              {/* Embedded Google Map iframe */}
+              <div className="w-full flex-1 min-h-[280px] sm:min-h-[320px] rounded-xl overflow-hidden border border-[#E8DEC8] shadow-inner relative group">
+                <iframe
+                  title="SLIET Longowal Campus Google Map"
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3444.6295551939174!2d75.6980313!3d30.2905183!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3910eb67727ac6c1%3A0x6b864a7cfa708ef7!2sSant%20Longowal%20Institute%20of%20Engineering%20and%20Technology!5e0!3m2!1sen!2sin!4v1710000000000!5m2!1sen!2sin"
+                  width="100%"
+                  height="100%"
+                  style={{ border: 0 }}
+                  allowFullScreen={true}
+                  loading="lazy"
+                  referrerPolicy="no-referrer-when-downgrade"
+                  className="w-full h-full"
+                ></iframe>
               </div>
             </div>
           </div>
 
         </div>
 
+        {/* Nearby Attractions */}
+        <div className="bg-[#FAF6F0] rounded-2xl p-6 border border-[#E8DEC8] shadow-sm mb-12">
+          <div className="flex items-center gap-3 mb-4 border-b border-[#E8DEC8] pb-3">
+            <div className="w-10 h-10 rounded-xl bg-[#F5EFE6] border border-[#E8DEC8] flex items-center justify-center text-[#580B1E] shrink-0">
+              <Landmark className="w-5 h-5 text-[#E67E22]" />
+            </div>
+            <div>
+              <h4 className="text-base font-bold text-[#580B1E] font-heading">Places to Visit &amp; Heritage Sites Nearby</h4>
+              <p className="text-[11px] text-[#52373D]">Prominent heritage attractions around SLIET &amp; Punjab</p>
+            </div>
+          </div>
+
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4">
+            {NEARBY_ATTRACTIONS.map((spot, idx) => (
+              <div key={idx} className="bg-white p-3.5 rounded-xl border border-[#E8DEC8] hover:border-[#6B0F24] transition-colors flex flex-col justify-between">
+                <div>
+                  <div className="flex items-start justify-between gap-2 mb-1.5">
+                    <h5 className="text-xs font-bold text-[#580B1E] leading-snug">{spot.name}</h5>
+                    <span className="text-[10px] font-bold text-[#580B1E] bg-[#F5EFE6] px-2 py-0.5 rounded-full border border-[#E8DEC8] shrink-0">
+                      {spot.distance}
+                    </span>
+                  </div>
+                  <p className="text-[11px] text-[#52373D] line-clamp-3 leading-relaxed">{spot.description}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+
         {/* Distance Matrix Section */}
-        <div className="editorial-card rounded-2xl p-6 sm:p-8 border border-stone-200 shadow-sm">
+        <div className="bg-[#FAF6F0] rounded-2xl p-6 sm:p-8 border border-[#E8DEC8] shadow-sm">
           <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 mb-6">
             <div className="flex items-center gap-3">
-              <Compass className="w-5 h-5 text-amber-700" />
+              <Compass className="w-5 h-5 text-[#6B0F24]" />
               <div>
-                <h3 className="text-lg font-bold text-stone-900 font-heading">Road &amp; City Connectivity Distances</h3>
-                <p className="text-xs text-stone-500">Distance breakdown from major cities and transit hubs to SLIET Longowal</p>
+                <h3 className="text-lg font-bold text-[#580B1E] font-heading">Road &amp; City Connectivity Distances</h3>
+                <p className="text-xs text-[#52373D]">Distance breakdown from major transit hubs to SLIET Longowal</p>
               </div>
             </div>
 
             {/* Distance Filter Tabs */}
-            <div className="flex items-center gap-1.5 bg-stone-100 p-1 rounded-xl border border-stone-200">
+            <div className="flex items-center gap-1.5 bg-[#F5EFE6] p-1 rounded-xl border border-[#E8DEC8]">
               {[
                 { key: 'all', label: 'All Routes' },
                 { key: 'road', label: 'Roadways' },
@@ -120,10 +165,10 @@ export const VenueLocation: React.FC = () => {
                 <button
                   key={tab.key}
                   onClick={() => setActiveTab(tab.key as any)}
-                  className={`px-3 py-1.5 rounded-lg text-xs font-semibold transition-all ${
+                  className={`px-3.5 py-1.5 rounded-lg text-xs font-bold transition-all cursor-pointer ${
                     activeTab === tab.key
-                      ? 'bg-stone-900 text-white font-bold'
-                      : 'text-stone-600 hover:text-stone-900'
+                      ? 'bg-[#580B1E] text-white shadow-2xs'
+                      : 'text-[#52373D] hover:text-[#580B1E]'
                   }`}
                 >
                   {tab.label}
@@ -137,26 +182,26 @@ export const VenueLocation: React.FC = () => {
             {filteredDistances.map((item, idx) => (
               <div
                 key={idx}
-                className="bg-white p-3.5 rounded-xl border border-stone-200 hover:border-amber-400 transition-colors shadow-2xs"
+                className="bg-white p-3.5 rounded-xl border border-[#E8DEC8] hover:border-[#6B0F24] transition-colors shadow-2xs"
               >
                 <div className="flex items-center justify-between mb-1.5">
-                  <span className="text-xs font-bold text-stone-900">{item.place}</span>
+                  <span className="text-xs font-bold text-[#580B1E]">{item.place}</span>
                   {item.type === 'rail' ? (
-                    <Train className="w-3.5 h-3.5 text-amber-600" />
+                    <Train className="w-3.5 h-3.5 text-[#E67E22]" />
                   ) : (
-                    <Car className="w-3.5 h-3.5 text-emerald-600" />
+                    <Car className="w-3.5 h-3.5 text-[#6B0F24]" />
                   )}
                 </div>
-                <div className="text-base font-bold text-amber-800 font-serif-editorial">
+                <div className="text-base font-bold text-[#E67E22] font-serif-editorial">
                   {item.distance}
                 </div>
               </div>
             ))}
           </div>
 
-          <div className="mt-6 pt-4 border-t border-stone-200 flex flex-wrap items-center justify-between gap-3 text-xs text-stone-600">
+          <div className="mt-6 pt-4 border-t border-[#E8DEC8] flex flex-wrap items-center justify-between gap-3 text-xs text-[#52373D]">
             <span className="flex items-center gap-1.5">
-              <MapPin className="w-4 h-4 text-amber-600" />
+              <MapPin className="w-4 h-4 text-[#6B0F24]" />
               SLIET is located ~7 km off the Chandigarh-Bathinda Highway in Sangrur District, Punjab.
             </span>
 
@@ -164,9 +209,9 @@ export const VenueLocation: React.FC = () => {
               href="https://maps.google.com/?q=SLIET+Longowal+Punjab"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-1.5 font-bold text-amber-700 hover:text-amber-800 transition-colors"
+              className="inline-flex items-center gap-1.5 font-bold text-[#580B1E] hover:text-[#6B0F24] transition-colors"
             >
-              <span>Open in Google Maps</span>
+              <span>Get Directions</span>
               <ExternalLink className="w-3.5 h-3.5" />
             </a>
           </div>

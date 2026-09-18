@@ -1,81 +1,103 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { 
   Utensils, Presentation, HelpCircle, Palette, Sparkles, Calendar, Clock, MapPin, 
-  Phone, CheckCircle2, Award, ExternalLink, QrCode
+  Phone, CheckCircle2, Award, ExternalLink, QrCode, BookOpen, Star, ArrowLeft
 } from 'lucide-react';
 import { WFD_CELEBRATIONS_DATA, CONFERENCE_INFO } from '../data/conferenceData';
 
-export const WFDCelebrations: React.FC = () => {
+interface WFDCelebrationsProps {
+  onBackToHome?: () => void;
+  isStandalonePage?: boolean;
+}
+
+export const WFDCelebrations: React.FC<WFDCelebrationsProps> = ({ onBackToHome, isStandalonePage = false }) => {
+  const [activeTab, setActiveTab] = useState<number>(0);
+
   const getIcon = (iconName: string) => {
     switch (iconName) {
-      case 'Utensils': return <Utensils className="w-5 h-5 text-amber-700" />;
-      case 'Presentation': return <Presentation className="w-5 h-5 text-teal-700" />;
-      case 'HelpCircle': return <HelpCircle className="w-5 h-5 text-indigo-600" />;
-      case 'Palette': return <Palette className="w-5 h-5 text-rose-600" />;
-      case 'Sparkles': return <Sparkles className="w-5 h-5 text-orange-600" />;
-      default: return <Award className="w-5 h-5 text-amber-700" />;
+      case 'BookOpen': return <BookOpen className="w-5 h-5 text-[#580B1E]" />;
+      case 'Utensils': return <Utensils className="w-5 h-5 text-[#E67E22]" />;
+      case 'Presentation': return <Presentation className="w-5 h-5 text-[#6B0F24]" />;
+      case 'HelpCircle': return <HelpCircle className="w-5 h-5 text-[#8C1C36]" />;
+      case 'Palette': return <Palette className="w-5 h-5 text-[#D4AF37]" />;
+      case 'Sparkles': return <Sparkles className="w-5 h-5 text-[#E67E22]" />;
+      default: return <Award className="w-5 h-5 text-[#6B0F24]" />;
     }
   };
 
   return (
-    <section id="wfd" className="py-20 bg-[#FAF8F5] relative overflow-hidden">
+    <section id="wfd" className="py-20 bg-[#F5EFE6] relative overflow-hidden text-[#2C070F]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        
+        {/* Navigation Back Header if on Standalone Page */}
+        {isStandalonePage && onBackToHome && (
+          <div className="mb-8">
+            <button
+              onClick={onBackToHome}
+              className="inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-[#FAF6F0] border border-[#E8DEC8] text-xs font-bold text-[#580B1E] hover:bg-[#580B1E] hover:text-white transition-all cursor-pointer shadow-xs"
+            >
+              <ArrowLeft className="w-4 h-4" />
+              <span>Back to Main Conference</span>
+            </button>
+          </div>
+        )}
         
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-16">
-          <span className="text-xs font-bold uppercase tracking-widest text-emerald-800 bg-emerald-100 px-3.5 py-1 rounded-full border border-emerald-300">
-            Special Student Events &amp; Workshop
-          </span>
-          <h2 className="text-3xl sm:text-5xl font-bold text-stone-950 mt-4 font-serif-editorial">
-            World Food Day <span className="italic text-emerald-700">2026 Celebrations</span>
+          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full text-xs font-bold uppercase tracking-widest text-[#580B1E] bg-[#FAF6F0] border border-[#E8DEC8] mb-3 shadow-2xs">
+            <Star className="w-3.5 h-3.5 text-[#D4AF37]" />
+            <span>Special Student Events &amp; Championships</span>
+          </div>
+          <h2 className="text-3xl sm:text-5xl font-bold text-[#580B1E] tracking-tight font-display-hero">
+            World Food Day <span className="italic text-[#6B0F24]">2026 Celebrations</span>
           </h2>
-          <p className="text-sm sm:text-base text-stone-600 mt-3">
-            Theme: <strong className="text-stone-900 font-semibold">“Innovate Today. Nourish Tomorrow”</strong> • Organized by FET Department &amp; AFSTI Longowal Chapter.
+          <p className="text-sm sm:text-base text-[#52373D] mt-3 leading-relaxed">
+            Theme: <strong className="text-[#580B1E] font-semibold">“Innovate Today. Nourish Tomorrow”</strong> • Department of Food Engineering &amp; Technology, SLIET in association with AFSTI Longowal Chapter.
           </p>
-          <div className="w-16 h-1 bg-gradient-to-r from-amber-600 to-emerald-600 mx-auto mt-4 rounded-full" />
+          <div className="w-16 h-1 bg-gradient-to-r from-[#E67E22] via-[#6B0F24] to-[#580B1E] mx-auto mt-4 rounded-full" />
         </div>
 
         {/* WFD Event Meta Header Banner */}
-        <div className="pastel-gradient-card rounded-2xl p-6 sm:p-8 mb-14 border border-stone-200 shadow-sm">
+        <div className="bg-[#FAF6F0] rounded-2xl p-6 sm:p-8 mb-12 border border-[#E8DEC8] shadow-sm">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-4 items-center">
             
-            <div className="flex items-center gap-3 bg-white p-3.5 rounded-xl border border-stone-200 shadow-2xs">
-              <div className="w-9 h-9 rounded-lg bg-amber-100 flex items-center justify-center text-amber-800 shrink-0">
+            <div className="flex items-center gap-3 bg-white p-3.5 rounded-xl border border-[#E8DEC8]">
+              <div className="w-9 h-9 rounded-lg bg-[#F5EFE6] flex items-center justify-center text-[#E67E22] shrink-0 border border-[#E8DEC8]">
                 <Calendar className="w-4 h-4" />
               </div>
               <div>
-                <span className="text-[10px] font-bold text-stone-400 uppercase block">Event Dates</span>
-                <span className="text-xs font-bold text-stone-900 font-heading">{WFD_CELEBRATIONS_DATA.dates}</span>
+                <span className="text-[10px] font-bold text-[#52373D] uppercase block">Event Dates</span>
+                <span className="text-xs font-bold text-[#580B1E] font-heading">{WFD_CELEBRATIONS_DATA.dates}</span>
               </div>
             </div>
 
-            <div className="flex items-center gap-3 bg-white p-3.5 rounded-xl border border-stone-200 shadow-2xs">
-              <div className="w-9 h-9 rounded-xl bg-teal-100 flex items-center justify-center text-teal-800 shrink-0">
+            <div className="flex items-center gap-3 bg-white p-3.5 rounded-xl border border-[#E8DEC8]">
+              <div className="w-9 h-9 rounded-xl bg-[#F5EFE6] flex items-center justify-center text-[#6B0F24] shrink-0 border border-[#E8DEC8]">
                 <Clock className="w-4 h-4" />
               </div>
               <div>
-                <span className="text-[10px] font-bold text-stone-400 uppercase block">Timing</span>
-                <span className="text-xs font-bold text-stone-900 font-heading">{WFD_CELEBRATIONS_DATA.time}</span>
+                <span className="text-[10px] font-bold text-[#52373D] uppercase block">Timing</span>
+                <span className="text-xs font-bold text-[#580B1E] font-heading">{WFD_CELEBRATIONS_DATA.time}</span>
               </div>
             </div>
 
-            <div className="flex items-center gap-3 bg-white p-3.5 rounded-xl border border-stone-200 shadow-2xs">
-              <div className="w-9 h-9 rounded-xl bg-emerald-100 flex items-center justify-center text-emerald-800 shrink-0">
+            <div className="flex items-center gap-3 bg-white p-3.5 rounded-xl border border-[#E8DEC8]">
+              <div className="w-9 h-9 rounded-xl bg-[#F5EFE6] flex items-center justify-center text-[#580B1E] shrink-0 border border-[#E8DEC8]">
                 <MapPin className="w-4 h-4" />
               </div>
               <div>
-                <span className="text-[10px] font-bold text-stone-400 uppercase block">Venue</span>
-                <span className="text-xs font-bold text-stone-900 font-heading">{WFD_CELEBRATIONS_DATA.venue}</span>
+                <span className="text-[10px] font-bold text-[#52373D] uppercase block">Venue</span>
+                <span className="text-xs font-bold text-[#580B1E] font-heading">{WFD_CELEBRATIONS_DATA.venue}</span>
               </div>
             </div>
 
-            <div className="flex items-center gap-3 bg-white p-3.5 rounded-xl border border-orange-300 shadow-2xs">
-              <div className="w-9 h-9 rounded-xl bg-orange-100 flex items-center justify-center text-[#E86024] shrink-0">
+            <div className="flex items-center gap-3 bg-white p-3.5 rounded-xl border border-[#E8DEC8]">
+              <div className="w-9 h-9 rounded-xl bg-[#F5EFE6] flex items-center justify-center text-[#E67E22] shrink-0 border border-[#E8DEC8]">
                 <Award className="w-4 h-4" />
               </div>
               <div>
-                <span className="text-[10px] font-bold text-stone-400 uppercase block">Reg. Deadline</span>
-                <span className="text-xs font-bold text-[#E86024] font-heading">{WFD_CELEBRATIONS_DATA.registrationDeadline}</span>
+                <span className="text-[10px] font-bold text-[#52373D] uppercase block">Reg. Deadline</span>
+                <span className="text-xs font-bold text-[#E67E22] font-heading">{WFD_CELEBRATIONS_DATA.registrationDeadline}</span>
               </div>
             </div>
 
@@ -84,10 +106,10 @@ export const WFDCelebrations: React.FC = () => {
                 href={CONFERENCE_INFO.abstractFormUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-full flex items-center justify-center gap-2 px-4 py-3 rounded-xl text-xs font-bold text-white bg-gradient-to-b from-[#ff6b35] via-[#E86024] to-[#d64f18] shadow-md border border-white/30 hover:scale-[1.02] active:scale-[0.98] transition-all uppercase tracking-wider"
+                className="w-full flex items-center justify-center gap-2 px-4 py-3 rounded-xl text-xs font-bold text-white bg-[#580B1E] hover:bg-[#6B0F24] shadow-md transition-all uppercase tracking-wider"
               >
-                <QrCode className="w-4 h-4" />
-                <span>Register for WFD</span>
+                <QrCode className="w-4 h-4 text-[#D4AF37]" />
+                <span>Register WFD</span>
                 <ExternalLink className="w-3.5 h-3.5" />
               </a>
             </div>
@@ -95,116 +117,175 @@ export const WFDCelebrations: React.FC = () => {
           </div>
         </div>
 
-        {/* 6 WFD Competitions & Workshops Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-14">
-          {WFD_CELEBRATIONS_DATA.events.map((event: any, idx: number) => (
-            <div
-              key={idx}
-              className="editorial-card rounded-2xl p-6 border border-stone-200 shadow-xs flex flex-col justify-between bg-white hover:border-amber-400 transition-all"
-            >
-              <div>
-                <div className="flex items-center justify-between mb-4">
-                  <div className="w-12 h-12 rounded-xl bg-stone-100 border border-stone-200 flex items-center justify-center">
+        {/* Interactive Event Selector Tabs */}
+        <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-3 mb-8">
+          {WFD_CELEBRATIONS_DATA.events.map((event: any, idx: number) => {
+            const isActive = activeTab === idx;
+            return (
+              <button
+                key={idx}
+                onClick={() => setActiveTab(idx)}
+                className={`p-3.5 rounded-2xl text-left transition-all duration-200 border flex flex-col justify-between cursor-pointer ${
+                  isActive
+                    ? 'bg-[#580B1E] text-white border-[#580B1E] shadow-md'
+                    : 'bg-[#FAF6F0] text-[#2C070F] border-[#E8DEC8] hover:border-[#6B0F24]/40 shadow-2xs'
+                }`}
+              >
+                <div className="flex items-center justify-between mb-2">
+                  <div className={`w-8 h-8 rounded-lg flex items-center justify-center ${isActive ? 'bg-[#3D0714]' : 'bg-[#F5EFE6]'}`}>
                     {getIcon(event.iconName)}
                   </div>
-                  <span className="text-[10px] uppercase font-bold tracking-wider px-2.5 py-1 rounded-full bg-amber-100 text-amber-900 border border-amber-300">
-                    Event 0{idx + 1}
+                  <span className={`px-2 py-0.5 rounded-full text-[10px] font-bold uppercase ${
+                    isActive ? 'bg-[#E67E22] text-white' : 'bg-[#F5EFE6] text-[#52373D]'
+                  }`}>
+                    0{idx + 1}
                   </span>
                 </div>
-
-                <h3 className="text-lg font-bold text-stone-900 font-heading mb-1">
-                  {event.title}
-                </h3>
-                <p className="text-xs font-semibold text-amber-800 mb-4 italic">
-                  “{event.tagline}”
-                </p>
-
-                {/* Event Image if available */}
-                {event.image && (
-                  <div className="mb-4 rounded-2xl overflow-hidden border border-stone-200 shadow-xs">
-                    <img src={event.image} alt={event.title} className="w-full h-52 sm:h-64 object-cover hover:scale-105 transition-transform duration-500" />
-                  </div>
-                )}
-
-                {/* Highlights List */}
-                <div className="bg-stone-50 p-4 rounded-xl border border-stone-200 mb-4">
-                  <h4 className="text-[11px] font-bold text-stone-600 mb-2 uppercase tracking-wider">Key Highlights:</h4>
-                  <ul className="space-y-2 text-xs text-stone-700">
-                    {event.highlights.map((hl: string, hIdx: number) => (
-                      <li key={hIdx} className="flex items-start gap-2">
-                        <CheckCircle2 className="w-3.5 h-3.5 text-emerald-600 shrink-0 mt-0.5" />
-                        <span className="leading-relaxed">{hl}</span>
-                      </li>
-                    ))}
-                  </ul>
+                <div>
+                  <div className="font-bold text-xs leading-snug line-clamp-1">{event.title}</div>
+                  <span className={`text-[10px] block mt-0.5 truncate ${isActive ? 'text-[#E2B8C2]' : 'text-orange-500'}`}>
+                    {event.coordinator}
+                  </span>
                 </div>
-              </div>
-
-              {/* Student Coordinator Details */}
-              {event.overallCoordinators ? (
-                <div className="pt-3 border-t border-stone-200 space-y-2">
-                  <span className="text-xs font-bold text-stone-900 block">Overall Student Coordinators:</span>
-                  <div className="space-y-1 text-xs">
-                    {event.overallCoordinators.map((coord: any, cIdx: number) => (
-                      <div key={cIdx} className="flex items-center justify-between">
-                        <span className="font-semibold text-stone-800">{coord.name} <span className="text-stone-400">({coord.designation})</span></span>
-                        <a href={`tel:${coord.phone.replace(/[^0-9]/g, '')}`} className="font-bold text-amber-800 hover:underline">
-                          +91 {coord.phone}
-                        </a>
-                      </div>
-                    ))}
-                  </div>
-                </div>
-              ) : (
-                <div className="pt-3 border-t border-stone-200 space-y-2">
-                  <div className="flex items-center justify-between text-xs">
-                    <span className="font-bold text-stone-900">Coordinator:</span>
-                    <span className="font-semibold text-amber-800">{event.coordinator}</span>
-                  </div>
-
-                  {event.phone && (
-                    <a
-                      href={`tel:${event.phone.replace(/[^0-9]/g, '')}`}
-                      className="flex items-center gap-1.5 text-xs font-bold text-amber-700 hover:text-amber-800"
-                    >
-                      <Phone className="w-3.5 h-3.5" />
-                      <span>+91 {event.phone}</span>
-                    </a>
-                  )}
-
-                  {event.members && (
-                    <div className="text-[11px] text-stone-500 pt-1">
-                      <strong className="text-stone-700">Committee Members:</strong> {event.members.join(', ')}
-                    </div>
-                  )}
-                </div>
-              )}
-            </div>
-          ))}
+              </button>
+            );
+          })}
         </div>
 
+        {/* Selected Event Highlight Showcase with Dynamic Image Update */}
+        {(() => {
+          const currentEvent = WFD_CELEBRATIONS_DATA.events[activeTab];
+          return (
+            <div className="bg-[#FAF6F0] rounded-2xl p-6 sm:p-8 border border-[#E8DEC8] shadow-md mb-12">
+              <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-stretch">
+                
+                {/* Left Side: Event Details & Highlights */}
+                <div className="lg:col-span-7 flex flex-col justify-between">
+                  <div>
+                    <div className="flex items-center gap-2 mb-2">
+                      <span className="px-3 py-1 rounded-full bg-[#580B1E] text-white text-xs font-bold uppercase tracking-wider">
+                        Event 0{activeTab + 1}
+                      </span>
+                      <span className="text-xs font-bold text-[#6B0F24] uppercase tracking-wider font-heading">
+                        World Food Day 2026 Competition
+                      </span>
+                    </div>
+
+                    <h3 className="text-2xl sm:text-3xl font-bold text-[#580B1E] font-heading mb-2">
+                      {currentEvent.title}
+                    </h3>
+                    <p className="text-sm font-semibold text-[#E67E22] italic mb-6">
+                      “{currentEvent.tagline}”
+                    </p>
+
+                    <div className="bg-[#FDFBF7] p-5 rounded-2xl border border-[#E8DEC8] mb-6">
+                      <h4 className="text-xs font-bold text-[#580B1E] uppercase tracking-wider mb-3">Key Highlights &amp; Scope:</h4>
+                      <ul className="space-y-2.5 text-xs text-[#52373D]">
+                        {currentEvent.highlights.map((hl: string, hIdx: number) => (
+                          <li key={hIdx} className="flex items-start gap-2.5">
+                            <CheckCircle2 className="w-4 h-4 text-[#6B0F24] shrink-0 mt-0.5" />
+                            <span className="leading-relaxed font-medium">{hl}</span>
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+                  </div>
+
+                  {/* Coordinators & Contacts Footer */}
+                  <div className="pt-4 border-t border-[#E8DEC8] flex flex-wrap items-center justify-between gap-4">
+                    {currentEvent.overallCoordinators ? (
+                      <div className="space-y-1 text-xs">
+                        <span className="font-bold text-[#580B1E] block">Overall Student Coordinators:</span>
+                        {currentEvent.overallCoordinators.map((coord: any, cIdx: number) => (
+                          <div key={cIdx} className="flex items-center gap-3">
+                            <span className="font-semibold text-[#2C070F]">{coord.name} ({coord.designation}):</span>
+                            <a href={`tel:${coord.phone.replace(/[^0-9]/g, '')}`} className="font-bold text-[#6B0F24] hover:underline">
+                              +91 {coord.phone}
+                            </a>
+                          </div>
+                        ))}
+                      </div>
+                    ) : (
+                      <div className="space-y-1 text-xs">
+                        <div className="flex items-center gap-2">
+                          <span className="font-bold text-[#580B1E]">Event Coordinator:</span>
+                          <span className="font-semibold text-[#E67E22]">{currentEvent.coordinator}</span>
+                        </div>
+                        {currentEvent.phone && (
+                          <a href={`tel:${currentEvent.phone.replace(/[^0-9]/g, '')}`} className="flex items-center gap-1 font-bold text-[#6B0F24] hover:underline">
+                            <Phone className="w-3.5 h-3.5" />
+                            <span>+91 {currentEvent.phone}</span>
+                          </a>
+                        )}
+                        {currentEvent.members && (
+                          <div className="text-[11px] text-[#52373D] pt-0.5">
+                            <strong>Committee:</strong> {currentEvent.members.join(', ')}
+                          </div>
+                        )}
+                      </div>
+                    )}
+
+                    <a
+                      href={CONFERENCE_INFO.abstractFormUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center gap-2 px-6 py-3 rounded-xl text-xs font-bold text-white bg-[#580B1E] hover:bg-[#6B0F24] shadow-md uppercase tracking-wider shrink-0"
+                    >
+                      <span>Register for Event</span>
+                      <ExternalLink className="w-3.5 h-3.5" />
+                    </a>
+                  </div>
+
+                </div>
+
+                {/* Right Side: DYNAMIC poster image updated per active event tab */}
+                <div className="lg:col-span-5 flex flex-col justify-between bg-[#FDFBF7] p-5 rounded-2xl border border-[#E8DEC8]">
+                  <div className="relative overflow-hidden rounded-xl bg-white aspect-[4/3] flex items-center justify-center border border-[#E8DEC8]">
+                    <img
+                      key={activeTab}
+                      src={currentEvent.image || "/wfd/guess-it-right.png"}
+                      alt={currentEvent.title}
+                      className="w-full h-full object-contain p-2 hover:scale-105 transition-transform duration-500"
+                    />
+                    <div className="absolute top-3 left-3 px-3 py-1 rounded-full bg-[#580B1E]/95 text-white font-bold text-[10px] uppercase tracking-wider flex items-center gap-1.5 shadow-sm">
+                      <span className="w-2 h-2 rounded-full bg-[#D4AF37]" />
+                      Event 0{activeTab + 1} Flyer &amp; Notice
+                    </div>
+                  </div>
+
+                  <div className="mt-4 pt-3 flex items-center justify-between text-xs">
+                    <span className="text-[#52373D] font-medium">Evaluation &amp; Awards</span>
+                    <span className="font-bold text-[#580B1E] bg-[#F5EFE6] px-3 py-1 rounded-md border border-[#E8DEC8]">Certificate &amp; Memento</span>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+          );
+        })()}
+
         {/* Official Event Flyers Showcase at Bottom */}
-        <div className="max-w-4xl mx-auto pt-6 border-t border-stone-200">
+        <div className="max-w-4xl mx-auto pt-6 border-t border-[#E8DEC8]">
           <div className="text-center mb-6">
             <a
               href={CONFERENCE_INFO.abstractFormUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 px-6 py-3 rounded-full text-xs font-bold text-white bg-gradient-to-b from-[#ff6b35] via-[#E86024] to-[#d64f18] shadow-md border border-white/30 hover:scale-[1.03] active:scale-[0.97] transition-all uppercase tracking-wider"
+              className="inline-flex items-center gap-2 px-7 py-3.5 rounded-full text-xs font-bold text-white bg-[#580B1E] hover:bg-[#6B0F24] shadow-md hover:scale-[1.02] transition-all uppercase tracking-wider"
             >
-              <QrCode className="w-4 h-4" />
-              <span>Register for WFD Events</span>
+              <QrCode className="w-4 h-4 text-[#D4AF37]" />
+              <span>Register for World Food Day Events</span>
               <ExternalLink className="w-3.5 h-3.5" />
             </a>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            <div className="editorial-card rounded-2xl p-4 border border-stone-200 shadow-xs bg-white text-center">
-              <span className="text-[10px] uppercase font-bold text-stone-400 block mb-2">Official WFD Event Flyer</span>
+            <div className="bg-[#FAF6F0] rounded-2xl p-4 border border-[#E8DEC8] shadow-2xs text-center">
+              <span className="text-[10px] uppercase font-bold text-[#52373D] block mb-2 font-heading">Official WFD Event Flyer</span>
               <img src="/wfd/unofficial-poster.png" alt="WFD Event Poster" className="w-full h-auto rounded-xl object-contain shadow-2xs max-h-96 mx-auto" />
             </div>
-            <div className="editorial-card rounded-2xl p-4 border border-stone-200 shadow-xs bg-white text-center">
-              <span className="text-[10px] uppercase font-bold text-stone-400 block mb-2">Registration QR &amp; Portal</span>
+            <div className="bg-[#FAF6F0] rounded-2xl p-4 border border-[#E8DEC8] shadow-2xs text-center">
+              <span className="text-[10px] uppercase font-bold text-[#52373D] block mb-2 font-heading">Registration QR &amp; Portal</span>
               <img src="/wfd/scan-to-register.png" alt="Scan to Register" className="w-full h-auto rounded-xl object-contain shadow-2xs max-h-96 mx-auto" />
             </div>
           </div>

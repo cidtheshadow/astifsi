@@ -3,107 +3,113 @@ import { Mail, Phone, MapPin, ArrowUp, Send } from 'lucide-react';
 
 interface FooterProps {
   onOpenAbstractModal: () => void;
+  onNavigatePage?: (page: 'home' | 'wfd' | 'sponsors' | 'departmental-committees', hash?: string) => void;
 }
 
-export const Footer: React.FC<FooterProps> = ({ onOpenAbstractModal }) => {
+export const Footer: React.FC<FooterProps> = ({ onOpenAbstractModal, onNavigatePage }) => {
   const scrollToTop = () => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
   };
 
+  const handleNavClick = (page: 'home' | 'wfd' | 'sponsors' | 'departmental-committees', hash?: string) => {
+    if (onNavigatePage) {
+      onNavigatePage(page, hash);
+    }
+  };
+
   return (
-    <footer className="bg-[#FAF8F5] border-t border-stone-200 text-stone-600 pt-16 pb-8 relative">
+    <footer className="bg-[#FAF6F0] border-t border-[#E8DEC8] text-[#52373D] pt-16 pb-8 relative">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Top Footer Banner */}
-        <div className="editorial-card rounded-2xl p-6 sm:p-8 border border-stone-200 mb-14 bg-gradient-to-r from-amber-50/60 via-emerald-50/30 to-amber-50/60 flex flex-col md:flex-row items-center justify-between gap-6 shadow-sm">
+        <div className="bg-[#580B1E] text-white rounded-2xl p-6 sm:p-8 border border-[#6B0F24] mb-14 flex flex-col md:flex-row items-center justify-between gap-6 shadow-md">
           <div>
-            <span className="text-xs font-bold uppercase tracking-wider text-amber-800">
-              World Food Day 2026 Flagship Event
+            <span className="text-xs font-bold uppercase tracking-wider text-[#D4AF37] bg-[#3A0512] px-3 py-1 rounded-full border border-[#6B0F24] inline-block mb-2">
+              World Food Day 2026 Flagship Conclave
             </span>
-            <h3 className="text-2xl sm:text-3xl font-bold text-stone-950 font-serif-editorial mt-1">
+            <h3 className="text-2xl sm:text-3xl font-bold font-serif-editorial">
               Join Us at SLIET Longowal, Punjab
             </h3>
-            <p className="text-xs text-stone-600 mt-1 max-w-xl">
+            <p className="text-xs text-stone-200 mt-1 max-w-xl leading-relaxed">
               Be a part of India's premier national food conference bringing together science, technology, and industry innovation.
             </p>
           </div>
 
           <button
             onClick={onOpenAbstractModal}
-            className="whitespace-nowrap px-6 py-3 rounded-full text-xs font-bold text-white bg-gradient-to-b from-[#ff6b35] via-[#E86024] to-[#d64f18] shadow-[0_6px_20px_-3px_rgba(232,96,36,0.45)] border border-white/30 hover:scale-[1.03] active:scale-[0.97] transition-all uppercase tracking-wider flex items-center gap-2"
+            className="whitespace-nowrap px-6 py-3.5 rounded-lg text-xs font-bold text-white bg-[#E67E22] hover:bg-[#D35400] shadow-md transition-all uppercase tracking-wider flex items-center gap-2 border border-[#E67E22]"
           >
-            <Send className="w-4 h-4" />
+            <Send className="w-4 h-4 text-[#D4AF37]" />
             Submit Abstract Now
           </button>
         </div>
 
         {/* 4-Column Footer Links */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 pb-12 border-b border-stone-200">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 pb-12 border-b border-[#E8DEC8]">
           
           {/* Col 1: Conference Info */}
           <div>
-            <div className="flex items-center gap-2 mb-4">
-              <div className="w-8 h-8 rounded-lg bg-amber-100 flex items-center justify-center text-amber-800 font-bold">
-                🌾
-              </div>
-              <span className="font-bold text-base text-stone-900 font-heading">AFSTINFC-2026</span>
+            <div className="flex items-center gap-2 mb-3">
+              <img src="/logos/sliet-logo.jpeg" alt="SLIET Logo" className="h-8 w-auto rounded border border-[#E8DEC8] bg-white p-0.5" />
+              <img src="/logos/afsti-longowal-logo.jpeg" alt="AFSTI Longowal" className="h-8 w-auto rounded border border-[#E8DEC8] bg-white p-0.5" />
+              <span className="font-bold text-base text-[#580B1E] font-heading ml-1">AFSTINFC-2026</span>
             </div>
-            <p className="text-xs text-stone-600 leading-relaxed mb-4">
+            <p className="text-xs text-[#52373D] leading-relaxed mb-4">
               National Food Conference 2026 (Hybrid Mode) themed "Innovate Today. Nourish Tomorrow", jointly organized by AFSTI Longowal Chapter &amp; Department of FET, SLIET Longowal, Punjab.
             </p>
-            <div className="text-[11px] font-semibold text-amber-800 bg-amber-100 px-3 py-1.5 rounded-lg border border-amber-300 inline-block">
+            <div className="text-[11px] font-bold text-[#580B1E] bg-[#F5EFE6] px-3 py-1.5 rounded-lg border border-[#E8DEC8] inline-block">
               15–16 October 2026 • Hybrid Mode
             </div>
           </div>
 
           {/* Col 2: Quick Links */}
           <div>
-            <h4 className="text-sm font-bold text-stone-900 mb-4 font-heading">Quick Navigation</h4>
-            <ul className="space-y-2 text-xs">
-              <li><a href="#about" className="hover:text-amber-700 transition-colors">About Conference</a></li>
-              <li><a href="#committee" className="hover:text-amber-700 transition-colors">Organizing Committee</a></li>
-              <li><a href="#themes" className="hover:text-amber-700 transition-colors">10 Key Focus Areas</a></li>
-              <li><a href="#highlights" className="hover:text-amber-700 transition-colors">Conference Highlights</a></li>
-              <li><a href="#wfd" className="hover:text-amber-700 transition-colors">WFD 2026 Celebrations</a></li>
-              <li><a href="#dates" className="hover:text-amber-700 transition-colors">Important Dates &amp; Deadlines</a></li>
-              <li><a href="#registration" className="hover:text-amber-700 transition-colors">Registration &amp; Fees</a></li>
-              <li><a href="#sponsors" className="hover:text-amber-700 transition-colors">Sponsors &amp; Partners</a></li>
-              <li><a href="#venue" className="hover:text-amber-700 transition-colors">Venue &amp; Travel Matrix</a></li>
+            <h4 className="text-sm font-bold text-[#580B1E] mb-4 font-heading uppercase tracking-wider">Quick Navigation</h4>
+            <ul className="space-y-2 text-xs font-medium">
+              <li><button onClick={() => handleNavClick('home', '#about')} className="hover:text-[#580B1E] hover:font-bold transition-colors cursor-pointer">About Conference</button></li>
+              <li><button onClick={() => handleNavClick('home', '#themes')} className="hover:text-[#580B1E] hover:font-bold transition-colors cursor-pointer">Scientific Focus Areas</button></li>
+              <li><button onClick={() => handleNavClick('wfd')} className="text-[#6B0F24] font-bold hover:underline cursor-pointer">World Food Day 2026 Page</button></li>
+              <li><button onClick={() => handleNavClick('home', '#committee')} className="hover:text-[#580B1E] hover:font-bold transition-colors cursor-pointer">Organizing Committee</button></li>
+              <li><button onClick={() => handleNavClick('departmental-committees')} className="text-[#580B1E] font-bold hover:underline cursor-pointer">Local Departmental Committees (14)</button></li>
+              <li><button onClick={() => handleNavClick('home', '#deadlines')} className="hover:text-[#580B1E] hover:font-bold transition-colors cursor-pointer">Important Dates &amp; Schedule</button></li>
+              <li><button onClick={() => handleNavClick('home', '#registration')} className="hover:text-[#580B1E] hover:font-bold transition-colors cursor-pointer">Registration &amp; Fee Matrix</button></li>
+              <li><button onClick={() => handleNavClick('sponsors')} className="text-[#580B1E] font-bold hover:underline cursor-pointer">Sponsors &amp; Partners Page</button></li>
+              <li><button onClick={() => handleNavClick('home', '#venue')} className="hover:text-[#580B1E] hover:font-bold transition-colors cursor-pointer">Venue &amp; Travel Logistics</button></li>
             </ul>
           </div>
 
           {/* Col 3: Organizers */}
           <div>
-            <h4 className="text-sm font-bold text-stone-900 mb-4 font-heading">Organizing Bodies</h4>
-            <ul className="space-y-2 text-xs text-stone-700">
-              <li className="font-semibold text-amber-800">AFSTI Longowal Chapter</li>
+            <h4 className="text-sm font-bold text-[#580B1E] mb-4 font-heading uppercase tracking-wider">Organizing Bodies</h4>
+            <ul className="space-y-2 text-xs text-[#52373D]">
+              <li className="font-bold text-[#580B1E]">AFSTI Longowal Chapter</li>
               <li>Department of Food Engineering &amp; Technology</li>
-              <li className="text-stone-600">Sant Longowal Institute of Engineering &amp; Technology (SLIET), Longowal</li>
-              <li className="pt-2 text-stone-600 border-t border-stone-200">
-                In association with <strong className="text-stone-900">AFST(I), Mysuru</strong>
+              <li>Sant Longowal Institute of Engineering &amp; Technology (SLIET), Longowal</li>
+              <li className="pt-2 border-t border-[#E8DEC8]">
+                In association with <strong className="text-[#580B1E]">AFST(I), Mysuru</strong>
               </li>
             </ul>
           </div>
 
           {/* Col 4: Secretariat Contact */}
           <div>
-            <h4 className="text-sm font-bold text-stone-900 mb-4 font-heading">Conference Secretariat Contact</h4>
-            <div className="space-y-2.5 text-xs text-stone-700">
+            <h4 className="text-sm font-bold text-[#580B1E] mb-4 font-heading uppercase tracking-wider">Conference Secretariat</h4>
+            <div className="space-y-2.5 text-xs text-[#52373D]">
               <div className="flex items-start gap-2">
-                <MapPin className="w-4 h-4 text-amber-700 shrink-0 mt-0.5" />
+                <MapPin className="w-4 h-4 text-[#6B0F24] shrink-0 mt-0.5" />
                 <span>SLIET, Longowal, District Sangrur, Punjab - 148106, India</span>
               </div>
               <div className="flex items-center gap-2">
-                <Mail className="w-4 h-4 text-amber-700 shrink-0" />
-                <a href="mailto:afstinfc2026@sliet.ac.in" className="hover:underline">afstinfc2026@sliet.ac.in</a>
+                <Mail className="w-4 h-4 text-[#6B0F24] shrink-0" />
+                <a href="mailto:afstinfc2026@sliet.ac.in" className="hover:underline font-bold text-[#580B1E]">afstinfc2026@sliet.ac.in</a>
               </div>
               <div className="space-y-1 pt-1">
                 <div className="flex items-center gap-2">
-                  <Phone className="w-4 h-4 text-amber-700 shrink-0" />
-                  <a href="tel:9815980334" className="hover:underline font-semibold">+91 98159-80334</a>
+                  <Phone className="w-4 h-4 text-[#6B0F24] shrink-0" />
+                  <a href="tel:9815980334" className="hover:underline font-bold text-[#580B1E]">+91 98159-80334</a>
                 </div>
                 <div className="flex items-center gap-2 pl-6">
-                  <a href="tel:9815982026" className="hover:underline font-semibold">+91 98159-82026</a>
+                  <a href="tel:9815982026" className="hover:underline font-bold text-[#580B1E]">+91 98159-82026</a>
                 </div>
               </div>
             </div>
@@ -112,12 +118,12 @@ export const Footer: React.FC<FooterProps> = ({ onOpenAbstractModal }) => {
         </div>
 
         {/* Bottom Copyright & Back to Top */}
-        <div className="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-stone-500">
+        <div className="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-[#52373D]">
           <p>© 2026 National Food Conference (AFSTINFC-2026). All Rights Reserved. SLIET Longowal &amp; AFST(I).</p>
 
           <button
             onClick={scrollToTop}
-            className="flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-white text-stone-600 hover:text-stone-950 border border-stone-300 transition-colors shadow-2xs"
+            className="flex items-center gap-1.5 px-3.5 py-1.5 rounded-lg bg-[#F5EFE6] text-[#580B1E] hover:bg-[#580B1E] hover:text-white border border-[#E8DEC8] transition-colors shadow-2xs cursor-pointer font-bold"
           >
             <span>Back to top</span>
             <ArrowUp className="w-3.5 h-3.5" />

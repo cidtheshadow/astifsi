@@ -265,6 +265,142 @@ export const ABSTRACT_GUIDELINES = {
   ]
 };
 
+export const ORAL_PRESENTATION_GUIDELINES = {
+  duration: "8 Minutes Talk + 2 Minutes Q&A",
+  slidesCount: "10–15 Slides Preferred",
+  format: "Microsoft PowerPoint (.ppt / .pptx)",
+  reportingTime: "15 Minutes Prior to Session Start",
+  requirements: [
+    "Each presenter is allotted 8 minutes for oral presentation, followed by 2 minutes for Q&A.",
+    "Presentations should preferably contain 10–15 slides in Microsoft PowerPoint (.ppt/.pptx) format.",
+    "Use a professional, simple, and consistent slide design with clear and legible fonts.",
+    "Ensure graphs, tables, images, equations, and labels are clearly visible and appropriately numbered.",
+    "Presenters must be present at the presentation venue at least 15 minutes before the session starts."
+  ]
+};
+
+export interface LocalDepartmentalCommittee {
+  id: string;
+  number: string;
+  title: string;
+  coordinator: string;
+  members: string[];
+  studentCoordinators?: string[];
+}
+
+export const DEPARTMENTAL_COMMITTEES: LocalDepartmentalCommittee[] = [
+  {
+    id: "reception",
+    number: "01",
+    title: "Reception Committee",
+    coordinator: "Dr. C.S. Riar, HOD (FET)",
+    members: ["Dr. D.C. Saxena, Professor", "Dr. H.K. Sharma, Professor", "Dr. P.S. Panesar, Professor", "Dr. Kamlesh Prasad, Professor", "Dr. Vikas Nanda, Professor & Dean (E-Learning & Distance Education)"]
+  },
+  {
+    id: "purchase",
+    number: "02",
+    title: "Purchase Committee",
+    coordinator: "Prof. Navdeep Jindal, FET",
+    members: ["Prof. Sukhcharn Singh, FET", "Sri. Laxmi Narayan Singh, Sr. Technician, FET", "Mr. Devendra Singh, Technician, FET"]
+  },
+  {
+    id: "transportation",
+    number: "03",
+    title: "Transportation & TA Committee",
+    coordinator: "Prof. P. Kumar, FET",
+    members: ["Prof. Charanjiv Singh, FET", "Sri. Laxmi Narayan Singh, Sr. Technician, FET"],
+    studentCoordinators: ["Aditya Shree (Ph.D. Scholar)", "Ashmita Uppal (Ph.D. Scholar)", "Sunil Kumar (Ph.D. Scholar)"]
+  },
+  {
+    id: "accommodation",
+    number: "04",
+    title: "Accommodation Committee",
+    coordinator: "Er. Ashwani Kumar, Asstt. Prof., FET",
+    members: ["Mr. Manoj Pandey, Sr. Technician"],
+    studentCoordinators: ["Rishabh Thakur (Ph.D. Scholar)", "Bharat Bhushan (Ph.D. Scholar)", "Amisha Gurung (Ph.D. Scholar)", "Amandeep Singh (Ph.D. Scholar)"]
+  },
+  {
+    id: "registration",
+    number: "05",
+    title: "Registration Committee",
+    coordinator: "Er. Ashwani Kumar, Asstt. Prof., FET",
+    members: ["Dr. Tejinder Kaur, Guest Faculty", "Ms. Somya Saini, Guest Faculty", "Mrs. Parveen Goyal, Technician, FET"],
+    studentCoordinators: ["Divyanshi (Ph.D. Scholar)", "Amandeep Singh (Ph.D. Scholar)", "Jasmine Saini (Ph.D. Scholar)", "Riya (Ph.D. Scholar)", "Anjali Yadav (M.Tech. Student)"]
+  },
+  {
+    id: "publication",
+    number: "06",
+    title: "Publication Committee",
+    coordinator: "Prof. C.S. Riar, FET",
+    members: ["Prof. Sukhcharn Singh, FET", "Prof. Navdeep Jindal, FET"],
+    studentCoordinators: ["Aditya Shree (Ph.D. Scholar)", "Divyanshi (Ph.D. Scholar)"]
+  },
+  {
+    id: "venue-stage",
+    number: "07",
+    title: "Venue Arrangement & Stage Coordination Committee",
+    coordinator: "Prof. Sukhcharn Singh, FET",
+    members: ["Prof. Navdeep Jindal, FET", "F.I. ACSS / Nominee", "Mr. Navdeep Kumar, Incharge (Electrical Wing)", "Sri. Laxmi Narayan Singh, Sr. Technician, FET"],
+    studentCoordinators: ["Aditi (Ph.D. Scholar)", "Ambika Thakur (Ph.D. Scholar)", "Amisha Kaushik (Ph.D. Scholar)", "Ramanjot Kaur (Ph.D. Scholar)", "Pallavi Sharma (Ph.D. Scholar)", "Tanya Sonker (Ph.D. Scholar)", "Gunjan Thakur (Ph.D. Scholar)", "Avani Sharma (M.Tech. Student)", "Rupali Mandial (M.Tech. Student)"]
+  },
+  {
+    id: "hospitality",
+    number: "08",
+    title: "Hospitality Committee",
+    coordinator: "Prof. Charanjiv Singh, FET",
+    members: ["Er. Ashwani Kumar, Asstt. Prof., FET", "Mr. Manoj Pandey, Sr. Technician"],
+    studentCoordinators: ["Shashank Wirutkar (Ph.D. Scholar)", "Jyoti Soni (Ph.D. Scholar)", "Armandeep Kaur (Ph.D. Scholar)", "Ratandeep Ray (Ph.D. Scholar)", "Apurva Mishra (M.Tech. Student)", "Vishal Singh (M.Tech. Student)"]
+  },
+  {
+    id: "media-publicity",
+    number: "09",
+    title: "Media & Publicity Committee",
+    coordinator: "Prof. D.C. Saxena, FET",
+    members: ["Dr. S.S. Punia, SPI", "Prof. Navdeep Jindal, FET"],
+    studentCoordinators: ["Sparsh Parmar (Ph.D. Scholar)", "Satyarth Saindhaw (Ph.D. Scholar)", "Poonam Patil (Ph.D. Scholar)", "Alisha Rahaman (Ph.D. Scholar)"]
+  },
+  {
+    id: "technical",
+    number: "10",
+    title: "Technical Committee",
+    coordinator: "Prof. Sukhcharn Singh, FET",
+    members: ["Sri. Laxmi Narayan Singh, Sr. Technician, FET"],
+    studentCoordinators: ["Amisha Kaushik (Ph.D. Scholar)", "Mohit Nagar (Ph.D. Scholar)", "Nirbhay Kumar (Ph.D. Scholar)", "Divyanshi (Ph.D. Scholar)", "Heena (Ph.D. Scholar)", "Deep Shikha (Ph.D. Scholar)"]
+  },
+  {
+    id: "poster-sessions",
+    number: "11",
+    title: "Poster Sessions Committee",
+    coordinator: "Prof. Navdeep Jindal, FET",
+    members: ["Prof. Sukhcharn Singh, FET", "Ms. Somya Saini, Guest Faculty", "Dr. Omchand Singh, Sr. Technician, FET", "Mr. Devendra Singh, Technician, FET"],
+    studentCoordinators: ["Bharat Bhushan (Ph.D. Scholar)", "Mohit Nagar (Ph.D. Scholar)", "Aditya Shree (Ph.D. Scholar)", "Tanya Sonkar (Ph.D. Scholar)", "Neha Goyal (Ph.D. Scholar)", "Shatrudhan Kumar (M.Tech. Student)", "Shubham Thakur (M.Tech. Student)"]
+  },
+  {
+    id: "cultural",
+    number: "12",
+    title: "Cultural Committee",
+    coordinator: "Ms. Somya Saini, Guest Faculty",
+    members: [],
+    studentCoordinators: ["Pallavi Sharma (Ph.D. Scholar)", "Tanya Sonker (Ph.D. Scholar)", "Ramanjot Kaur (Ph.D. Scholar)", "Sunil Kumar (Ph.D. Scholar)", "Shubham Thakur (Ph.D. Scholar)", "Shubhankar (Ph.D. Scholar)"]
+  },
+  {
+    id: "sponsorship",
+    number: "13",
+    title: "Sponsorship Committee",
+    coordinator: "Prof. C.S. Riar, FET",
+    members: ["Prof. Sukhcharn Singh, FET", "Prof. Navdeep Jindal, FET", "Dr. Omchand Singh, Sr. Technician, FET"],
+    studentCoordinators: ["Amandeep Singh (Ph.D. Scholar)", "Bharat Bhushan (Ph.D. Scholar)", "Aditi (Ph.D. Scholar)"]
+  },
+  {
+    id: "website-comm",
+    number: "14",
+    title: "Website Development & Communication Committee",
+    coordinator: "Prof. Navdeep Jindal, FET",
+    members: ["Dr. Tajinder Singh, Faculty (CSE)"],
+    studentCoordinators: ["Aditi (Ph.D. Scholar)", "Ambika Thakur (Ph.D. Scholar)", "Heena (Ph.D. Scholar)", "Ramanjot Kaur (Ph.D. Scholar)", "Tanush Singla (GCS Student)"]
+  }
+];
+
 export const SLIET_DETAILS = {
   established: "1989",
   deemedStatus: "2007",
@@ -532,6 +668,7 @@ export const WFD_CELEBRATIONS_DATA = {
         { name: "Bharat Bhushan", designation: "Ph.D. Scholar", phone: "62975-31362" },
         { name: "Amisha Kaushik", designation: "Ph.D. Scholar", phone: "83073-52267" }
       ],
+      image: "/wfd/unofficial-poster.png",
       iconName: "BookOpen"
     },
     {
@@ -545,6 +682,7 @@ export const WFD_CELEBRATIONS_DATA = {
       ],
       coordinator: "Pallavi Sharma (Ph.D. Research Scholar)",
       members: ["Satyarth Saindhaw", "Sparsh Parmar", "Mohit Nagar", "Jasmine Saini", "Satrudhan (M.Tech)", "Shubhankar (M.Tech)"],
+      image: "/wfd/unofficial-poster.png",
       iconName: "Utensils"
     },
     {
@@ -558,6 +696,7 @@ export const WFD_CELEBRATIONS_DATA = {
       ],
       coordinator: "Amandeep Singh (Ph.D. Research Scholar)",
       members: ["Riya Goyal", "Ambika Thakur", "Armandeep Kaur", "Rupali (M.Tech)", "Tarunpreet (M.Tech)"],
+      image: "/wfd/unofficial-poster.png",
       iconName: "Presentation"
     },
     {
@@ -573,6 +712,7 @@ export const WFD_CELEBRATIONS_DATA = {
       phone: "72756-90956",
       email: "tanya.sonker.3@gmail.com",
       members: ["Poonam Patil", "Gunjan Thakur", "Ramanjot Kaur", "Avani Sharma (M.Tech)", "Apurba Mishra (M.Tech)"],
+      image: "/wfd/scan-to-register.png",
       iconName: "HelpCircle"
     },
     {
@@ -586,6 +726,7 @@ export const WFD_CELEBRATIONS_DATA = {
       ],
       coordinator: "Divyanshi Thakur (Ph.D. Research Scholar)",
       members: ["Heena", "Sunil Kumar", "Ashmita Mittal", "Shubham Thakur (M.Tech)", "Dilpreet (M.Tech)"],
+      image: "/wfd/scan-to-register.png",
       iconName: "Palette"
     },
     {

@@ -1,14 +1,61 @@
 @import "tailwindcss";
 
+@theme {
+  --color-primary: #580B1E;
+  --color-primary-dark: #420815;
+  --color-primary-container: #3D0714;
+  --color-on-primary: #ffffff;
+  --color-on-primary-container: #E2B8C2;
+
+  --color-maroon-deep: #580B1E;
+  --color-maroon-rich: #6B0F24;
+  --color-maroon-dark: #3A0512;
+  --color-maroon-light: #8C1C36;
+
+  --color-gold-accent: #D4AF37;
+  --color-amber-gold: #C5A059;
+  --color-saffron-warm: #E67E22;
+
+  --color-[#FAF8F5]: #FAF6F0;
+  --color-beige-surface: #FDFBF7;
+  --color-beige-container: #F5EFE6;
+  --color-beige-card: #FAF6F0;
+  --color-beige-border: #E8DEC8;
+
+  --color-surface: #FDFBF7;
+  --color-surface-container: #F5EFE6;
+  --color-surface-container-low: #F8F3EC;
+  --color-surface-container-lowest: #ffffff;
+  --color-surface-container-highest: #E8DEC8;
+
+  --color-on-surface: #2C070F;
+  --color-on-surface-variant: #52373D;
+
+  --font-display-hero: 'Playfair Display', Georgia, serif;
+  --font-headline-lg: 'Playfair Display', Georgia, serif;
+  --font-headline-md: 'Outfit', sans-serif;
+  --font-headline-sm: 'Outfit', sans-serif;
+  --font-label-lg: 'Outfit', sans-serif;
+  --font-label-md: 'Outfit', sans-serif;
+  --font-label-numeric: 'Outfit', sans-serif;
+  --font-body-lg: 'Plus Jakarta Sans', sans-serif;
+  --font-body-md: 'Plus Jakarta Sans', sans-serif;
+  --font-body-sm: 'Plus Jakarta Sans', sans-serif;
+}
+
 @layer base {
   body {
     font-family: 'Plus Jakarta Sans', sans-serif;
-    background-color: #FAF8F5;
-    color: #292524;
+    background-color: #FDFBF7;
+    color: #2C070F;
   }
 
   h1, h2, h3, .font-heading {
     font-family: 'Outfit', sans-serif;
+  }
+
+  .font-display-hero {
+    font-family: 'Playfair Display', Georgia, serif;
   }
 
   .font-serif-editorial {
@@ -16,22 +63,22 @@
   }
 }
 
-/* Custom Scrollbar for Warm Editorial Theme */
+/* Custom Scrollbar for Maroon & Beige Theme */
 ::-webkit-scrollbar {
   width: 8px;
 }
 
 ::-webkit-scrollbar-track {
-  background: #FAF8F5;
+  background: #FDFBF7;
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #D6D3D1;
+  background: #E8DEC8;
   border-radius: 4px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #E86024;
+  background: #6B0F24;
 }
 
 /* Floating Animation */
@@ -44,13 +91,13 @@
   animation: floatSoft 5s ease-in-out infinite;
 }
 
-/* Warm Card Styles matching uploaded reference */
+/* Editorial Card Styles for Maroon & Beige Theme */
 .editorial-card {
-  background: rgba(255, 255, 255, 0.9);
+  background: rgba(250, 246, 240, 0.95);
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
-  border: 1px solid rgba(231, 229, 228, 0.9);
-  box-shadow: 0 4px 20px -4px rgba(41, 37, 36, 0.04);
+  border: 1px solid #E8DEC8;
+  box-shadow: 0 4px 20px -4px rgba(88, 11, 30, 0.05);
 }
 
 .editorial-card-hover {
@@ -58,13 +105,13 @@
 }
 
 .editorial-card-hover:hover {
-  border-color: rgba(232, 96, 36, 0.4);
-  box-shadow: 0 12px 30px -8px rgba(232, 96, 36, 0.12);
+  border-color: rgba(107, 15, 36, 0.4);
+  box-shadow: 0 12px 30px -8px rgba(88, 11, 30, 0.15);
   transform: translateY(-2px);
 }
 
-/* Iridescent Pastel Card (Matching reference bottom right card) */
+/* Iridescent Pastel Card */
 .pastel-gradient-card {
-  background: linear-gradient(135deg, rgba(254, 243, 199, 0.6) 0%, rgba(209, 250, 229, 0.6) 50%, rgba(252, 231, 243, 0.6) 100%);
-  border: 1px dashed rgba(232, 96, 36, 0.3);
+  background: linear-gradient(135deg, rgba(245, 239, 230, 0.9) 0%, rgba(253, 251, 247, 0.9) 50%, rgba(248, 235, 220, 0.9) 100%);
+  border: 1px dashed rgba(107, 15, 36, 0.3);
 }
