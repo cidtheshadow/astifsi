@@ -532,7 +532,8 @@ export const WFD_CELEBRATIONS_DATA = {
         { name: "Bharat Bhushan", designation: "Ph.D. Scholar", phone: "62975-31362" },
         { name: "Amisha Kaushik", designation: "Ph.D. Scholar", phone: "83073-52267" }
       ],
-      iconName: "BookOpen"
+      iconName: "BookOpen",
+      image: "/wfd/food-art.png"
     },
     {
       title: "Innovative Food Art",
@@ -545,7 +546,8 @@ export const WFD_CELEBRATIONS_DATA = {
       ],
       coordinator: "Pallavi Sharma (Ph.D. Research Scholar)",
       members: ["Satyarth Saindhaw", "Sparsh Parmar", "Mohit Nagar", "Jasmine Saini", "Satrudhan (M.Tech)", "Shubhankar (M.Tech)"],
-      iconName: "Utensils"
+      iconName: "Utensils",
+      image: "/wfd/food-art.png"
     },
     {
       title: "Creative Oral Presentation",
@@ -558,7 +560,8 @@ export const WFD_CELEBRATIONS_DATA = {
       ],
       coordinator: "Amandeep Singh (Ph.D. Research Scholar)",
       members: ["Riya Goyal", "Ambika Thakur", "Armandeep Kaur", "Rupali (M.Tech)", "Tarunpreet (M.Tech)"],
-      iconName: "Presentation"
+      iconName: "Presentation",
+      image: "/wfd/creative-oral-presentation.png"
     },
     {
       title: "Technical Quiz Competition",
@@ -573,7 +576,8 @@ export const WFD_CELEBRATIONS_DATA = {
       phone: "72756-90956",
       email: "tanya.sonker.3@gmail.com",
       members: ["Poonam Patil", "Gunjan Thakur", "Ramanjot Kaur", "Avani Sharma (M.Tech)", "Apurba Mishra (M.Tech)"],
-      iconName: "HelpCircle"
+      iconName: "HelpCircle",
+      image: "/wfd/quiz-competition.png"
     },
     {
       title: "On-the-Spot Poster-Making Competition",
@@ -586,7 +590,8 @@ export const WFD_CELEBRATIONS_DATA = {
       ],
       coordinator: "Divyanshi Thakur (Ph.D. Research Scholar)",
       members: ["Heena", "Sunil Kumar", "Ashmita Mittal", "Shubham Thakur (M.Tech)", "Dilpreet (M.Tech)"],
-      iconName: "Palette"
+      iconName: "Palette",
+      image: "/wfd/poster-competition.png"
     },
     {
       title: "Guess It Right",
