@@ -1,9 +1,9 @@
 import React from 'react';
 import { 
   Utensils, Presentation, HelpCircle, Palette, Sparkles, Calendar, Clock, MapPin, 
-  Phone, CheckCircle2, Award, ExternalLink, QrCode
+  Phone, CheckCircle2, Award
 } from 'lucide-react';
-import { WFD_CELEBRATIONS_DATA, CONFERENCE_INFO } from '../data/conferenceData';
+import { WFD_CELEBRATIONS_DATA } from '../data/conferenceData';
 
 export const WFDCelebrations: React.FC = () => {
   const getIcon = (iconName: string) => {
@@ -37,7 +37,7 @@ export const WFDCelebrations: React.FC = () => {
 
         {/* WFD Event Meta Header Banner */}
         <div className="pastel-gradient-card rounded-2xl p-6 sm:p-8 mb-14 border border-stone-200 shadow-sm">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-4 items-center">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 items-center">
             
             <div className="flex items-center gap-3 bg-white p-3.5 rounded-xl border border-stone-200 shadow-2xs">
               <div className="w-9 h-9 rounded-lg bg-amber-100 flex items-center justify-center text-amber-800 shrink-0">
@@ -79,18 +79,7 @@ export const WFDCelebrations: React.FC = () => {
               </div>
             </div>
 
-            <div className="flex items-center justify-center">
-              <a
-                href={CONFERENCE_INFO.abstractFormUrl}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="w-full flex items-center justify-center gap-2 px-4 py-3 rounded-xl text-xs font-bold text-white bg-gradient-to-b from-[#ff6b35] via-[#E86024] to-[#d64f18] shadow-md border border-white/30 hover:scale-[1.02] active:scale-[0.98] transition-all uppercase tracking-wider"
-              >
-                <QrCode className="w-4 h-4" />
-                <span>Register for WFD</span>
-                <ExternalLink className="w-3.5 h-3.5" />
-              </a>
-            </div>
+            
 
           </div>
         </div>
@@ -183,34 +172,7 @@ export const WFDCelebrations: React.FC = () => {
           ))}
         </div>
 
-        {/* Official Event Flyers Showcase at Bottom */}
-        <div className="max-w-4xl mx-auto pt-6 border-t border-stone-200">
-          <div className="text-center mb-6">
-            <a
-              href={CONFERENCE_INFO.abstractFormUrl}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 px-6 py-3 rounded-full text-xs font-bold text-white bg-gradient-to-b from-[#ff6b35] via-[#E86024] to-[#d64f18] shadow-md border border-white/30 hover:scale-[1.03] active:scale-[0.97] transition-all uppercase tracking-wider"
-            >
-              <QrCode className="w-4 h-4" />
-              <span>Register for WFD Events</span>
-              <ExternalLink className="w-3.5 h-3.5" />
-            </a>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            <div className="editorial-card rounded-2xl p-4 border border-stone-200 shadow-xs bg-white text-center">
-              <span className="text-[10px] uppercase font-bold text-stone-400 block mb-2">Official WFD Event Flyer</span>
-              <img src="/wfd/unofficial-poster.png" alt="WFD Event Poster" className="w-full h-auto rounded-xl object-contain shadow-2xs max-h-96 mx-auto" />
-            </div>
-            <div className="editorial-card rounded-2xl p-4 border border-stone-200 shadow-xs bg-white text-center">
-              <span className="text-[10px] uppercase font-bold text-stone-400 block mb-2">Registration QR &amp; Portal</span>
-              <img src="/wfd/scan-to-register.png" alt="Scan to Register" className="w-full h-auto rounded-xl object-contain shadow-2xs max-h-96 mx-auto" />
-            </div>
-          </div>
-        </div>
-
-      </div>
+              </div>
     </section>
   );
 };

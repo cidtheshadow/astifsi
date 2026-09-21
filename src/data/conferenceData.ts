@@ -598,7 +598,7 @@ export const WFD_CELEBRATIONS_DATA = {
         "Put your Knowledge to the Test in an engaging interactive game"
       ],
       coordinator: "Rishabh Thakur (Ph.D. Research Scholar)",
-      image: "/wfd/guess-it-right.png",
+      image: "/wfd/guess-it-right-official.png",
       members: ["Amisha Gurung", "Nirbhay Kumar", "Shashank Wirutkar", "Anjali (M.Tech)", "Vishal (M.Tech)"],
       iconName: "Sparkles"
     }
