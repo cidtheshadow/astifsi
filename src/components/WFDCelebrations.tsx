@@ -111,7 +111,7 @@ export const WFDCelebrations: React.FC = () => {
                 {/* Event Image if available */}
                 {event.image && (
                   <div className="mb-4 rounded-2xl overflow-hidden border border-stone-200 shadow-xs">
-                    <img src={event.image} alt={event.title} className="w-full h-52 sm:h-64 object-cover hover:scale-105 transition-transform duration-500" />
+                    <img src={event.image} alt={event.title} className="w-full h-auto object-contain hover:scale-[1.02] transition-transform duration-500" />
                   </div>
                 )}
 

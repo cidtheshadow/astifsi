@@ -547,7 +547,7 @@ export const WFD_CELEBRATIONS_DATA = {
       coordinator: "Pallavi Sharma (Ph.D. Research Scholar)",
       members: ["Satyarth Saindhaw", "Sparsh Parmar", "Mohit Nagar", "Jasmine Saini", "Satrudhan (M.Tech)", "Shubhankar (M.Tech)"],
       iconName: "Utensils",
-      image: "/wfd/food-art.png"
+      image: "/wfd/food-art-new.jpg"
     },
     {
       title: "Creative Oral Presentation",
