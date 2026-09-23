@@ -12,6 +12,7 @@ import { Sponsors } from './components/Sponsors';
 import { VenueLocation } from './components/VenueLocation';
 import { Committee } from './components/Committee';
 import { Footer } from './components/Footer';
+import { AuthorGuidelinesFAQ } from './components/AuthorGuidelinesFAQ';
 
 export function App() {
   const [isAbstractModalOpen, setIsAbstractModalOpen] = useState(false);
@@ -37,6 +38,7 @@ export function App() {
         <FocusAreas onOpenAbstractModal={handleOpenAbstractModal} />
         <Highlights />
         <WFDCelebrations />
+        <AuthorGuidelinesFAQ />
         <ImportantDates onOpenAbstractModal={handleOpenAbstractModal} />
         <Registration onOpenAbstractModal={handleOpenAbstractModal} />
         <Sponsors />
