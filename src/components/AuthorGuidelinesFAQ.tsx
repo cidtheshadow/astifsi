@@ -400,7 +400,7 @@ export const AuthorGuidelinesFAQ: React.FC = () => {
 
   return (
     <section id="guidelines-faq" className="py-20 bg-stone-50 relative overflow-hidden border-t border-stone-200">
-      <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12">
           <span className="text-xs font-bold uppercase tracking-widest text-[#E86024] bg-orange-100 px-3.5 py-1 rounded-full border border-orange-200">
             Information & Rules
@@ -411,12 +411,12 @@ export const AuthorGuidelinesFAQ: React.FC = () => {
           <div className="w-16 h-1 bg-[#E86024] mx-auto mt-4 rounded-full" />
         </div>
 
-        <div className="space-y-3">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 items-start">
           {guidelinesData.map((item, index) => (
             <div key={index} className="bg-white border border-stone-200 rounded-xl shadow-xs overflow-hidden">
               <button
                 onClick={() => toggleAccordion(index)}
-                className="w-full px-6 py-4 flex items-center justify-between text-left hover:bg-stone-50 transition-colors focus:outline-none"
+                className="w-full px-5 py-3 flex items-center justify-between text-left hover:bg-stone-50 transition-colors focus:outline-none"
               >
                 <span className="font-bold text-stone-900 pr-4">{item.title}</span>
                 {openIndex === index ? (

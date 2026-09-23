@@ -37,10 +37,10 @@ export function App() {
         <Committee />
         <FocusAreas onOpenAbstractModal={handleOpenAbstractModal} />
         <Highlights />
-        <WFDCelebrations />
         <AuthorGuidelinesFAQ />
         <ImportantDates onOpenAbstractModal={handleOpenAbstractModal} />
         <Registration onOpenAbstractModal={handleOpenAbstractModal} />
+        <WFDCelebrations />
         <Sponsors />
         <VenueLocation />
       </main>
