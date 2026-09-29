@@ -10,6 +10,7 @@ import { AbstractSubmissionModal } from './components/AbstractSubmissionModal';
 import { Registration } from './components/Registration';
 import { Sponsors } from './components/Sponsors';
 import { VenueLocation } from './components/VenueLocation';
+import { Speakers } from "./components/Speakers";
 import { Committee } from './components/Committee';
 import { DepartmentalCommittees } from './components/DepartmentalCommittees';
 import { Footer } from './components/Footer';
@@ -62,6 +63,7 @@ export function App() {
           <>
             <Hero onOpenAbstractModal={handleOpenAbstractModal} />
             <AboutConference />
+            <Speakers />
             <Committee onNavigateDepartmental={() => handleNavigatePage('departmental-committees')} />
             <FocusAreas onOpenAbstractModal={handleOpenAbstractModal} />
             <Highlights />
