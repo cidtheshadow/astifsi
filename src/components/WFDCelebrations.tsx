@@ -204,22 +204,7 @@ export const WFDCelebrations: React.FC<WFDCelebrationsProps> = ({ onBackToHome, 
           );
         })()}
 
-        {/* Official Event Flyers Showcase at Bottom */}
-        <div className="max-w-4xl mx-auto pt-6 border-t border-[#E8DEC8]">
-
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            <div className="bg-[#FAF6F0] rounded-2xl p-4 border border-[#E8DEC8] shadow-2xs text-center">
-              <span className="text-[10px] uppercase font-bold text-[#52373D] block mb-2 font-heading">Official WFD Event Flyer</span>
-              <img src="/wfd/unofficial-poster.png" alt="WFD Event Poster" className="w-full h-auto rounded-xl object-contain shadow-2xs max-h-96 mx-auto" />
-            </div>
-            <div className="bg-[#FAF6F0] rounded-2xl p-4 border border-[#E8DEC8] shadow-2xs text-center">
-              <span className="text-[10px] uppercase font-bold text-[#52373D] block mb-2 font-heading">Registration QR &amp; Portal</span>
-              <img src="/wfd/scan-to-register.png" alt="Scan to Register" className="w-full h-auto rounded-xl object-contain shadow-2xs max-h-96 mx-auto" />
-            </div>
-          </div>
-        </div>
-
-      </div>
+              </div>
     </section>
   );
 };

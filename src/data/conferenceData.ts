@@ -682,7 +682,7 @@ export const WFD_CELEBRATIONS_DATA = {
       ],
       coordinator: "Pallavi Sharma (Ph.D. Research Scholar)",
       members: ["Satyarth Saindhaw", "Sparsh Parmar", "Mohit Nagar", "Jasmine Saini", "Satrudhan (M.Tech)", "Shubhankar (M.Tech)"],
-      image: "/wfd/unofficial-poster.png",
+      image: "/wfd/food-art.png",
       iconName: "Utensils"
     },
     {
@@ -696,7 +696,7 @@ export const WFD_CELEBRATIONS_DATA = {
       ],
       coordinator: "Amandeep Singh (Ph.D. Research Scholar)",
       members: ["Riya Goyal", "Ambika Thakur", "Armandeep Kaur", "Rupali (M.Tech)", "Tarunpreet (M.Tech)"],
-      image: "/wfd/unofficial-poster.png",
+      image: "/wfd/creative-oral.png",
       iconName: "Presentation"
     },
     {
@@ -712,7 +712,7 @@ export const WFD_CELEBRATIONS_DATA = {
       phone: "72756-90956",
       email: "tanya.sonker.3@gmail.com",
       members: ["Poonam Patil", "Gunjan Thakur", "Ramanjot Kaur", "Avani Sharma (M.Tech)", "Apurba Mishra (M.Tech)"],
-      image: "/wfd/scan-to-register.png",
+      image: "/wfd/quiz.png",
       iconName: "HelpCircle"
     },
     {
@@ -726,7 +726,7 @@ export const WFD_CELEBRATIONS_DATA = {
       ],
       coordinator: "Divyanshi Thakur (Ph.D. Research Scholar)",
       members: ["Heena", "Sunil Kumar", "Ashmita Mittal", "Shubham Thakur (M.Tech)", "Dilpreet (M.Tech)"],
-      image: "/wfd/scan-to-register.png",
+      image: "/wfd/poster-comp.png",
       iconName: "Palette"
     },
     {
@@ -739,7 +739,7 @@ export const WFD_CELEBRATIONS_DATA = {
         "Put your Knowledge to the Test in an engaging interactive game"
       ],
       coordinator: "Rishabh Thakur (Ph.D. Research Scholar)",
-      image: "/wfd/guess-it-right.png",
+      image: "/wfd/guess-it.png",
       members: ["Amisha Gurung", "Nirbhay Kumar", "Shashank Wirutkar", "Anjali (M.Tech)", "Vishal (M.Tech)"],
       iconName: "Sparkles"
     }
