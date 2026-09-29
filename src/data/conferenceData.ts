@@ -761,7 +761,7 @@ export const SPEAKERS_DATA = [
     designation: "Principal Extension Scientist-cum-Head, Processing & Food Engineering",
     affiliation: "Punjab Agriculture University",
     location: "Ludhiana, Punjab, India",
-    image: "/speakers/dr-tarsem-chand-mittal.jpg",
+    image: "/speakers/tarsem.jpg",
     avatarInitials: "TM"
   },
   {
@@ -769,7 +769,7 @@ export const SPEAKERS_DATA = [
     designation: "Professor & HOD, Food Science and Technology",
     affiliation: "Maharaja Ranjit Singh Punjab Technical University (MRSPTU)",
     location: "Bathinda, Punjab, India",
-    image: "/speakers/dr-kawaljit-singh.jpg",
+    image: "/speakers/kawaljit-singh.jpeg",
     avatarInitials: "KS"
   },
   {
@@ -777,7 +777,7 @@ export const SPEAKERS_DATA = [
     designation: "Associate Professor",
     affiliation: "Chandigarh University",
     location: "Mohali, Punjab, India",
-    image: "/speakers/dr-davinder-pal.jpg",
+    image: "/speakers/davinder.jpg",
     avatarInitials: "DO"
   },
   {
@@ -785,7 +785,7 @@ export const SPEAKERS_DATA = [
     designation: "Professor, Food Science and Technology, Research Director-Life science",
     affiliation: "Manav Rachna International Institute of Research and studies",
     location: "Faridabad, Haryana, India",
-    image: "/speakers/dr-lakhvinder-kaur.png",
+    image: "/speakers/lakhvinder.png",
     avatarInitials: "LK"
   },
   {
@@ -793,7 +793,7 @@ export const SPEAKERS_DATA = [
     designation: "Vice President- Technical",
     affiliation: "Coca-Cola, Kandhari Global Beverages Pvt. Ltd.",
     location: "Gurugram, Haryana, India",
-    image: "/speakers/mr-satinder-singh-nandra.jpg",
+    image: "/speakers/satinder.jpg",
     avatarInitials: "SN"
   },
   {
@@ -801,7 +801,7 @@ export const SPEAKERS_DATA = [
     designation: "Country Manager",
     affiliation: "Newly Weds Foods",
     location: "Ahmedabad, Gujarat, India",
-    image: "/speakers/mr-paramdeep-singh-ghuman.jpg",
+    image: "/speakers/paramdeep-ghuman.jpeg",
     avatarInitials: "PG"
   },
   {
@@ -809,7 +809,7 @@ export const SPEAKERS_DATA = [
     designation: "Associate director",
     affiliation: "PepsiCo",
     location: "Gurgaon, Haryana, India",
-    image: "/speakers/satyam-gupta.jpg",
+    image: "/speakers/satyam.jpg",
     avatarInitials: "SG"
   }
 ];

@@ -31,11 +31,11 @@ export const Hero: React.FC<HeroProps> = ({ onOpenAbstractModal }) => {
               </div>
 
               <div className="flex items-center gap-2.5 bg-white px-3.5 py-1.5 rounded-xl border border-[#E8DEC8] shadow-2xs">
-                <img src="/logos/sliet-logo.jpeg" alt="SLIET Logo" className="h-9 sm:h-10 w-auto rounded-md object-contain" />
+                <img src="/logos/sliet-logo.jpeg" alt="SLIET Logo" className="h-11 sm:h-14 w-auto rounded-md object-contain" />
                 <span className="text-xs font-bold text-stone-300">•</span>
-                <img src="/logos/afsti-longowal-logo.jpeg" alt="AFSTI Longowal" className="h-9 sm:h-10 w-auto rounded-md object-contain" />
+                <img src="/logos/afsti-longowal-logo.jpeg" alt="AFSTI Longowal" className="h-11 sm:h-14 w-auto rounded-md object-contain" />
                 <span className="text-xs font-bold text-stone-300">•</span>
-                <img src="/logos/afsti-mysuru-logo.jpeg" alt="AFSTI Mysuru" className="h-9 sm:h-10 w-auto rounded-md object-contain" />
+                <img src="/logos/afsti-mysuru-logo.jpeg" alt="AFSTI Mysuru" className="h-11 sm:h-14 w-auto rounded-md object-contain" />
               </div>
             </div>
 

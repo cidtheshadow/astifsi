@@ -266,18 +266,6 @@ export const WFDCelebrations: React.FC<WFDCelebrationsProps> = ({ onBackToHome, 
 
         {/* Official Event Flyers Showcase at Bottom */}
         <div className="max-w-4xl mx-auto pt-6 border-t border-[#E8DEC8]">
-          <div className="text-center mb-6">
-            <a
-              href={CONFERENCE_INFO.abstractFormUrl}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 px-7 py-3.5 rounded-full text-xs font-bold text-white bg-[#580B1E] hover:bg-[#6B0F24] shadow-md hover:scale-[1.02] transition-all uppercase tracking-wider"
-            >
-              <QrCode className="w-4 h-4 text-[#D4AF37]" />
-              <span>Register for World Food Day Events</span>
-              <ExternalLink className="w-3.5 h-3.5" />
-            </a>
-          </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             <div className="bg-[#FAF6F0] rounded-2xl p-4 border border-[#E8DEC8] shadow-2xs text-center">

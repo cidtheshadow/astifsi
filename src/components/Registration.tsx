@@ -1,6 +1,6 @@
 import React from 'react';
 import { CreditCard, Building2, FileText, QrCode, Check } from 'lucide-react';
-import { BANK_DETAILS, CONFERENCE_INFO } from '../data/conferenceData';
+import { BANK_DETAILS } from '../data/conferenceData';
 
 interface RegistrationProps {
   onOpenAbstractModal: () => void;
@@ -28,7 +28,7 @@ export const Registration: React.FC<RegistrationProps> = ({ onOpenAbstractModal 
         </div>
 
         {/* 4-Column Grid: Registration Fees Cards */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 items-stretch mb-16">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 items-stretch mb-16">
           
           {/* Card 1: Students & Scholars */}
           <div className="bg-white rounded-2xl p-8 border border-[#F5EFE6] shadow-sm flex flex-col h-full hover:shadow-md transition-shadow">
@@ -38,14 +38,21 @@ export const Registration: React.FC<RegistrationProps> = ({ onOpenAbstractModal 
               <p className="text-xs text-stone-500">Enrolled UG/PG/PhD Scholars</p>
             </div>
             
-            <div className="mb-6">
-              <div className="flex items-baseline gap-1">
-                <span className="text-2xl font-bold text-[#580B1E]">₹</span>
-                <span className="text-4xl font-extrabold text-[#580B1E] font-heading tracking-tight">2,000</span>
+            <div className="mb-6 flex flex-col gap-3">
+              <div className="flex flex-col">
+                <span className="text-[10px] font-bold text-stone-500 uppercase">Non-AFSTI Member</span>
+                <div className="flex items-baseline gap-1">
+                  <span className="text-xl font-bold text-[#580B1E]">₹</span>
+                  <span className="text-4xl font-extrabold text-[#580B1E] font-heading tracking-tight">750</span>
+                </div>
               </div>
-              <p className="text-xs text-stone-800 font-bold mt-1">
-                Early Bird Rate <span className="text-stone-500 font-normal">(Regular: ₹2,500)</span>
-              </p>
+              <div className="flex flex-col">
+                <span className="text-[10px] font-bold text-[#E67E22] uppercase">AFSTI Member</span>
+                <div className="flex items-baseline gap-1">
+                  <span className="text-xl font-bold text-[#E67E22]">₹</span>
+                  <span className="text-4xl font-extrabold text-[#E67E22] font-heading tracking-tight">500</span>
+                </div>
+              </div>
             </div>
 
             <div className="w-full h-px bg-[#F5EFE6] mb-6" />
@@ -53,97 +60,42 @@ export const Registration: React.FC<RegistrationProps> = ({ onOpenAbstractModal 
             <ul className="space-y-4 mb-8 flex-grow text-xs text-stone-600">
               <li className="flex items-start gap-2">
                 <Check className="w-4 h-4 text-[#580B1E] shrink-0" />
-                <span>Oral/Poster presentation slot</span>
+                <span>Access to all technical sessions</span>
               </li>
               <li className="flex items-start gap-2">
                 <Check className="w-4 h-4 text-[#580B1E] shrink-0" />
-                <span>Conference Kit & Certificate</span>
+                <span>Conference kit & participation certificate</span>
               </li>
               <li className="flex items-start gap-2">
                 <Check className="w-4 h-4 text-[#580B1E] shrink-0" />
-                <span>Access to all 8 technical tracks</span>
+                <span>Working lunch & high tea</span>
               </li>
             </ul>
-
-            <a
-              href={CONFERENCE_INFO.abstractFormUrl}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="w-full block text-center py-3 rounded-lg text-xs font-bold text-[#580B1E] bg-[#F5EFE6] hover:bg-[#eaddce] transition-colors mt-auto"
-            >
-              Register as Scholar
-            </a>
           </div>
 
-          {/* Card 2: AFSTI Members (MOST POPULAR) */}
-          <div className="bg-[#580B1E] rounded-2xl p-8 border border-[#D4AF37] shadow-lg flex flex-col h-full relative transform lg:-translate-y-2">
-            <div className="absolute -top-3 left-1/2 -translate-x-1/2 bg-[#D4AF37] text-[#580B1E] px-4 py-1 rounded-full text-[10px] font-bold uppercase tracking-wider whitespace-nowrap shadow-sm">
-              Most Popular
-            </div>
-            
-            <div className="mb-6 mt-2">
-              <span className="text-[10px] font-bold text-[#D4AF37] uppercase tracking-wider block mb-2">SPECIAL PRIVILEGE</span>
-              <h3 className="text-xl font-bold text-white font-heading mb-1">AFSTI Members</h3>
-              <p className="text-xs text-white/80">Active members of AFSTI HQ or any Chapter</p>
-            </div>
-            
-            <div className="mb-6">
-              <div className="flex items-baseline gap-1">
-                <span className="text-2xl font-bold text-white">₹</span>
-                <span className="text-4xl font-extrabold text-white font-heading tracking-tight">3,500</span>
-              </div>
-              <p className="text-xs text-[#D4AF37] font-bold mt-1">
-                Early Bird Rate <span className="text-white/70 font-normal">(Regular: ₹4,200)</span>
-              </p>
-            </div>
-
-            <div className="w-full h-px bg-white/10 mb-6" />
-
-            <ul className="space-y-4 mb-8 flex-grow text-xs text-white/90">
-              <li className="flex items-start gap-2">
-                <Check className="w-4 h-4 text-[#D4AF37] shrink-0" />
-                <span>Priority review for paper</span>
-              </li>
-              <li className="flex items-start gap-2">
-                <Check className="w-4 h-4 text-[#D4AF37] shrink-0" />
-                <span>Proceedings Indexed Book copy</span>
-              </li>
-              <li className="flex items-start gap-2">
-                <Check className="w-4 h-4 text-[#D4AF37] shrink-0" />
-                <span>Gala Dinner & Cultural Night</span>
-              </li>
-              <li className="flex items-start gap-2">
-                <Check className="w-4 h-4 text-[#D4AF37] shrink-0" />
-                <span>AFSTI Chapter Member Meet</span>
-              </li>
-            </ul>
-
-            <a
-              href={CONFERENCE_INFO.abstractFormUrl}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="w-full block text-center py-3 rounded-lg text-xs font-bold text-[#580B1E] bg-[#D4AF37] hover:bg-[#c4a030] transition-colors shadow-sm mt-auto"
-            >
-              Register as Member
-            </a>
-          </div>
-
-          {/* Card 3: Academicians / Faculty */}
+          {/* Card 2: Academicians / Faculty */}
           <div className="bg-white rounded-2xl p-8 border border-[#F5EFE6] shadow-sm flex flex-col h-full hover:shadow-md transition-shadow">
             <div className="mb-6">
               <span className="text-[10px] font-bold text-stone-500 uppercase tracking-wider block mb-2">FACULTY TRACK</span>
               <h3 className="text-xl font-bold text-[#580B1E] font-heading mb-1">Academicians / Faculty</h3>
-              <p className="text-xs text-stone-500">University faculty, scientists from non-AFSTI</p>
+              <p className="text-xs text-stone-500">University faculty, scientists</p>
             </div>
             
-            <div className="mb-6">
-              <div className="flex items-baseline gap-1">
-                <span className="text-2xl font-bold text-[#580B1E]">₹</span>
-                <span className="text-4xl font-extrabold text-[#580B1E] font-heading tracking-tight">4,500</span>
+            <div className="mb-6 flex flex-col gap-3">
+              <div className="flex flex-col">
+                <span className="text-[10px] font-bold text-stone-500 uppercase">Non-AFSTI Member</span>
+                <div className="flex items-baseline gap-1">
+                  <span className="text-xl font-bold text-[#580B1E]">₹</span>
+                  <span className="text-4xl font-extrabold text-[#580B1E] font-heading tracking-tight">1,500</span>
+                </div>
               </div>
-              <p className="text-xs text-stone-800 font-bold mt-1">
-                Early Bird Rate <span className="text-stone-500 font-normal">(Regular: ₹5,500)</span>
-              </p>
+              <div className="flex flex-col">
+                <span className="text-[10px] font-bold text-[#E67E22] uppercase">AFSTI Member</span>
+                <div className="flex items-baseline gap-1">
+                  <span className="text-xl font-bold text-[#E67E22]">₹</span>
+                  <span className="text-4xl font-extrabold text-[#E67E22] font-heading tracking-tight">1,000</span>
+                </div>
+              </div>
             </div>
 
             <div className="w-full h-px bg-[#F5EFE6] mb-6" />
@@ -162,60 +114,45 @@ export const Registration: React.FC<RegistrationProps> = ({ onOpenAbstractModal 
                 <span>Session chair consideration</span>
               </li>
             </ul>
-
-            <a
-              href={CONFERENCE_INFO.abstractFormUrl}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="w-full block text-center py-3 rounded-lg text-xs font-bold text-[#580B1E] bg-[#F5EFE6] hover:bg-[#eaddce] transition-colors mt-auto"
-            >
-              Register as Faculty
-            </a>
           </div>
 
-          {/* Card 4: Industry & Corporates */}
-          <div className="bg-white rounded-2xl p-8 border border-[#F5EFE6] shadow-sm flex flex-col h-full hover:shadow-md transition-shadow">
-            <div className="mb-6">
-              <span className="text-[10px] font-bold text-stone-500 uppercase tracking-wider block mb-2">CORPORATE</span>
-              <h3 className="text-xl font-bold text-[#580B1E] font-heading mb-1">Industry & Corporates</h3>
-              <p className="text-xs text-stone-500">R&D Directors, QC Heads, Founders</p>
+          {/* Card 3: Industry & Corporates */}
+          <div className="bg-[#580B1E] rounded-2xl p-8 border border-[#6B0F24] shadow-md flex flex-col h-full hover:shadow-lg transition-shadow relative overflow-hidden">
+            <div className="absolute top-0 right-0 p-4 opacity-10">
+              <Building2 className="w-24 h-24 text-white" />
+            </div>
+            <div className="mb-6 relative z-10">
+              <span className="text-[10px] font-bold text-[#D4AF37] uppercase tracking-wider block mb-2">CORPORATE</span>
+              <h3 className="text-xl font-bold text-white font-heading mb-1">Industry & Corporates</h3>
+              <p className="text-xs text-stone-300">R&D Directors, QC Heads, Founders</p>
             </div>
             
-            <div className="mb-6">
-              <div className="flex items-baseline gap-1">
-                <span className="text-2xl font-bold text-[#580B1E]">₹</span>
-                <span className="text-4xl font-extrabold text-[#580B1E] font-heading tracking-tight">8,000</span>
+            <div className="mb-6 relative z-10">
+              <div className="flex flex-col">
+                <span className="text-[10px] font-bold text-[#D4AF37] uppercase">Standard Rate</span>
+                <div className="flex items-baseline gap-1">
+                  <span className="text-xl font-bold text-white">₹</span>
+                  <span className="text-4xl font-extrabold text-white font-heading tracking-tight">1,500</span>
+                </div>
               </div>
-              <p className="text-xs text-stone-800 font-bold mt-1">
-                Early Bird Rate <span className="text-stone-500 font-normal">(Regular: ₹10,000)</span>
-              </p>
             </div>
 
-            <div className="w-full h-px bg-[#F5EFE6] mb-6" />
+            <div className="w-full h-px bg-[#6B0F24] mb-6 relative z-10" />
 
-            <ul className="space-y-4 mb-8 flex-grow text-xs text-stone-600">
+            <ul className="space-y-4 mb-8 flex-grow text-xs text-stone-200 relative z-10">
               <li className="flex items-start gap-2">
-                <Check className="w-4 h-4 text-[#580B1E] shrink-0" />
+                <Check className="w-4 h-4 text-[#D4AF37] shrink-0" />
                 <span>B2B Industry-Academia Lounge</span>
               </li>
               <li className="flex items-start gap-2">
-                <Check className="w-4 h-4 text-[#580B1E] shrink-0" />
+                <Check className="w-4 h-4 text-[#D4AF37] shrink-0" />
                 <span>Company logo in souvenir book</span>
               </li>
               <li className="flex items-start gap-2">
-                <Check className="w-4 h-4 text-[#580B1E] shrink-0" />
+                <Check className="w-4 h-4 text-[#D4AF37] shrink-0" />
                 <span>Expo pavilion entry</span>
               </li>
             </ul>
-
-            <a
-              href={CONFERENCE_INFO.abstractFormUrl}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="w-full block text-center py-3 rounded-lg text-xs font-bold text-[#580B1E] bg-[#F5EFE6] hover:bg-[#eaddce] transition-colors mt-auto"
-            >
-              Register Industry Delegate
-            </a>
           </div>
 
         </div>

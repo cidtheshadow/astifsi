@@ -13,6 +13,7 @@ import { VenueLocation } from './components/VenueLocation';
 import { Speakers } from "./components/Speakers";
 import { Committee } from './components/Committee';
 import { DepartmentalCommittees } from './components/DepartmentalCommittees';
+import { AuthorGuidelinesFAQ } from "./components/AuthorGuidelinesFAQ";
 import { Footer } from './components/Footer';
 
 export function App() {
@@ -98,6 +99,7 @@ export function App() {
       </main>
 
       {/* Footer */}
+      <AuthorGuidelinesFAQ />
       <Footer 
         onOpenAbstractModal={handleOpenAbstractModal} 
         onNavigatePage={handleNavigatePage}
