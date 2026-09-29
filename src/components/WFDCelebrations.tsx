@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { 
-  Utensils, Presentation, HelpCircle, Palette, Sparkles, Calendar, Clock, MapPin, 
-  Phone, CheckCircle2, Award, ExternalLink, QrCode, BookOpen, Star, ArrowLeft
+  Utensils, Presentation, HelpCircle, Palette, Sparkles, 
+  Phone, CheckCircle2, Award, ExternalLink, BookOpen, Star, ArrowLeft
 } from 'lucide-react';
 import { WFD_CELEBRATIONS_DATA, CONFERENCE_INFO } from '../data/conferenceData';
 
@@ -55,66 +55,6 @@ export const WFDCelebrations: React.FC<WFDCelebrationsProps> = ({ onBackToHome, 
             Theme: <strong className="text-[#580B1E] font-semibold">“Innovate Today. Nourish Tomorrow”</strong> • Department of Food Engineering &amp; Technology, SLIET in association with AFSTI Longowal Chapter.
           </p>
           <div className="w-16 h-1 bg-gradient-to-r from-[#E67E22] via-[#6B0F24] to-[#580B1E] mx-auto mt-4 rounded-full" />
-        </div>
-
-        {/* WFD Event Meta Header Banner */}
-        <div className="bg-[#FAF6F0] rounded-2xl p-6 sm:p-8 mb-12 border border-[#E8DEC8] shadow-sm">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-4 items-center">
-            
-            <div className="flex items-center gap-3 bg-white p-3.5 rounded-xl border border-[#E8DEC8]">
-              <div className="w-9 h-9 rounded-lg bg-[#F5EFE6] flex items-center justify-center text-[#E67E22] shrink-0 border border-[#E8DEC8]">
-                <Calendar className="w-4 h-4" />
-              </div>
-              <div>
-                <span className="text-[10px] font-bold text-[#52373D] uppercase block">Event Dates</span>
-                <span className="text-xs font-bold text-[#580B1E] font-heading">{WFD_CELEBRATIONS_DATA.dates}</span>
-              </div>
-            </div>
-
-            <div className="flex items-center gap-3 bg-white p-3.5 rounded-xl border border-[#E8DEC8]">
-              <div className="w-9 h-9 rounded-xl bg-[#F5EFE6] flex items-center justify-center text-[#6B0F24] shrink-0 border border-[#E8DEC8]">
-                <Clock className="w-4 h-4" />
-              </div>
-              <div>
-                <span className="text-[10px] font-bold text-[#52373D] uppercase block">Timing</span>
-                <span className="text-xs font-bold text-[#580B1E] font-heading">{WFD_CELEBRATIONS_DATA.time}</span>
-              </div>
-            </div>
-
-            <div className="flex items-center gap-3 bg-white p-3.5 rounded-xl border border-[#E8DEC8]">
-              <div className="w-9 h-9 rounded-xl bg-[#F5EFE6] flex items-center justify-center text-[#580B1E] shrink-0 border border-[#E8DEC8]">
-                <MapPin className="w-4 h-4" />
-              </div>
-              <div>
-                <span className="text-[10px] font-bold text-[#52373D] uppercase block">Venue</span>
-                <span className="text-xs font-bold text-[#580B1E] font-heading">{WFD_CELEBRATIONS_DATA.venue}</span>
-              </div>
-            </div>
-
-            <div className="flex items-center gap-3 bg-white p-3.5 rounded-xl border border-[#E8DEC8]">
-              <div className="w-9 h-9 rounded-xl bg-[#F5EFE6] flex items-center justify-center text-[#E67E22] shrink-0 border border-[#E8DEC8]">
-                <Award className="w-4 h-4" />
-              </div>
-              <div>
-                <span className="text-[10px] font-bold text-[#52373D] uppercase block">Reg. Deadline</span>
-                <span className="text-xs font-bold text-[#E67E22] font-heading">{WFD_CELEBRATIONS_DATA.registrationDeadline}</span>
-              </div>
-            </div>
-
-            <div className="flex items-center justify-center">
-              <a
-                href={CONFERENCE_INFO.abstractFormUrl}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="w-full flex items-center justify-center gap-2 px-4 py-3 rounded-xl text-xs font-bold text-white bg-[#580B1E] hover:bg-[#6B0F24] shadow-md transition-all uppercase tracking-wider"
-              >
-                <QrCode className="w-4 h-4 text-[#D4AF37]" />
-                <span>Register WFD</span>
-                <ExternalLink className="w-3.5 h-3.5" />
-              </a>
-            </div>
-
-          </div>
         </div>
 
         {/* Interactive Event Selector Tabs */}
