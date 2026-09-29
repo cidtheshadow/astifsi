@@ -1,5 +1,5 @@
 import React from 'react';
-import { CreditCard, Building2, FileText, QrCode, Check } from 'lucide-react';
+import { CreditCard, Building2, FileText, QrCode } from 'lucide-react';
 import { BANK_DETAILS } from '../data/conferenceData';
 
 interface RegistrationProps {
@@ -57,20 +57,7 @@ export const Registration: React.FC<RegistrationProps> = ({ onOpenAbstractModal 
 
             <div className="w-full h-px bg-[#F5EFE6] mb-6" />
 
-            <ul className="space-y-4 mb-8 flex-grow text-xs text-stone-600">
-              <li className="flex items-start gap-2">
-                <Check className="w-4 h-4 text-[#580B1E] shrink-0" />
-                <span>Access to all technical sessions</span>
-              </li>
-              <li className="flex items-start gap-2">
-                <Check className="w-4 h-4 text-[#580B1E] shrink-0" />
-                <span>Conference kit & participation certificate</span>
-              </li>
-              <li className="flex items-start gap-2">
-                <Check className="w-4 h-4 text-[#580B1E] shrink-0" />
-                <span>Working lunch & high tea</span>
-              </li>
-            </ul>
+            
           </div>
 
           {/* Card 2: Academicians / Faculty */}
@@ -100,20 +87,7 @@ export const Registration: React.FC<RegistrationProps> = ({ onOpenAbstractModal 
 
             <div className="w-full h-px bg-[#F5EFE6] mb-6" />
 
-            <ul className="space-y-4 mb-8 flex-grow text-xs text-stone-600">
-              <li className="flex items-start gap-2">
-                <Check className="w-4 h-4 text-[#580B1E] shrink-0" />
-                <span>Faculty research presentation</span>
-              </li>
-              <li className="flex items-start gap-2">
-                <Check className="w-4 h-4 text-[#580B1E] shrink-0" />
-                <span>Proceedings book & hard badge</span>
-              </li>
-              <li className="flex items-start gap-2">
-                <Check className="w-4 h-4 text-[#580B1E] shrink-0" />
-                <span>Session chair consideration</span>
-              </li>
-            </ul>
+            
           </div>
 
           {/* Card 3: Industry & Corporates */}
@@ -139,20 +113,7 @@ export const Registration: React.FC<RegistrationProps> = ({ onOpenAbstractModal 
 
             <div className="w-full h-px bg-[#6B0F24] mb-6 relative z-10" />
 
-            <ul className="space-y-4 mb-8 flex-grow text-xs text-stone-200 relative z-10">
-              <li className="flex items-start gap-2">
-                <Check className="w-4 h-4 text-[#D4AF37] shrink-0" />
-                <span>B2B Industry-Academia Lounge</span>
-              </li>
-              <li className="flex items-start gap-2">
-                <Check className="w-4 h-4 text-[#D4AF37] shrink-0" />
-                <span>Company logo in souvenir book</span>
-              </li>
-              <li className="flex items-start gap-2">
-                <Check className="w-4 h-4 text-[#D4AF37] shrink-0" />
-                <span>Expo pavilion entry</span>
-              </li>
-            </ul>
+            
           </div>
 
         </div>
