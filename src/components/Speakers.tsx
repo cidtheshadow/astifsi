@@ -11,7 +11,7 @@ export const Speakers: React.FC = () => {
             Eminent Speakers
           </span>
           <h2 className="text-3xl sm:text-5xl font-bold text-stone-900 mt-4 font-serif-editorial">
-            Guest <span className="italic text-stone-500">Speakers</span>
+            Invited <span className="italic text-stone-500">Speakers</span>
           </h2>
           <div className="w-16 h-1 bg-[#E86024] mx-auto mt-4 rounded-full" />
         </div>
