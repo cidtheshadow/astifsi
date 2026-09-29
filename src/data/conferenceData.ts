@@ -801,6 +801,7 @@ export const SPEAKERS_DATA = [
     designation: "Country Manager",
     affiliation: "Newly Weds Foods",
     location: "Ahmedabad, Gujarat, India",
+    image: "/speakers/mr-paramdeep-singh-ghuman.jpg",
     avatarInitials: "PG"
   },
   {
@@ -808,6 +809,7 @@ export const SPEAKERS_DATA = [
     designation: "Associate director",
     affiliation: "PepsiCo",
     location: "Gurgaon, Haryana, India",
+    image: "/speakers/satyam-gupta.jpg",
     avatarInitials: "SG"
   }
 ];
