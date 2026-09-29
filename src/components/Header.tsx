@@ -61,8 +61,8 @@ export const Header: React.FC<HeaderProps> = ({
               >
                 <div className="flex items-center gap-1 shrink-0 bg-white/90 p-1 rounded-lg border border-[#D4AF37]/30 shadow-2xs group-hover:scale-105 transition-transform">
                   <img src="/logos/sliet-logo.jpeg" alt="SLIET Logo" className="h-8 sm:h-9 w-auto object-contain" />
-                  <img src="/logos/afsti-longowal-logo.jpeg" alt="AFSTI Longowal" className="h-8 sm:h-9 w-auto object-contain" />
-                  <img src="/logos/afsti-mysuru-logo.jpeg" alt="AFSTI Mysuru" className="h-8 sm:h-9 w-auto object-contain" />
+                  <img src="/logos/afsti-longowal-logo.jpeg" alt="AFSTI Longowal" className="hidden sm:block h-9 w-auto object-contain" />
+                  <img src="/logos/afsti-mysuru-logo.jpeg" alt="AFSTI Mysuru" className="hidden sm:block h-9 w-auto object-contain" />
                 </div>
               </button>
 

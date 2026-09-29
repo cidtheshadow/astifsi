@@ -527,7 +527,7 @@ export const COMMITTEE_MEMBERS: CommitteeMember[] = [
   // National Advisory Committee
   {
     name: "Prof. A. S. Bawa",
-    role: "National Advisory Committee",
+    role: "Advisory Board",
     designation: "Former Director",
     institution: "DFRL Mysuru",
     category: "Advisory",
@@ -537,7 +537,7 @@ export const COMMITTEE_MEMBERS: CommitteeMember[] = [
   },
   {
     name: "Prof. Sudesh Kumar Yadav",
-    role: "National Advisory Committee",
+    role: "Advisory Board",
     designation: "Director",
     institution: "CSIR-IHBT, Palampur",
     category: "Advisory",
@@ -547,7 +547,7 @@ export const COMMITTEE_MEMBERS: CommitteeMember[] = [
   },
   {
     name: "Prof. Nachiket Kotwaliwale",
-    role: "National Advisory Committee",
+    role: "Advisory Board",
     designation: "Director",
     institution: "ICAR-CIPHET, Ludhiana",
     category: "Advisory",
@@ -557,7 +557,7 @@ export const COMMITTEE_MEMBERS: CommitteeMember[] = [
   },
   {
     name: "Prof. Ashwani Pareek",
-    role: "National Advisory Committee",
+    role: "Advisory Board",
     designation: "Executive Director",
     institution: "NABI, Mohali",
     category: "Advisory",
@@ -567,7 +567,7 @@ export const COMMITTEE_MEMBERS: CommitteeMember[] = [
   },
   {
     name: "Dr. Nilesh Amritkar",
-    role: "National Advisory Committee",
+    role: "Advisory Board",
     designation: "Managing Director",
     institution: "Envirocare Labs",
     category: "Advisory",
@@ -577,7 +577,7 @@ export const COMMITTEE_MEMBERS: CommitteeMember[] = [
   },
   {
     name: "Prof. Ashok Kumar",
-    role: "National Advisory Committee",
+    role: "Advisory Board",
     designation: "Former Dean (CoAET) & Director Extension Education",
     institution: "PAU Ludhiana",
     category: "Advisory",
@@ -587,7 +587,7 @@ export const COMMITTEE_MEMBERS: CommitteeMember[] = [
   },
   {
     name: "Prof. Rakesh Sharda",
-    role: "National Advisory Committee",
+    role: "Advisory Board",
     designation: "Project Director",
     institution: "ICAR-CIPHET, Ludhiana",
     category: "Advisory",
@@ -597,7 +597,7 @@ export const COMMITTEE_MEMBERS: CommitteeMember[] = [
   },
   {
     name: "Er. Parmdeep Ghuman",
-    role: "National Advisory Committee",
+    role: "Advisory Board",
     designation: "Country Manager India",
     institution: "Newly Weds Foods LLC",
     category: "Advisory",
@@ -607,7 +607,7 @@ export const COMMITTEE_MEMBERS: CommitteeMember[] = [
   },
   {
     name: "Mr. Sartaj Singh Brar",
-    role: "National Advisory Committee",
+    role: "Advisory Board",
     designation: "Managing Director",
     institution: "Pagro Frozen Foods Pvt. Ltd.",
     category: "Advisory",
@@ -797,7 +797,7 @@ export const SPEAKERS_DATA = [
     avatarInitials: "SN"
   },
   {
-    name: "Mr. Paramdeep Shingh Ghuman",
+    name: "Mr. Paramdeep Singh Ghuman",
     designation: "Country Manager",
     affiliation: "Newly Weds Foods",
     location: "Ahmedabad, Gujarat, India",
