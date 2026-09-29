@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
 import { 
   Utensils, Presentation, HelpCircle, Palette, Sparkles, 
-  Phone, CheckCircle2, Award, ExternalLink, BookOpen, Star, ArrowLeft
+  Phone, CheckCircle2, Award, BookOpen, Star, ArrowLeft
 } from 'lucide-react';
-import { WFD_CELEBRATIONS_DATA, CONFERENCE_INFO } from '../data/conferenceData';
+import { WFD_CELEBRATIONS_DATA } from '../data/conferenceData';
 
 interface WFDCelebrationsProps {
   onBackToHome?: () => void;
@@ -165,15 +165,7 @@ export const WFDCelebrations: React.FC<WFDCelebrationsProps> = ({ onBackToHome, 
                       </div>
                     )}
 
-                    <a
-                      href={CONFERENCE_INFO.abstractFormUrl}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="inline-flex items-center gap-2 px-6 py-3 rounded-xl text-xs font-bold text-white bg-[#580B1E] hover:bg-[#6B0F24] shadow-md uppercase tracking-wider shrink-0"
-                    >
-                      <span>Register for Event</span>
-                      <ExternalLink className="w-3.5 h-3.5" />
-                    </a>
+                    
                   </div>
 
                 </div>
