@@ -60,19 +60,20 @@ export function App() {
 
       {/* Main Content Area based on Active Page */}
       <main className="pt-24 sm:pt-28">
-        {activePage === 'home' && (
+                {activePage === 'home' && (
           <>
             <Hero onOpenAbstractModal={handleOpenAbstractModal} />
             <AboutConference />
-            <Speakers />
             <Committee onNavigateDepartmental={() => handleNavigatePage('departmental-committees')} />
             <FocusAreas onOpenAbstractModal={handleOpenAbstractModal} />
+            <Speakers />
             <Highlights />
-            <WFDCelebrations />
             <ImportantDates onOpenAbstractModal={handleOpenAbstractModal} />
             <Registration onOpenAbstractModal={handleOpenAbstractModal} />
             <Sponsors />
             <VenueLocation />
+            <AuthorGuidelinesFAQ />
+            <WFDCelebrations />
           </>
         )}
 

@@ -28,16 +28,16 @@ export const Header: React.FC<HeaderProps> = ({
   const navLinks: { name: string; page: ActivePage; hash?: string }[] = [
     { name: 'About', page: 'home', hash: '#about' },
     { name: 'Committees', page: 'home', hash: '#committee' },
-    { name: 'Focus Areas', page: 'home', hash: '#themes' },
-    { name: 'Invited Speakers', page: 'home', hash: '#speakers' },
+    { name: 'Focus', page: 'home', hash: '#themes' },
+    { name: 'Speakers', page: 'home', hash: '#speakers' },
     { name: 'Highlights', page: 'home', hash: '#highlights' },
-    { name: 'Important Dates', page: 'home', hash: '#deadlines' },
-    { name: 'Registration', page: 'home', hash: '#registration' },
-    { name: 'Local Committees', page: 'departmental-committees' },
+    { name: 'Dates', page: 'home', hash: '#deadlines' },
+    { name: 'Register', page: 'home', hash: '#registration' },
+    { name: 'Local', page: 'departmental-committees' },
     { name: 'Sponsors', page: 'sponsors' },
-    { name: 'Venue & Location', page: 'home', hash: '#venue' },
+    { name: 'Venue', page: 'home', hash: '#venue' },
     { name: 'FAQ', page: 'home', hash: '#faqs' },
-    { name: 'World Food Day 2026', page: 'wfd' },
+    { name: 'WFD 26\'', page: 'wfd' },
   ];
 
   const handleLinkClick = (page: ActivePage, hash?: string) => {
@@ -131,9 +131,9 @@ export const Header: React.FC<HeaderProps> = ({
       {/* 2. Luxury Bottom Navigation Bar (Centered inline list with dividers like TATA CLiQ Luxury) */}
       <div className="hidden xl:block bg-[#1B0208] text-stone-200 border-b border-[#3A0512] py-2">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <nav className="flex items-center justify-center flex-wrap gap-x-2 gap-y-1 text-xs">
+          <nav className="flex items-center justify-center gap-x-1.5 gap-y-1 overflow-x-auto whitespace-nowrap scrollbar-hide text-xs">
             {navLinks.map((link, idx) => {
-              const isWFD = link.name.includes('World Food Day');
+              const isWFD = link.name.includes('WFD');
               const isCurrent = activePage === link.page && (link.page !== 'home' || activePage === 'home');
               
               return (
@@ -141,7 +141,7 @@ export const Header: React.FC<HeaderProps> = ({
                   {idx > 0 && <span className="text-stone-600 font-light select-none px-1">|</span>}
                   <button
                     onClick={() => handleLinkClick(link.page, link.hash)}
-                    className={`transition-all duration-200 cursor-pointer py-1 px-2 rounded font-medium tracking-wide uppercase text-[11px] ${
+                    className={`transition-all duration-200 cursor-pointer py-1 px-1 rounded font-medium tracking-wide uppercase text-[10.5px] xl:text-[11px] ${
                       isWFD
                         ? 'text-[#E67E22] font-bold hover:text-white hover:bg-[#580B1E] border border-[#E67E22]/40'
                         : isCurrent && link.page !== 'home'
@@ -167,7 +167,7 @@ export const Header: React.FC<HeaderProps> = ({
                 key={link.name}
                 onClick={() => handleLinkClick(link.page, link.hash)}
                 className={`text-left px-4 py-2.5 rounded-lg text-sm font-medium transition-colors cursor-pointer ${
-                  link.name.includes('World Food Day')
+                  link.name.includes('WFD')
                     ? 'text-[#E67E22] font-bold bg-[#580B1E]/60 border border-[#E67E22]/30'
                     : 'text-stone-200 hover:text-white hover:bg-[#580B1E]'
                 }`}
