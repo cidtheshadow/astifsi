@@ -52,7 +52,7 @@ export const FocusAreas: React.FC<FocusAreasProps> = ({ onOpenAbstractModal }) =
               <span>Research Call &amp; Peer-Review Disciplines</span>
             </div>
             <h2 className="text-3xl sm:text-5xl font-bold text-[#580B1E] tracking-tight font-display-hero">
-              Conference Scientific Tracks
+              Key Focus Areas
             </h2>
             <p className="text-sm text-stone-600 mt-2 max-w-2xl leading-relaxed">
               Original research papers, review articles, and scientific poster submissions are invited across 10 curated technological thrust areas.
@@ -90,9 +90,6 @@ export const FocusAreas: React.FC<FocusAreasProps> = ({ onOpenAbstractModal }) =
                   <div className="w-10 h-10 rounded-xl bg-[#D1FAE5] border border-emerald-200 flex items-center justify-center group-hover:scale-110 transition-transform">
                     {getIcon(area.iconName)}
                   </div>
-                  <span className="px-2.5 py-1 rounded-full bg-[#FEF3C7] text-[#713700] text-[10px] font-bold uppercase tracking-wider">
-                    Track {area.number}
-                  </span>
                 </div>
 
                 <h3 className="text-base font-bold text-[#580B1E] group-hover:text-[#D4AF37] transition-colors font-heading mb-2">
@@ -145,7 +142,7 @@ export const FocusAreas: React.FC<FocusAreasProps> = ({ onOpenAbstractModal }) =
               </div>
               <div>
                 <span className="text-xs font-bold text-[#E67E22] uppercase tracking-wider font-heading">
-                  Track {activeModalArea.number} Scope
+                  Scope
                 </span>
                 <h3 className="text-lg font-bold text-[#580B1E] font-heading">
                   {activeModalArea.title}

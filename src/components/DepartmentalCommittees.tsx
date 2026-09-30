@@ -103,10 +103,29 @@ export const DepartmentalCommittees: React.FC<DepartmentalCommitteesProps> = ({
                   <div className="pt-3 border-t border-[#E8DEC8]/60">
                     <div className="flex items-center gap-2 text-[11px] text-[#E67E22] font-bold uppercase tracking-wider mb-2">
                       <GraduationCap className="w-3.5 h-3.5" />
-                      <span>Student Coordinators ({committee.studentCoordinators.length})</span>
+                      <span>Student Coordinator{committee.studentCoordinators.length > 1 ? 's' : ''}</span>
                     </div>
                     <div className="flex flex-wrap gap-1.5">
                       {committee.studentCoordinators.map((st, idx) => (
+                        <span
+                          key={idx}
+                          className="inline-block text-[11px] font-medium bg-[#F5EFE6] text-[#580B1E] px-2 py-0.5 rounded-md border border-[#E8DEC8]"
+                        >
+                          {st}
+                        </span>
+                      ))}
+                    </div>
+                  </div>
+                )}
+                {/* Student Members if available */}
+                {committee.studentMembers && committee.studentMembers.length > 0 && (
+                  <div className="pt-3 border-t border-[#E8DEC8]/60 mt-3">
+                    <div className="flex items-center gap-2 text-[11px] text-[#E67E22] font-bold uppercase tracking-wider mb-2">
+                      <Users className="w-3.5 h-3.5" />
+                      <span>Student Members</span>
+                    </div>
+                    <div className="flex flex-wrap gap-1.5">
+                      {committee.studentMembers.map((st, idx) => (
                         <span
                           key={idx}
                           className="inline-block text-[11px] font-medium bg-[#F5EFE6] text-[#580B1E] px-2 py-0.5 rounded-md border border-[#E8DEC8]"

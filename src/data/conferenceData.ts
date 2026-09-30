@@ -286,6 +286,7 @@ export interface LocalDepartmentalCommittee {
   coordinator: string;
   members: string[];
   studentCoordinators?: string[];
+  studentMembers?: string[];
 }
 
 export const DEPARTMENTAL_COMMITTEES: LocalDepartmentalCommittee[] = [
@@ -309,7 +310,8 @@ export const DEPARTMENTAL_COMMITTEES: LocalDepartmentalCommittee[] = [
     title: "Transportation & TA Committee",
     coordinator: "Prof. P. Kumar, FET",
     members: ["Prof. Charanjiv Singh, FET", "Sri. Laxmi Narayan Singh, Sr. Technician, FET"],
-    studentCoordinators: ["Aditya Shree (Ph.D. Scholar)", "Ashmita Uppal (Ph.D. Scholar)", "Sunil Kumar (Ph.D. Scholar)"]
+    studentCoordinators: ["Aditya Shree (Ph.D. Scholar)"],
+    studentMembers: ["Ashmita Uppal (Ph.D. Scholar)", "Sunil Kumar (Ph.D. Scholar)"]
   },
   {
     id: "accommodation",
@@ -317,7 +319,8 @@ export const DEPARTMENTAL_COMMITTEES: LocalDepartmentalCommittee[] = [
     title: "Accommodation Committee",
     coordinator: "Er. Ashwani Kumar, Asstt. Prof., FET",
     members: ["Mr. Manoj Pandey, Sr. Technician"],
-    studentCoordinators: ["Rishabh Thakur (Ph.D. Scholar)", "Bharat Bhushan (Ph.D. Scholar)", "Amisha Gurung (Ph.D. Scholar)", "Amandeep Singh (Ph.D. Scholar)"]
+    studentCoordinators: ["Rishabh Thakur (Ph.D. Scholar)"],
+    studentMembers: ["Bharat Bhushan (Ph.D. Scholar)", "Amisha Gurung (Ph.D. Scholar)", "Amandeep Singh (Ph.D. Scholar)"]
   },
   {
     id: "registration",
@@ -325,7 +328,8 @@ export const DEPARTMENTAL_COMMITTEES: LocalDepartmentalCommittee[] = [
     title: "Registration Committee",
     coordinator: "Er. Ashwani Kumar, Asstt. Prof., FET",
     members: ["Dr. Tejinder Kaur, Guest Faculty", "Ms. Somya Saini, Guest Faculty", "Mrs. Parveen Goyal, Technician, FET"],
-    studentCoordinators: ["Divyanshi (Ph.D. Scholar)", "Amandeep Singh (Ph.D. Scholar)", "Jasmine Saini (Ph.D. Scholar)", "Riya (Ph.D. Scholar)", "Anjali Yadav (M.Tech. Student)"]
+    studentCoordinators: ["Divyanshi (Ph.D. Scholar)"],
+    studentMembers: ["Amandeep Singh (Ph.D. Scholar)", "Jasmine Saini (Ph.D. Scholar)", "Riya (Ph.D. Scholar)", "Anjali Yadav (M.Tech. Student)"]
   },
   {
     id: "publication",
@@ -333,7 +337,8 @@ export const DEPARTMENTAL_COMMITTEES: LocalDepartmentalCommittee[] = [
     title: "Publication Committee",
     coordinator: "Prof. C.S. Riar, FET",
     members: ["Prof. Sukhcharn Singh, FET", "Prof. Navdeep Jindal, FET"],
-    studentCoordinators: ["Aditya Shree (Ph.D. Scholar)", "Divyanshi (Ph.D. Scholar)"]
+    studentCoordinators: ["Aditya Shree (Ph.D. Scholar)"],
+    studentMembers: ["Divyanshi (Ph.D. Scholar)"]
   },
   {
     id: "venue-stage",
@@ -341,7 +346,8 @@ export const DEPARTMENTAL_COMMITTEES: LocalDepartmentalCommittee[] = [
     title: "Venue Arrangement & Stage Coordination Committee",
     coordinator: "Prof. Sukhcharn Singh, FET",
     members: ["Prof. Navdeep Jindal, FET", "F.I. ACSS / Nominee", "Mr. Navdeep Kumar, Incharge (Electrical Wing)", "Sri. Laxmi Narayan Singh, Sr. Technician, FET"],
-    studentCoordinators: ["Aditi (Ph.D. Scholar)", "Ambika Thakur (Ph.D. Scholar)", "Amisha Kaushik (Ph.D. Scholar)", "Ramanjot Kaur (Ph.D. Scholar)", "Pallavi Sharma (Ph.D. Scholar)", "Tanya Sonker (Ph.D. Scholar)", "Gunjan Thakur (Ph.D. Scholar)", "Avani Sharma (M.Tech. Student)", "Rupali Mandial (M.Tech. Student)"]
+    studentCoordinators: ["Aditi (Ph.D. Scholar)"],
+    studentMembers: ["Ambika Thakur (Ph.D. Scholar)", "Amisha Kaushik (Ph.D. Scholar)", "Ramanjot Kaur (Ph.D. Scholar)", "Pallavi Sharma (Ph.D. Scholar)", "Tanya Sonker (Ph.D. Scholar)", "Gunjan Thakur (Ph.D. Scholar)", "Avani Sharma (M.Tech. Student)", "Rupali Mandial (M.Tech. Student)"]
   },
   {
     id: "hospitality",
@@ -349,7 +355,8 @@ export const DEPARTMENTAL_COMMITTEES: LocalDepartmentalCommittee[] = [
     title: "Hospitality Committee",
     coordinator: "Prof. Charanjiv Singh, FET",
     members: ["Er. Ashwani Kumar, Asstt. Prof., FET", "Mr. Manoj Pandey, Sr. Technician"],
-    studentCoordinators: ["Shashank Wirutkar (Ph.D. Scholar)", "Jyoti Soni (Ph.D. Scholar)", "Armandeep Kaur (Ph.D. Scholar)", "Ratandeep Ray (Ph.D. Scholar)", "Apurva Mishra (M.Tech. Student)", "Vishal Singh (M.Tech. Student)"]
+    studentCoordinators: ["Shashank Wirutkar (Ph.D. Scholar)"],
+    studentMembers: ["Jyoti Soni (Ph.D. Scholar)", "Armandeep Kaur (Ph.D. Scholar)", "Ratandeep Ray (Ph.D. Scholar)", "Apurva Mishra (M.Tech. Student)", "Vishal Singh (M.Tech. Student)"]
   },
   {
     id: "media-publicity",
@@ -357,7 +364,8 @@ export const DEPARTMENTAL_COMMITTEES: LocalDepartmentalCommittee[] = [
     title: "Media & Publicity Committee",
     coordinator: "Prof. D.C. Saxena, FET",
     members: ["Dr. S.S. Punia, SPI", "Prof. Navdeep Jindal, FET"],
-    studentCoordinators: ["Sparsh Parmar (Ph.D. Scholar)", "Satyarth Saindhaw (Ph.D. Scholar)", "Poonam Patil (Ph.D. Scholar)", "Alisha Rahaman (Ph.D. Scholar)"]
+    studentCoordinators: ["Sparsh Parmar (Ph.D. Scholar)"],
+    studentMembers: ["Satyarth Saindhaw (Ph.D. Scholar)", "Poonam Patil (Ph.D. Scholar)", "Alisha Rahaman (Ph.D. Scholar)"]
   },
   {
     id: "technical",
@@ -365,7 +373,8 @@ export const DEPARTMENTAL_COMMITTEES: LocalDepartmentalCommittee[] = [
     title: "Technical Committee",
     coordinator: "Prof. Sukhcharn Singh, FET",
     members: ["Sri. Laxmi Narayan Singh, Sr. Technician, FET"],
-    studentCoordinators: ["Amisha Kaushik (Ph.D. Scholar)", "Mohit Nagar (Ph.D. Scholar)", "Nirbhay Kumar (Ph.D. Scholar)", "Divyanshi (Ph.D. Scholar)", "Heena (Ph.D. Scholar)", "Deep Shikha (Ph.D. Scholar)"]
+    studentCoordinators: ["Amisha Kaushik (Ph.D. Scholar)"],
+    studentMembers: ["Mohit Nagar (Ph.D. Scholar)", "Nirbhay Kumar (Ph.D. Scholar)", "Divyanshi (Ph.D. Scholar)", "Heena (Ph.D. Scholar)", "Deep Shikha (Ph.D. Scholar)"]
   },
   {
     id: "poster-sessions",
@@ -373,7 +382,8 @@ export const DEPARTMENTAL_COMMITTEES: LocalDepartmentalCommittee[] = [
     title: "Poster Sessions Committee",
     coordinator: "Prof. Navdeep Jindal, FET",
     members: ["Prof. Sukhcharn Singh, FET", "Ms. Somya Saini, Guest Faculty", "Dr. Omchand Singh, Sr. Technician, FET", "Mr. Devendra Singh, Technician, FET"],
-    studentCoordinators: ["Bharat Bhushan (Ph.D. Scholar)", "Mohit Nagar (Ph.D. Scholar)", "Aditya Shree (Ph.D. Scholar)", "Tanya Sonkar (Ph.D. Scholar)", "Neha Goyal (Ph.D. Scholar)", "Shatrudhan Kumar (M.Tech. Student)", "Shubham Thakur (M.Tech. Student)"]
+    studentCoordinators: ["Bharat Bhushan (Ph.D. Scholar)"],
+    studentMembers: ["Mohit Nagar (Ph.D. Scholar)", "Aditya Shree (Ph.D. Scholar)", "Tanya Sonkar (Ph.D. Scholar)", "Neha Goyal (Ph.D. Scholar)", "Shatrudhan Kumar (M.Tech. Student)", "Shubham Thakur (M.Tech. Student)"]
   },
   {
     id: "cultural",
@@ -381,7 +391,8 @@ export const DEPARTMENTAL_COMMITTEES: LocalDepartmentalCommittee[] = [
     title: "Cultural Committee",
     coordinator: "Ms. Somya Saini, Guest Faculty",
     members: [],
-    studentCoordinators: ["Pallavi Sharma (Ph.D. Scholar)", "Tanya Sonker (Ph.D. Scholar)", "Ramanjot Kaur (Ph.D. Scholar)", "Sunil Kumar (Ph.D. Scholar)", "Shubham Thakur (Ph.D. Scholar)", "Shubhankar (Ph.D. Scholar)"]
+    studentCoordinators: ["Pallavi Sharma (Ph.D. Scholar)"],
+    studentMembers: ["Tanya Sonker (Ph.D. Scholar)", "Ramanjot Kaur (Ph.D. Scholar)", "Sunil Kumar (Ph.D. Scholar)", "Shubham Thakur (Ph.D. Scholar)", "Shubhankar (Ph.D. Scholar)"]
   },
   {
     id: "sponsorship",
@@ -389,7 +400,8 @@ export const DEPARTMENTAL_COMMITTEES: LocalDepartmentalCommittee[] = [
     title: "Sponsorship Committee",
     coordinator: "Prof. C.S. Riar, FET",
     members: ["Prof. Sukhcharn Singh, FET", "Prof. Navdeep Jindal, FET", "Dr. Omchand Singh, Sr. Technician, FET"],
-    studentCoordinators: ["Amandeep Singh (Ph.D. Scholar)", "Bharat Bhushan (Ph.D. Scholar)", "Aditi (Ph.D. Scholar)"]
+    studentCoordinators: ["Amandeep Singh (Ph.D. Scholar)"],
+    studentMembers: ["Bharat Bhushan (Ph.D. Scholar)", "Aditi (Ph.D. Scholar)"]
   },
   {
     id: "website-comm",
@@ -397,7 +409,8 @@ export const DEPARTMENTAL_COMMITTEES: LocalDepartmentalCommittee[] = [
     title: "Website Development & Communication Committee",
     coordinator: "Prof. Navdeep Jindal, FET",
     members: ["Dr. Tajinder Singh, Faculty (CSE)"],
-    studentCoordinators: ["Aditi (Ph.D. Scholar)", "Ambika Thakur (Ph.D. Scholar)", "Heena (Ph.D. Scholar)", "Ramanjot Kaur (Ph.D. Scholar)", "Tanush Singla (GCS Student)"]
+    studentCoordinators: ["Aditi (Ph.D. Scholar)"],
+    studentMembers: ["Ambika Thakur (Ph.D. Scholar)", "Heena (Ph.D. Scholar)", "Ramanjot Kaur (Ph.D. Scholar)", "Tanush Singla (GCS Student)"]
   }
 ];
 
@@ -668,7 +681,7 @@ export const WFD_CELEBRATIONS_DATA = {
         { name: "Bharat Bhushan", designation: "Ph.D. Scholar", phone: "62975-31362" },
         { name: "Amisha Kaushik", designation: "Ph.D. Scholar", phone: "83073-52267" }
       ],
-      image: "/wfd/unofficial-poster.png",
+      image: "/wfd/scan-to-register.png",
       iconName: "BookOpen"
     },
     {
@@ -725,7 +738,7 @@ export const WFD_CELEBRATIONS_DATA = {
         "Exciting Awards & Certificates for winners and top presentations"
       ],
       coordinator: "Divyanshi Thakur (Ph.D. Research Scholar)",
-      members: ["Heena", "Sunil Kumar", "Ashmita Mittal", "Shubham Thakur (M.Tech)", "Dilpreet (M.Tech)"],
+      members: ["Heena", "Sunil Kumar", "Ashmita Uppal", "Shubham Thakur (M.Tech)", "Dilpreet (M.Tech)"],
       image: "/wfd/poster-comp.png",
       iconName: "Palette"
     },

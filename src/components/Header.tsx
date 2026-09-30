@@ -34,6 +34,7 @@ export const Header: React.FC<HeaderProps> = ({
     { name: 'Registration', page: 'home', hash: '#registration' },
     { name: 'Sponsors', page: 'sponsors' },
     { name: 'Venue & Location', page: 'home', hash: '#venue' },
+    { name: 'FAQ', page: 'home', hash: '#faqs' },
     { name: 'World Food Day 2026', page: 'wfd' },
   ];
 
