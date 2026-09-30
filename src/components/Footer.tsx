@@ -25,7 +25,7 @@ export const Footer: React.FC<FooterProps> = ({ onOpenAbstractModal, onNavigateP
         <div className="bg-[#580B1E] text-white rounded-2xl p-6 sm:p-8 border border-[#6B0F24] mb-14 flex flex-col md:flex-row items-center justify-between gap-6 shadow-md">
           <div>
             <span className="text-xs font-bold uppercase tracking-wider text-[#D4AF37] bg-[#3A0512] px-3 py-1 rounded-full border border-[#6B0F24] inline-block mb-2">
-              World Food Day 2026 Flagship Conclave
+              World Food Day 2026 Conference
             </span>
             <h3 className="text-2xl sm:text-3xl font-bold font-serif-editorial">
               Join Us at SLIET Longowal, Punjab

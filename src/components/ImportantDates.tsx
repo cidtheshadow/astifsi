@@ -16,7 +16,7 @@ export const ImportantDates: React.FC<ImportantDatesProps> = ({ onOpenAbstractMo
           <div>
             <div className="flex items-center gap-2 text-[#D4AF37] font-heading font-bold text-xs uppercase tracking-wider mb-2">
               <Calendar className="w-4 h-4 text-[#E67E22]" />
-              <span>Conclave Milestones</span>
+              <span>Conference Milestones</span>
             </div>
             <h2 className="text-3xl sm:text-5xl font-bold text-[#580B1E] tracking-tight font-display-hero">
               Important Dates &amp; Deadlines

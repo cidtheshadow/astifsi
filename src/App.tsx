@@ -100,7 +100,7 @@ export function App() {
       </main>
 
       {/* Footer */}
-      <AuthorGuidelinesFAQ />
+      
       <Footer 
         onOpenAbstractModal={handleOpenAbstractModal} 
         onNavigatePage={handleNavigatePage}

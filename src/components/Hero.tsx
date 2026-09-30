@@ -27,7 +27,7 @@ export const Hero: React.FC<HeroProps> = ({ onOpenAbstractModal }) => {
             <div className="flex flex-wrap items-center gap-3">
               <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full text-xs font-bold bg-[#580B1E] text-white border border-[#6B0F24] shadow-2xs">
                 <span className="w-2 h-2 rounded-full bg-[#D4AF37] animate-ping" />
-                <span>AFST(I), Mysuru Sponsored Flagship Conclave</span>
+                <span>AFST(I), Mysuru Sponsored Conference</span>
               </div>
 
               <div className="flex items-center gap-2.5 bg-white px-3.5 py-1.5 rounded-xl border border-[#E8DEC8] shadow-2xs">
@@ -41,7 +41,7 @@ export const Hero: React.FC<HeroProps> = ({ onOpenAbstractModal }) => {
 
             {/* Headline with Playfair Display / Editorial Serif accent */}
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-[#580B1E] tracking-tight leading-tight font-display-hero">
-              National <span className="inline-flex items-center gap-1 font-heading text-[#580B1E] bg-[#F5EFE6] px-3 py-1 rounded-2xl border border-[#E8DEC8] text-2xl font-bold align-middle mx-1 shadow-2xs">🌾 Food</span> Conference{' '}
+              National <span className="inline-flex items-center gap-1 font-heading text-[#580B1E] bg-[#F5EFE6] px-4 py-2 rounded-3xl border-2 border-[#E8DEC8] text-4xl sm:text-5xl lg:text-6xl font-bold align-middle mx-2 shadow-sm">🌾 Food</span> Conference{' '}
               <span className="font-heading text-[#E67E22] font-black tracking-normal ml-1">2026</span>
             </h1>
 
