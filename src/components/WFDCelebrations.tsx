@@ -82,10 +82,7 @@ export const WFDCelebrations: React.FC<WFDCelebrationsProps> = ({ onBackToHome, 
                   </span>
                 </div>
                 <div>
-                  <div className="font-bold text-xs leading-snug line-clamp-1">{event.title}</div>
-                  <span className={`text-[10px] block mt-0.5 truncate ${isActive ? 'text-[#E2B8C2]' : 'text-orange-500'}`}>
-                    {event.coordinator}
-                  </span>
+                  <div className="font-bold text-xs leading-snug line-clamp-2">{event.title}</div>
                 </div>
               </button>
             );
