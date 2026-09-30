@@ -23,7 +23,7 @@ export const Registration: React.FC<RegistrationProps> = ({ onOpenAbstractModal 
             Conference Registration & Fee Matrix
           </h2>
           <p className="text-sm text-stone-600 leading-relaxed max-w-2xl mx-auto">
-            Registration includes conference kit, certificate, Scopus-indexed proceedings, networking lunches, and gala dinner.
+            Registration includes conference kit, certificate, networking lunches, and gala dinner.
           </p>
         </div>
 
