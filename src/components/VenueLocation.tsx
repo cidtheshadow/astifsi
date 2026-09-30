@@ -22,7 +22,7 @@ export const VenueLocation: React.FC = () => {
               <span>Host Institution &amp; Destination Logistics</span>
             </div>
             <h2 className="text-3xl sm:text-5xl font-bold text-[#580B1E] tracking-tight font-serif-editorial">
-              About SLIET Longowal &amp; Location Map
+              <a href="https://sliet.ac.in/" target="_blank" rel="noopener noreferrer" className="hover:underline hover:text-[#6B0F24] transition-colors decoration-[#D4AF37] underline-offset-8">About SLIET Longowal</a> &amp; Location Map
             </h2>
             <p className="text-sm text-[#52373D] mt-2 max-w-2xl leading-relaxed">
               Sant Longowal Institute of Engineering &amp; Technology (SLIET) is an autonomous CFTI &amp; Deemed University established by the Ministry of Education, Govt. of India on a 451-acre lush green campus in Punjab.
