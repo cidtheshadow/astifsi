@@ -27,11 +27,13 @@ export const Header: React.FC<HeaderProps> = ({
 
   const navLinks: { name: string; page: ActivePage; hash?: string }[] = [
     { name: 'About', page: 'home', hash: '#about' },
-    { name: 'Focus Areas', page: 'home', hash: '#themes' },
-    { name: 'Important Dates', page: 'home', hash: '#deadlines' },
     { name: 'Committees', page: 'home', hash: '#committee' },
-    { name: 'Local Committees', page: 'departmental-committees' },
+    { name: 'Focus Areas', page: 'home', hash: '#themes' },
+    { name: 'Invited Speakers', page: 'home', hash: '#speakers' },
+    { name: 'Highlights', page: 'home', hash: '#highlights' },
+    { name: 'Important Dates', page: 'home', hash: '#deadlines' },
     { name: 'Registration', page: 'home', hash: '#registration' },
+    { name: 'Local Committees', page: 'departmental-committees' },
     { name: 'Sponsors', page: 'sponsors' },
     { name: 'Venue & Location', page: 'home', hash: '#venue' },
     { name: 'FAQ', page: 'home', hash: '#faqs' },
