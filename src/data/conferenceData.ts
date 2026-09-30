@@ -681,7 +681,7 @@ export const WFD_CELEBRATIONS_DATA = {
         { name: "Bharat Bhushan", designation: "Ph.D. Scholar", phone: "62975-31362" },
         { name: "Amisha Kaushik", designation: "Ph.D. Scholar", phone: "83073-52267" }
       ],
-      image: "/wfd/scan-to-register.png",
+      image: "/wfd/food-art.png",
       iconName: "BookOpen"
     },
     {
@@ -695,7 +695,7 @@ export const WFD_CELEBRATIONS_DATA = {
       ],
       coordinator: "Pallavi Sharma (Ph.D. Research Scholar)",
       members: ["Satyarth Saindhaw", "Sparsh Parmar", "Mohit Nagar", "Jasmine Saini", "Satrudhan (M.Tech)", "Shubhankar (M.Tech)"],
-      image: "/wfd/food-art.png",
+      image: "/wfd/new-food-art.jpg",
       iconName: "Utensils"
     },
     {

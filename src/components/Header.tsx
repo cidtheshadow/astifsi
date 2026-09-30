@@ -46,9 +46,9 @@ export const Header: React.FC<HeaderProps> = ({
   };
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 transition-all duration-300 shadow-md">
+    <header className="fixed top-0 left-0 right-0 z-50 transition-all duration-300 shadow-2xl shadow-[#580B1E]/50">
       {/* 1. Main Luxury Header Top Tier (TATA CLiQ Luxury Inspired) */}
-      <div className={`transition-all duration-300 bg-[#2B050E] text-[#FDFBF7] border-b border-[#580B1E] ${
+      <div className={`transition-all duration-300 bg-[#2B050E]/95 backdrop-blur-xl text-[#FDFBF7] border-b border-[#580B1E] ${
         isScrolled ? 'py-2' : 'py-3'
       }`}>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -103,7 +103,7 @@ export const Header: React.FC<HeaderProps> = ({
             <div className="flex items-center gap-3 shrink-0">
               <button
                 onClick={onOpenAbstractModal}
-                className="hidden sm:inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-[#580B1E] hover:bg-[#6B0F24] text-xs font-bold text-white shadow-md hover:shadow-lg transition-all duration-200 uppercase tracking-wider border border-[#D4AF37]/50 cursor-pointer"
+                className="hidden sm:inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-[#580B1E] hover:bg-[#6B0F24] text-xs font-bold text-white shadow-2xl shadow-[#580B1E]/50 hover:shadow-lg transition-all duration-200 uppercase tracking-wider border border-[#D4AF37]/50 cursor-pointer"
               >
                 <span className="relative flex h-2 w-2">
                   <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#D4AF37] opacity-75"></span>
@@ -181,7 +181,7 @@ export const Header: React.FC<HeaderProps> = ({
                 setIsMobileMenuOpen(false);
                 onOpenAbstractModal();
               }}
-              className="w-full flex items-center justify-center gap-2 px-4 py-3 rounded-lg text-xs font-bold text-white bg-[#580B1E] hover:bg-[#6B0F24] border border-[#D4AF37]/50 shadow-md uppercase tracking-wider cursor-pointer"
+              className="w-full flex items-center justify-center gap-2 px-4 py-3 rounded-lg text-xs font-bold text-white bg-[#580B1E] hover:bg-[#6B0F24] border border-[#D4AF37]/50 shadow-2xl shadow-[#580B1E]/50 uppercase tracking-wider cursor-pointer"
             >
               <Send className="w-4 h-4 text-[#D4AF37]" />
               Submit Abstract (Oct 4)
