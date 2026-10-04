@@ -186,7 +186,7 @@ export const Header: React.FC<HeaderProps> = ({
               className="w-full flex items-center justify-center gap-2 px-4 py-3 rounded-lg text-xs font-bold text-white bg-[#580B1E] hover:bg-[#6B0F24] border border-[#D4AF37]/50 shadow-2xl shadow-[#580B1E]/50 uppercase tracking-wider cursor-pointer"
             >
               <Send className="w-4 h-4 text-[#D4AF37]" />
-              Submit Abstract (Oct 4)
+              Submit Abstract (Oct 8)
             </button>
           </div>
         </div>

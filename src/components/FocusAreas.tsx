@@ -113,7 +113,7 @@ export const FocusAreas: React.FC<FocusAreasProps> = ({ onOpenAbstractModal }) =
         <div className="mt-12 text-center bg-white p-6 rounded-2xl border border-stone-200 max-w-3xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-4 shadow-sm">
           <div className="text-left">
             <h4 className="text-sm font-bold text-[#580B1E]">Have research matching these scientific tracks?</h4>
-            <p className="text-xs text-orange-500 mt-0.5">Submit your 300-word abstract online before Oct 4, 2026.</p>
+            <p className="text-xs text-orange-500 mt-0.5">Submit your 300-word abstract online before Oct 8, 2026.</p>
           </div>
           <button
             onClick={onOpenAbstractModal}

@@ -28,7 +28,7 @@ export const ImportantDates: React.FC<ImportantDatesProps> = ({ onOpenAbstractMo
 
           <div className="bg-white p-3.5 rounded-xl border border-stone-200 shadow-2xs flex items-center gap-3 shrink-0">
             <span className="w-3 h-3 rounded-full bg-[#E67E22] animate-pulse shrink-0" />
-            <span className="text-xs font-bold text-[#580B1E]">Abstract Submission Closes: October 4, 2026</span>
+            <span className="text-xs font-bold text-[#580B1E]">Abstract Submission Closes: October 8, 2026</span>
           </div>
         </div>
 

@@ -79,7 +79,7 @@ export const Hero: React.FC<HeroProps> = ({ onOpenAbstractModal }) => {
                 className="inline-flex items-center gap-2.5 px-7 py-3.5 rounded-lg text-xs font-bold text-white bg-[#580B1E] hover:bg-[#6B0F24] shadow-lg hover:shadow-xl hover:scale-[1.02] active:scale-[0.98] transition-all duration-200 uppercase tracking-wider cursor-pointer border border-[#6B0F24]"
               >
                 <Send className="w-4 h-4 text-[#D4AF37]" />
-                <span>Submit Abstract (Oct 4)</span>
+                <span>Submit Abstract (Oct 8)</span>
                 <span className="ml-1.5 px-2 py-0.5 rounded-full bg-[#F5EFE6] text-[#580B1E] text-[10px] font-extrabold uppercase border border-[#E8DEC8]">
                   Early Bird
                 </span>
@@ -139,7 +139,7 @@ export const Hero: React.FC<HeroProps> = ({ onOpenAbstractModal }) => {
             </div>
             <div>
               <h3 className="text-xs font-bold text-[#580B1E] font-heading mb-0.5">
-                Abstract Submission Deadline: Oct 4, 2026
+                Abstract Submission Deadline: Oct 8, 2026
               </h3>
               <p className="text-[11px] text-[#52373D] leading-relaxed">
                 Submit original research up to 300 words. Intimation of acceptance on Oct 5, 2026.

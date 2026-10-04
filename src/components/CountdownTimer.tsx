@@ -14,8 +14,8 @@ export const CountdownTimer: React.FC = () => {
   const targets = {
     abstract: {
       name: "Abstract Submission Deadline",
-      dateStr: "2026-10-04T23:59:59",
-      formatted: "October 4, 2026"
+      dateStr: "2026-10-08T23:59:59",
+      formatted: "October 8, 2026"
     },
     conference: {
       name: "Conference Inauguration",
@@ -59,7 +59,7 @@ export const CountdownTimer: React.FC = () => {
           }`}
         >
           <AlertCircle className="w-3.5 h-3.5" />
-          <span className="whitespace-nowrap">Abstract Deadline (Oct 4)</span>
+          <span className="whitespace-nowrap">Abstract Deadline (Oct 8)</span>
         </button>
         <button
           onClick={() => setTargetType('conference')}

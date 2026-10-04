@@ -187,8 +187,8 @@ export const KEY_FOCUS_AREAS: FocusArea[] = [
 
 export const IMPORTANT_DATES: ImportantDate[] = [
   {
-    rawDate: "2026-10-04",
-    date: "October 4, 2026",
+    rawDate: "2026-10-08",
+    date: "October 8, 2026",
     title: "Submission of Abstract",
     description: "Deadline for submitting original research abstracts (Max 300 words) via Google Form.",
     isUrgent: true
@@ -261,7 +261,7 @@ export const ABSTRACT_GUIDELINES = {
     "Concise bold title in 12 pt Times New Roman.",
     "Full author names, institutional affiliations, and 3-5 keywords.",
     "Abstract should be submitted through official Google Form.",
-    "Deadline for Abstract Submission: October 4, 2026."
+    "Deadline for Abstract Submission: October 8, 2026."
   ]
 };
 

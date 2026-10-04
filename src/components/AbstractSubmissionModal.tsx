@@ -27,7 +27,7 @@ export const AbstractSubmissionModal: React.FC<AbstractSubmissionModalProps> = (
                 Presentation Guidelines &amp; Submissions
               </h2>
               <p className="text-xs text-[#52373D]">
-                Abstract Deadline: <span className="text-[#E67E22] font-semibold">October 4, 2026</span> • Scopus Indexed Proceedings
+                Abstract Deadline: <span className="text-[#E67E22] font-semibold">October 8, 2026</span> • Scopus Indexed Proceedings
               </p>
             </div>
           </div>
@@ -106,7 +106,7 @@ export const AbstractSubmissionModal: React.FC<AbstractSubmissionModalProps> = (
             <div className="bg-[#F5EFE6] p-3.5 rounded-xl border border-[#E8DEC8] text-xs text-[#580B1E] flex items-start gap-2.5">
               <AlertCircle className="w-4 h-4 text-[#E67E22] shrink-0 mt-0.5" />
               <p className="leading-relaxed">
-                <strong>Official Channel:</strong> Abstract submissions and registration forms must be submitted through the official Google Form before <strong>October 4, 2026</strong>.
+                <strong>Official Channel:</strong> Abstract submissions and registration forms must be submitted through the official Google Form before <strong>October 8, 2026</strong>.
               </p>
             </div>
           </div>
