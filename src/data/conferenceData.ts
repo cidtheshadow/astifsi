@@ -824,5 +824,15 @@ export const SPEAKERS_DATA = [
     location: "Gurgaon, Haryana, India",
     image: "/speakers/satyam.jpg",
     avatarInitials: "SG"
+  },
   }
+  {
+    name: "Dr. Bhaskar Jyoti",
+    designation: "Director - International Relations (Resource & Business Development) | Head of IPR Cell",
+    affiliation: "Mahakaushal University",
+    location: "Jabalpur, Madhya Pradesh, India",
+    image: "/speakers/dr-bhaskar-jyoti.png",
+    avatarInitials: "BJ",
+    bio: "A seasoned Food Technologist with IIMBx certification... Currently serving as Director – International Relations, leading strategic collaborations, facilitating Technology Transfer (ToT) initiatives, and enabling MoUs at national and international levels."
+  },
 ];
