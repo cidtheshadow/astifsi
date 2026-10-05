@@ -825,7 +825,6 @@ export const SPEAKERS_DATA = [
     image: "/speakers/satyam.jpg",
     avatarInitials: "SG"
   },
-  }
   {
     name: "Dr. Bhaskar Jyoti",
     designation: "Director - International Relations (Resource & Business Development) | Head of IPR Cell",
