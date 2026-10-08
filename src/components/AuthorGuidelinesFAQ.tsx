@@ -20,55 +20,6 @@ const FAQ_DATA = [
       {
         question: "4. Mode of Presentation",
         answer: "Presentations can be made in Oral or Poster formats.\nThe organizing committee will review submitted abstracts and decide the appropriate mode of presentation (Oral or Poster) based on the quality of the research and relevance to the conference themes.\nThe final decision will be communicated to the authors."
-      },
-      {
-        question: "5. Guidelines for Oral Presentations",
-        answer: "Time Limit: Each presenter will be allotted a specific time (usually 7-8 minutes for presentation and 2-3 minutes for Q&A).\nFormat: Presentations should be in PowerPoint (.ppt or .pptx) format or PDF.\nContent: Slides should be clear, concise, and readable from a distance. Avoid overcrowding slides with text.\nDelivery: Presenters must join the designated session (physical or virtual) on time and ensure smooth technical setup prior to their slot."
-      },
-      {
-        question: "6. Guidelines for Poster Presentations",
-        answer: "Size: The standard size for physical posters is generally A0 (84.1 cm x 118.9 cm) in portrait orientation.\nVirtual Posters: If online, a 1-page PDF or a short 3-minute video presentation may be required.\nContent: Posters should have a clear flow, including Title, Authors, Introduction, Methodology, Results, Conclusion, and References. Use visual elements (charts, graphs, images) effectively.\nDisplay: Presenters are responsible for putting up and taking down their physical posters at the designated times."
-      },
-      {
-        question: "7. Full Paper Submission (Optional/If Applicable)",
-        answer: "Authors of accepted abstracts may be invited to submit full-length papers for publication in conference proceedings or a partnered journal.\nDetailed formatting guidelines and deadlines for full papers will be provided separately by the organizing committee."
-      },
-      {
-        question: "8. Registration Policy",
-        answer: "At least one author (the presenting author) must register for the conference to ensure the abstract is included in the programme and the abstract book.\nRegistration fees cover access to sessions, conference materials, and an e-certificate of presentation/participation."
-      },
-      {
-        question: "9. Code of Conduct and Ethics",
-        answer: "Plagiarism or unethical research practices will lead to immediate rejection.\nPresentations should respect diverse audiences and avoid offensive content."
-      }
-    ]
-  },
-  {
-    category: "General FAQs",
-    items: [
-      {
-        question: "1. Who can attend AFSTINFC-2026?",
-        answer: "The conference is open to researchers, academicians, industry professionals, students, and anyone interested in the fields of Food Science, Technology, and Engineering."
-      },
-      {
-        question: "2. Can I present my research online?",
-        answer: "Yes, the conference supports both physical and online modes for presentations."
-      },
-      {
-        question: "3. When will I know if my abstract is accepted?",
-        answer: "Acceptance notifications will be sent out starting 5 October 2026, via email or the conference website."
-      },
-      {
-        question: "4. Is on-the-spot registration available?",
-        answer: "It is highly recommended to register online by 7 October 2026. On-the-spot registration may be limited and subject to availability."
-      },
-      {
-        question: "5. Will I receive a certificate?",
-        answer: "Yes, all registered participants and presenters will receive an e-certificate."
-      },
-      {
-        question: "6. Can I submit more than one abstract?",
-        answer: "Yes, you can submit multiple abstracts, but each must be registered separately if accepted for presentation."
       }
     ]
   }
@@ -100,7 +51,7 @@ export const AuthorGuidelinesFAQ: React.FC = () => {
           <div className="w-16 h-1 bg-[#E86024] mx-auto mt-4 rounded-full" />
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-start">
+        <div className="grid grid-cols-1 gap-8 lg:gap-12 items-start">
           {FAQ_DATA.map((section, catIdx) => (
             <div key={catIdx} className="bg-white rounded-2xl p-6 sm:p-8 border border-stone-200 shadow-sm">
               <div className="flex items-center gap-3 mb-6 pb-4 border-b border-stone-100">

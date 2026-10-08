@@ -182,6 +182,14 @@ export const KEY_FOCUS_AREAS: FocusArea[] = [
     description: "Bridging bench-scale innovation to industrial adoption, joint research ventures, pilot-plant trials, and policy frameworks.",
     iconName: "Handshake",
     tag: "Tech Transfer"
+  },
+  {
+    name: "Prof. Paras Sharma",
+    designation: "Professor and Head, Department of Food Technology",
+    affiliation: "Mizoram University",
+    location: "Aizawl, Mizoram, India",
+    image: "/speakers/prof-paras-sharma.png",
+    avatarInitials: "PS"
   }
 ];
 
@@ -827,11 +835,10 @@ export const SPEAKERS_DATA = [
   },
   {
     name: "Dr. Bhaskar Jyoti",
-    designation: "Director - International Relations (Resource & Business Development) | Head of IPR Cell",
+    designation: "Head IPR Cell, Assistant Professor- Food Science & Technology (Ag)",
     affiliation: "Mahakaushal University",
     location: "Jabalpur, Madhya Pradesh, India",
     image: "/speakers/dr-bhaskar-jyoti.png",
-    avatarInitials: "BJ",
-    bio: "A seasoned Food Technologist with IIMBx certification... Currently serving as Director – International Relations, leading strategic collaborations, facilitating Technology Transfer (ToT) initiatives, and enabling MoUs at national and international levels."
+    avatarInitials: "BJ"
   },
 ];
