@@ -182,14 +182,6 @@ export const KEY_FOCUS_AREAS: FocusArea[] = [
     description: "Bridging bench-scale innovation to industrial adoption, joint research ventures, pilot-plant trials, and policy frameworks.",
     iconName: "Handshake",
     tag: "Tech Transfer"
-  },
-  {
-    name: "Prof. Paras Sharma",
-    designation: "Professor and Head, Department of Food Technology",
-    affiliation: "Mizoram University",
-    location: "Aizawl, Mizoram, India",
-    image: "/speakers/prof-paras-sharma.png",
-    avatarInitials: "PS"
   }
 ];
 
