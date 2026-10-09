@@ -861,4 +861,12 @@ export const SPEAKERS_DATA = [
     image: "/speakers/dr-bhaskar-jyoti.png",
     avatarInitials: "BJ"
   },
+  {
+    name: "Prof. Paras Sharma",
+    designation: "Professor and Head, Department of Food Technology",
+    affiliation: "Mizoram University",
+    location: "Aizawl, Mizoram, India",
+    image: "/speakers/prof-paras-sharma.png",
+    avatarInitials: "PS"
+  }
 ];
