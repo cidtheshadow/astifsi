@@ -651,6 +651,34 @@ export const SPONSORS = [
     description: "Sant Longowal Institute of Engineering & Technology (Govt. of India Deemed University).",
     logo: "/logos/sliet-logo.jpeg",
     badge: "Host Institution"
+  },
+  {
+    name: "Alumni GFT-1998",
+    role: "Sponsor",
+    badge: "Sponsor",
+    description: "Alumni Batch of GFT-1998 supporting the conference.",
+    logo: "/sponsors/alumni-gft-1998.png"
+  },
+  {
+    name: "Puja Science House",
+    role: "Sponsor",
+    badge: "Sponsor",
+    description: "Supporting scientific research and education.",
+    logo: "/sponsors/puja-science-house.png"
+  },
+  {
+    name: "Coca-Cola",
+    role: "Sponsor",
+    badge: "Sponsor",
+    description: "Refreshing the world and making a difference.",
+    logo: "/sponsors/coca-cola.png"
+  },
+  {
+    name: "LABCO INDIA",
+    role: "Sponsor",
+    badge: "Sponsor",
+    description: "Providing high quality laboratory equipment.",
+    logo: "/sponsors/labco-india.png"
   }
 ];
 
@@ -818,8 +846,8 @@ export const SPEAKERS_DATA = [
     avatarInitials: "PG"
   },
   {
-    name: "Satyam Gupta",
-    designation: "Associate director",
+    name: "Mr. Satyam Gupta",
+    designation: "Associate Director",
     affiliation: "PepsiCo",
     location: "Gurgaon, Haryana, India",
     image: "/speakers/satyam.jpg",
